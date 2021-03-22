@@ -70,6 +70,38 @@ collections:
         searchFields: ['title']
         valueField: 'title'
 
+  - name: sickness
+    label: Krankheitsbilder
+    label_singular: Krankheitsbild
+    editor:
+      preview: true
+    extension: yml
+    folder: content/sickness
+    slug: '{{fields.slug}}'
+    create: true
+    preview_path: krankheitsbild/{{fields.slug}}
+    fields:
+      - { label: Sammlung, name: collection, widget: hidden, default: sickness }
+      - { label: Titel, name: title, widget: string }
+      - { label: Slug, name: slug, widget: string }
+      - { label: Inhalt, name: body, widget: markdown }
+
+  - name: operation
+    label: Operationen
+    label_singular: Operationen
+    editor:
+      preview: true
+    extension: yml
+    folder: content/operation
+    slug: '{{fields.slug}}'
+    create: true
+    preview_path: operation/{{fields.slug}}
+    fields:
+      - { label: Sammlung, name: collection, widget: hidden, default: operation }
+      - { label: Titel, name: title, widget: string }
+      - { label: Slug, name: slug, widget: string }
+      - { label: Inhalt, name: body, widget: markdown }
+
   - name: category
     label: Kategorien
     label_singular: Kategorie

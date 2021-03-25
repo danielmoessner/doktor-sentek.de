@@ -70,18 +70,18 @@ collections:
         searchFields: ['title']
         valueField: 'title'
 
-  - name: sickness
+  - name: illness
     label: Krankheitsbilder
     label_singular: Krankheitsbild
     editor:
       preview: true
     extension: yml
-    folder: content/sickness
+    folder: content/illness
     slug: '{{fields.slug}}'
     create: true
     preview_path: krankheitsbild/{{fields.slug}}
     fields:
-      - { label: Sammlung, name: collection, widget: hidden, default: sickness }
+      - { label: Sammlung, name: collection, widget: hidden, default: illness }
       - { label: Titel, name: title, widget: string }
       - { label: Slug, name: slug, widget: string }
       - { label: Inhalt, name: body, widget: markdown }

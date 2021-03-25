@@ -22,7 +22,7 @@ exports.createPages = async ({ graphql, actions }) => {
           slug
         }
       }
-      allSicknessYaml {
+      allIllnessYaml {
         nodes {
           id
           slug
@@ -52,7 +52,7 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     });
   });
-  result.data.allSicknessYaml.nodes.forEach((node) => {
+  result.data.allIllnessYaml.nodes.forEach((node) => {
     createPage({
       path: `krankheitsbilder/${node.slug}/`,
       component: path.resolve(`./src/templates/sickness.jsx`),

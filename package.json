@@ -5,6 +5,7 @@
   "private": true,
   "version": "0.0.0",
   "dependencies": {
+    "@headlessui/react": "^0.3.1",
     "@tailwindcss/aspect-ratio": "^0.2.0",
     "@tailwindcss/typography": "^0.3.1",
     "animate.css": "^4.1.1",
@@ -38,7 +39,7 @@
   "scripts": {
     "build": "gatsby build",
     "dev": "npm-run-all --parallel gatsby cms",
-    "gatsby": "nodemon --exec 'kill-port --port 8000 && gatsby develop' --watch gatsby-node.js --watch package.json --watch gatsby-config.js",
+    "gatsby": "gatsby develop",
     "serve": "gatsby serve",
     "cms": "npx netlify-cms-proxy-server",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",

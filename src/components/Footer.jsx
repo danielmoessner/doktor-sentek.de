@@ -6,29 +6,39 @@ import { Link, useStaticQuery, graphql } from 'gatsby';
 function Component() {
   const data = useStaticQuery(graphql`
     {
-      allOperationYaml {
+      operations: allMarkdownRemark(
+        filter: { frontmatter: { collection: { eq: "operation" } } }
+        sort: { fields: frontmatter___title }
+      ) {
         nodes {
-          slug
-          title
+          frontmatter {
+            slug
+            title
+          }
         }
       }
-      allIllnessYaml {
+      illnesses: allMarkdownRemark(
+        filter: { frontmatter: { collection: { eq: "illness" } } }
+        sort: { fields: frontmatter___title }
+      ) {
         nodes {
-          slug
-          title
+          frontmatter {
+            slug
+            title
+          }
         }
       }
     }
   `);
-  const illnessLinks = data.allIllnessYaml.nodes;
-  const operationLinks = data.allOperationYaml.nodes;
+  const illnessLinks = data.illnesses.nodes.map((node) => node.frontmatter);
+  const operationLinks = data.operations.nodes.map((node) => node.frontmatter);
 
   return (
-    <footer className="bg-white" aria-labelledby="footerHeading">
+    <footer className="bg-gray-50 shadow-inner" aria-labelledby="footerHeading">
       <h2 id="footerHeading" className="sr-only">
         Footer
       </h2>
-      <div className="max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-6">
+      <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:pt-16 lg:pb-20 lg:px-6">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8 xl:col-span-1">
             <img
@@ -113,7 +123,7 @@ function Component() {
                   </li>
                   <li>
                     <Link to="/kontakt/" className="text-base text-gray-500 hover:text-gray-900">
-                      Sprechstunde
+                      Sprechstunden
                     </Link>
                   </li>
                 </ul>

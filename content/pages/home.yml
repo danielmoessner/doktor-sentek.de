@@ -1,7 +1,8 @@
 collection: page
 slug: home
 meta:
-  description: Informationen und Wissenswertes über die in Deutschland lebenden
-    Wildtiere. Von Wildschweinen über Rehen bis hin zu den Bergenten.
-  title: Wildtiere in Deutschland
+  description: Beschreibung
+  title: Facharztpraxis
   image: ../media/elch.jpg
+antiAging:
+  image: ../media/r-d-smith-7ibuzq6cugs-unsplash.jpg

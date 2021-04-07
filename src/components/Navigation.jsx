@@ -11,76 +11,94 @@ function Component() {
   const [menuOpen, setMenuOpen] = useState(false);
   const data = useStaticQuery(graphql`
     {
-      allOperationYaml {
+      operations: allMarkdownRemark(
+        filter: { frontmatter: { collection: { eq: "operation" } } }
+        sort: { fields: frontmatter___title }
+      ) {
         nodes {
-          slug
-          title
+          frontmatter {
+            slug
+            title
+          }
         }
       }
-      allIllnessYaml {
+      illnesses: allMarkdownRemark(
+        filter: { frontmatter: { collection: { eq: "illness" } } }
+        sort: { fields: frontmatter___title }
+      ) {
         nodes {
-          slug
-          title
+          frontmatter {
+            slug
+            title
+          }
         }
       }
     }
   `);
-  const illnessLinks = data.allIllnessYaml.nodes;
-  const operationLinks = data.allOperationYaml.nodes;
+  const illnessLinks = data.illnesses.nodes.map((node) => node.frontmatter);
+  const operationLinks = data.operations.nodes.map((node) => node.frontmatter);
 
   return (
-    <nav className="border-b border-gray-100">
-      <div className="max-w-6xl mx-auto lg:px-6">
-        <div className="">
-          <div className="flex flex-col divide-y divide-gray-100">
-            <div className="pt-3 pb-4 px-4 sm:px-6 lg:px-0">
-              <div className="flex flex-row space-x-7">
-                <div className="flex flex-row items-center">
-                  <svg
-                    className="w-6 h-6 text-teal-800 mr-2"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                    />
-                  </svg>
-                  <Link
-                    className="text-base font-medium text-gray-600 hover:text-teal-800"
-                    to="tel:098 128287348"
-                  >
-                    089 18287374
-                  </Link>
-                </div>
-                <div className="flex flex-row items-center">
-                  <svg
-                    className="w-6 h-6 text-teal-800 mr-2"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                    />
-                  </svg>
-                  <Link
-                    className="text-base font-medium text-gray-600 hover:text-teal-800"
-                    to="mailto:info@email.de"
-                  >
-                    info@email.de
-                  </Link>
+    <>
+      <div className="">
+        <div className="max-w-7xl mx-auto lg:px-6">
+          <div className="">
+            <div className="border-b border-gray-100">
+              <div className="pt-3 pb-4 px-4 sm:px-6 lg:px-0">
+                <div className="flex flex-row space-x-7">
+                  <div className="flex flex-row items-center">
+                    <svg
+                      className="w-6 h-6 text-teal-800 mr-2"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                      />
+                    </svg>
+                    <Link
+                      className="text-base font-medium text-gray-600 hover:text-teal-800"
+                      to="tel:098 128287348"
+                    >
+                      089 18287374
+                    </Link>
+                  </div>
+                  <div className="flex flex-row items-center">
+                    <svg
+                      className="w-6 h-6 text-teal-800 mr-2"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                      />
+                    </svg>
+                    <Link
+                      className="text-base font-medium text-gray-600 hover:text-teal-800"
+                      to="mailto:info@email.de"
+                    >
+                      info@email.de
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+      <nav className="border-b border-gray-100 sticky top-0 bg-white z-50 shadow-sm">
+        <div className="max-w-7xl mx-auto lg:px-6">
+          <div className="">
             <div>
               <nav className="bg-white">
                 <div className="relative flex flex-row-reverse justify-between h-24 px-4 sm:px-6 lg:px-0">
@@ -187,8 +205,8 @@ function Component() {
             </div>
           </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </>
   );
 }
 

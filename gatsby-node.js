@@ -3,61 +3,42 @@ const path = require('path');
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
 
-  // Create the animal pages
   const result = await graphql(`
     query {
-      allMarkdownRemark(filter: { frontmatter: { collection: { eq: "animal" } } }) {
-        edges {
-          node {
-            frontmatter {
-              slug
-            }
-            id
+      operations: allMarkdownRemark(filter: { frontmatter: { collection: { eq: "operation" } } }) {
+        nodes {
+          id
+          frontmatter {
+            slug
           }
         }
       }
-      allOperationYaml {
+      illnesses: allMarkdownRemark(filter: { frontmatter: { collection: { eq: "illness" } } }) {
         nodes {
           id
-          slug
-        }
-      }
-      allIllnessYaml {
-        nodes {
-          id
-          slug
+          frontmatter {
+            slug
+          }
         }
       }
     }
   `);
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  result.data.operations.nodes.forEach((node) => {
     createPage({
-      path: `wildtiere/${node.frontmatter.slug}`,
-      component: path.resolve(`./src/templates/animal.jsx`),
+      path: `operationen/${node.frontmatter.slug}/`,
+      component: path.resolve(`./src/templates/operation.jsx`),
       context: {
-        // Data passed to context is available
-        // in page queries as GraphQL variables.
         slug: node.frontmatter.slug,
         id: node.id,
       },
     });
   });
-  result.data.allOperationYaml.nodes.forEach((node) => {
+  result.data.illnesses.nodes.forEach((node) => {
     createPage({
-      path: `operationen/${node.slug}/`,
-      component: path.resolve(`./src/templates/operation.jsx`),
-      context: {
-        slug: node.slug,
-        id: node.id,
-      },
-    });
-  });
-  result.data.allIllnessYaml.nodes.forEach((node) => {
-    createPage({
-      path: `krankheitsbilder/${node.slug}/`,
+      path: `krankheitsbilder/${node.frontmatter.slug}/`,
       component: path.resolve(`./src/templates/sickness.jsx`),
       context: {
-        slug: node.slug,
+        slug: node.frontmatter.slug,
         id: node.id,
       },
     });

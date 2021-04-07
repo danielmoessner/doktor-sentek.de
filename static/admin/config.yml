@@ -37,9 +37,30 @@ collections:
         fields:
           - { label: Sammlung, name: collection, widget: hidden, default: page }
           - { label: Slug, name: slug, widget: hidden, default: home }
-          - label: 'Meta'
-            name: 'meta'
-            widget: 'object'
+          - label: Meta
+            name: meta
+            widget: object
+            fields:
+              - { label: Titel, name: title, widget: string }
+              - label: Beschreibung
+                name: description
+                widget: text
+              - { label: Bild, name: image, widget: image }
+          - label: Anti Aging
+            name: antiAging
+            widget: object
+            fields:
+              - { label: Bild, name: image, widget: image }
+
+      - file: content/pages/contact.yml
+        label: Kontakt
+        name: contact
+        fields:
+          - { label: Sammlung, name: collection, widget: hidden, default: page }
+          - { label: Slug, name: slug, widget: hidden, default: contact }
+          - label: Meta
+            name: meta
+            widget: object
             fields:
               - { label: Titel, name: title, widget: string }
               - label: Beschreibung
@@ -47,60 +68,110 @@ collections:
                 widget: text
               - { label: Bild, name: image, widget: image }
 
-  - name: animal
-    label: Wildtiere
-    label_singular: Wildtier
+      - file: content/pages/nonSurgicalTherapies.md
+        label: Nicht-operative Therapien
+        name: nonSurgicalTherapies
+        fields:
+          - { label: Sammlung, name: collection, widget: hidden, default: page }
+          - { label: Slug, name: slug, widget: hidden, default: home }
+          - label: Meta
+            name: meta
+            widget: object
+            fields:
+              - { label: Titel, name: title, widget: string }
+              - label: Beschreibung
+                name: description
+                widget: text
+              - { label: Bild, name: image, widget: image }
+          - label: Header
+            name: header
+            widget: object
+            fields:
+              - { label: Vortitel, name: pretitle, widget: string }
+              - { label: Titel, name: title, widget: string }
+              - { label: Text, name: text, widget: text }
+          - {
+              label: Inhalt,
+              name: body,
+              widget: markdown,
+              hint: Bitte nur Überschrift 2-6 verwenden für SEO.,
+            }
+
+  - name: member
+    label: Teammitglieder
+    label_singular: Teammitglied
     editor:
       preview: true
-    folder: content/animals
+    folder: content/member
     slug: '{{fields.slug}}'
     create: true
-    preview_path: wildtiere/{{fields.slug}}
+    # preview_path: wildtiere/{{fields.slug}}
     fields:
-      - { label: Sammlung, name: collection, widget: hidden, default: animal }
+      - { label: Sammlung, name: collection, widget: hidden, default: member }
       - { label: Titel, name: title, widget: string }
       - { label: Slug, name: slug, widget: string }
+      - { label: Untertitel, name: subtitle, widget: string }
       - { label: Bild, name: image, widget: image }
       - { label: Auszug, name: excerpt, widget: text }
       - { label: Inhalt, name: body, widget: markdown }
-      - label: 'Kategorie'
-        name: 'category'
-        widget: 'relation'
-        collection: 'category'
-        searchFields: ['title']
-        valueField: 'title'
 
   - name: illness
     label: Krankheitsbilder
     label_singular: Krankheitsbild
     editor:
       preview: true
-    extension: yml
+    extension: md
     folder: content/illness
     slug: '{{fields.slug}}'
     create: true
     preview_path: krankheitsbild/{{fields.slug}}
     fields:
       - { label: Sammlung, name: collection, widget: hidden, default: illness }
+      - label: Meta
+        name: meta
+        widget: object
+        fields:
+          - { label: Titel, name: title, widget: string }
+          - label: Beschreibung
+            name: description
+            widget: text
+          - { label: Bild, name: image, widget: image }
       - { label: Titel, name: title, widget: string }
       - { label: Slug, name: slug, widget: string }
-      - { label: Inhalt, name: body, widget: markdown }
+      - { label: Auszug, name: excerpt, widget: text }
+      - label: Inhalt
+        name: body
+        widget: markdown
+        hint: Bitte nur Überschrift 2-6 verwenden für SEO.
 
   - name: operation
     label: Operationen
     label_singular: Operationen
     editor:
       preview: true
-    extension: yml
+    extension: md
     folder: content/operation
     slug: '{{fields.slug}}'
     create: true
     preview_path: operation/{{fields.slug}}
     fields:
       - { label: Sammlung, name: collection, widget: hidden, default: operation }
+      - label: Meta
+        name: meta
+        widget: object
+        fields:
+          - { label: Titel, name: title, widget: string }
+          - label: Beschreibung
+            name: description
+            widget: text
+          - { label: Bild, name: image, widget: image }
       - { label: Titel, name: title, widget: string }
       - { label: Slug, name: slug, widget: string }
-      - { label: Inhalt, name: body, widget: markdown }
+      - { label: Auszug, name: excerpt, widget: text }
+      - label: Inhalt
+        name: body
+        widget: markdown
+        hint: Bitte nur Überschrift 2-6 verwenden für SEO.
 
   - name: category
     label: Kategorien

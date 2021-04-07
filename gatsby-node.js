@@ -36,7 +36,7 @@ exports.createPages = async ({ graphql, actions }) => {
   result.data.illnesses.nodes.forEach((node) => {
     createPage({
       path: `krankheitsbilder/${node.frontmatter.slug}/`,
-      component: path.resolve(`./src/templates/sickness.jsx`),
+      component: path.resolve(`./src/templates/illness.jsx`),
       context: {
         slug: node.frontmatter.slug,
         id: node.id,

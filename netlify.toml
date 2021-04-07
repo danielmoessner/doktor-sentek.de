@@ -4,4 +4,5 @@
 
 [[headers]]
   for = "/*"
-    Basic-Auth: admin:pass1234
+  [headers.values]
+    Basic-Auth = "admin:pass1234"

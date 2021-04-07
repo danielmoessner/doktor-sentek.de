@@ -3,5 +3,5 @@
   command = "npm run build"
 
 [[headers]]
-  /*
+  for = "/*"
     Basic-Auth: admin:pass1234

@@ -2,6 +2,7 @@ import React from 'react';
 // import PropTypes from 'prop-types';
 import { Link, useStaticQuery, graphql } from 'gatsby';
 // import { Transition } from '@headlessui/react';
+import Logo from './LogoSvg';
 
 function Component() {
   const data = useStaticQuery(graphql`
@@ -28,10 +29,15 @@ function Component() {
           }
         }
       }
+      contact: settingsYaml(slug: { eq: "contact" }) {
+        phone
+        email
+      }
     }
   `);
   const illnessLinks = data.illnesses.nodes.map((node) => node.frontmatter);
   const operationLinks = data.operations.nodes.map((node) => node.frontmatter);
+  const { contact } = data;
 
   return (
     <footer className="bg-gray-50 shadow-inner" aria-labelledby="footerHeading">
@@ -40,12 +46,8 @@ function Component() {
       </h2>
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:pt-16 lg:pb-20 lg:px-6">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-          <div className="space-y-8 xl:col-span-1">
-            <img
-              className="h-10"
-              src="https://tailwindui.com/img/logos/workflow-mark-gray-300.svg"
-              alt="Company name"
-            />
+          <div className="space-y-8 xl:col-span-1 text-teal-900">
+            <Logo />
             <p className="text-gray-500 text-base">
               Making the world a better place through constructing elegant hierarchies.
             </p>
@@ -65,12 +67,12 @@ function Component() {
                     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                   />
                 </svg>
-                <Link
+                <a
                   className="text-base font-medium text-gray-600 hover:text-teal-800"
-                  to="tel:098 128287348"
+                  href={`tel:${contact.phone}`}
                 >
-                  089 18287374
-                </Link>
+                  {contact.phone}
+                </a>
               </div>
               <div className="flex flex-row items-center">
                 <svg
@@ -87,12 +89,12 @@ function Component() {
                     d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                   />
                 </svg>
-                <Link
+                <a
                   className="text-base font-medium text-gray-600 hover:text-teal-800"
-                  to="mailto:info@email.de"
+                  href={`mailto:${contact.email}`}
                 >
-                  info@email.de
-                </Link>
+                  {contact.email}
+                </a>
               </div>
             </div>
           </div>

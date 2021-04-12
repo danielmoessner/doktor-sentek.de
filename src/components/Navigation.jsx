@@ -6,11 +6,16 @@ import Button from './Button';
 import NavigationLink from './NavigationLink';
 import NavigationDropdown from './NavigationDropdown';
 import NavigationMobileLink from './NavigationMobileLink';
+import Logo from './LogoSvg';
 
 function Component() {
   const [menuOpen, setMenuOpen] = useState(false);
   const data = useStaticQuery(graphql`
     {
+      contact: settingsYaml(slug: { eq: "contact" }) {
+        phone
+        email
+      }
       operations: allMarkdownRemark(
         filter: { frontmatter: { collection: { eq: "operation" } } }
         sort: { fields: frontmatter___title }
@@ -37,6 +42,7 @@ function Component() {
   `);
   const illnessLinks = data.illnesses.nodes.map((node) => node.frontmatter);
   const operationLinks = data.operations.nodes.map((node) => node.frontmatter);
+  const { contact } = data;
 
   return (
     <>
@@ -61,12 +67,12 @@ function Component() {
                         d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                       />
                     </svg>
-                    <Link
+                    <a
                       className="text-base font-medium text-gray-600 hover:text-teal-800"
-                      to="tel:098 128287348"
+                      href={`tel:${contact.phone}`}
                     >
-                      089 18287374
-                    </Link>
+                      {contact.phone}
+                    </a>
                   </div>
                   <div className="flex flex-row items-center">
                     <svg
@@ -83,12 +89,12 @@ function Component() {
                         d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                       />
                     </svg>
-                    <Link
+                    <a
                       className="text-base font-medium text-gray-600 hover:text-teal-800"
-                      to="mailto:info@email.de"
+                      href={`mailto:${contact.email}`}
                     >
-                      info@email.de
-                    </Link>
+                      {contact.email}
+                    </a>
                   </div>
                 </div>
               </div>
@@ -144,19 +150,10 @@ function Component() {
                     </button>
                   </div>
                   <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-between">
-                    <div className="flex-shrink-0 flex items-center">
-                      <img
-                        className="hidden h-8 w-auto"
-                        src="https://tailwindui.com/img/logos/workflow-mark-teal-600.svg"
-                        alt="Workflow"
-                      />
-                      <img
-                        className="hidden h-8 w-auto"
-                        src="https://tailwindui.com/img/logos/workflow-logo-teal-600-mark-gray-800-text.svg"
-                        alt="Workflow"
-                      />
-                    </div>
-                    <div className="hidden lg:ml-6 lg:flex lg:space-x-8">
+                    <Link to="/" className="flex-shrink-0 flex items-center text-teal-900 w-80">
+                      <Logo />
+                    </Link>
+                    <div className="hidden lg:ml-6 lg:flex lg:space-x-4">
                       <NavigationLink to="/">Startseite</NavigationLink>
                       <NavigationDropdown linkPrepend="krankheitsbilder/" links={illnessLinks}>
                         Krankheitsbilder
@@ -169,7 +166,9 @@ function Component() {
                       </NavigationDropdown>
                       <NavigationLink to="/team/">Team</NavigationLink>
                       <div className="self-center">
-                        <Button to="/kontakt/">Sprechstunden</Button>
+                        <Button small to="/kontakt/">
+                          Sprechstunden
+                        </Button>
                       </div>
                     </div>
                   </div>

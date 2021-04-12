@@ -46,27 +46,44 @@ collections:
                 name: description
                 widget: text
               - { label: Bild, name: image, widget: image }
+          - label: Header
+            name: header
+            widget: object
+            fields:
+              - { label: Titel, name: title, widget: string }
+              - { label: Titel farbig, name: titleColor, widget: string, required: false }
+              - { label: Text, name: text, widget: text }
+              - { label: Button links, name: buttonLeft, widget: text }
+              - { label: Button rechts, name: buttonRight, widget: text }
+              - { label: Bild, name: image, widget: image }
+          - label: Krankheitsbilder
+            name: illness
+            widget: object
+            fields: 
+              - { label: Titel, name: title, widget: string }
+              - { label: Text, name: text, widget: string }
+          - label: Team
+            name: team 
+            widget: object
+            fields:
+              - { label: Titel, name: title, widget: string }
+              - { label: Text, name: text, widget: text }
+              - { label: Button, name: button, widget: string }
+          - label: Sprechstunden
+            name: appointment
+            widget: object
+            fields:
+              - { label: Titel, name: title, widget: string }
+              - { label: Text, name: text, widget: text }
           - label: Anti Aging
             name: antiAging
             widget: object
             fields:
               - { label: Bild, name: image, widget: image }
-
-      - file: content/pages/contact.yml
-        label: Kontakt
-        name: contact
-        fields:
-          - { label: Sammlung, name: collection, widget: hidden, default: page }
-          - { label: Slug, name: slug, widget: hidden, default: contact }
-          - label: Meta
-            name: meta
-            widget: object
-            fields:
+              - { label: Vortitel, name: pretitle, widget: string }
               - { label: Titel, name: title, widget: string }
-              - label: Beschreibung
-                name: description
-                widget: text
-              - { label: Bild, name: image, widget: image }
+              - { label: Text, name: text, widget: text }
+              - { label: Button, name: button, widget: string }
 
       - file: content/pages/nonSurgicalTherapies.md
         label: Nicht-operative Therapien
@@ -90,12 +107,26 @@ collections:
               - { label: Vortitel, name: pretitle, widget: string }
               - { label: Titel, name: title, widget: string }
               - { label: Text, name: text, widget: text }
-          - {
-              label: Inhalt,
-              name: body,
-              widget: markdown,
-              hint: Bitte nur Überschrift 2-6 verwenden für SEO.,
-            }
+          - label: Inhalt
+            name: body
+            widget: markdown
+            hint: Bitte nur Überschrift 2-6 verwenden für SEO.
+
+      - file: content/pages/contact.yml
+        label: Kontakt
+        name: contact
+        fields:
+          - { label: Sammlung, name: collection, widget: hidden, default: page }
+          - { label: Slug, name: slug, widget: hidden, default: contact }
+          - label: Meta
+            name: meta
+            widget: object
+            fields:
+              - { label: Titel, name: title, widget: string }
+              - label: Beschreibung
+                name: description
+                widget: text
+              - { label: Bild, name: image, widget: image }         
 
   - name: member
     label: Teammitglieder
@@ -199,11 +230,36 @@ collections:
         fields:
           - { label: Sammlung, name: collection, widget: hidden, default: setting }
           - { label: Slug, name: slug, widget: hidden, default: global }
-          - {
-              label: Titel in der Navigation,
-              name: navigationTitle,
-              widget: string,
-              default: Wildtiere,
-            }
-          - { label: URL der Seite, name: siteUrl, widget: string, required: false }
           - { label: Favicon, name: favicon, widget: image }
+          - { label: Svg Logo, name: logo, widget: text, hint: Bitte nur ändern wenn man weiß was man macht. }
+      - file: content/settings/appointments.yml
+        label: Sprechstunden
+        name: appointments
+        preview: false
+        fields:
+          - { label: Sammlung, name: collection, widget: hidden, default: setting }
+          - { label: Slug, name: slug, widget: hidden, default: appointments }
+          - label: Sprechstunden
+            widget: list
+            name: appointments
+            fields:
+              - { label: Tag, name: day, widget: string }
+              - { label: Öffnungszeiten, name: openingHours, widget: string }
+      - file: content/settings/footer.yml
+        label: Footer
+        name: footer
+        preview: false
+        fields:
+          - { label: Sammlung, name: collection, widget: hidden, default: setting }
+          - { label: Slug, name: slug, widget: hidden, default: footer }
+          - { label: Text, name: text, widget: text }
+      - file: content/settings/contact.yml
+        label: Kontaktinformationen
+        name: contact
+        preview: false
+        fields:
+          - { label: Sammlung, name: collection, widget: hidden, default: setting }
+          - { label: Slug, name: slug, widget: hidden, default: contact }
+          - { label: Telefon, name: phone, widget: string }
+          - { label: E-Mail, name: email, widget: string }
+          - { label: Adresse, name: address, widget: text }

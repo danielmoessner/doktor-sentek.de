@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import Layout from '../components/Layout';
 import Seo from '../components/Seo';
+import Appointments from '../components/Appointments';
 import Header from '../components/Header';
 
 function Page({ data }) {
@@ -128,44 +129,7 @@ function Page({ data }) {
                   Sprechstundenzeiten
                 </h2>
                 <div className="mt-3">
-                  <dl className="sm:divide-y sm:divide-gray-200">
-                    <div className="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                      <dt className="text-sm font-medium text-gray-500">Montag</dt>
-                      <dd className="mt-1 text-sm text-gray-700 sm:mt-0 sm:col-span-2 sm:text-right">
-                        8:00 - 17:00 Uhr
-                      </dd>
-                    </div>
-                    <div className="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                      <dt className="text-sm font-medium text-gray-500">Dienstag</dt>
-                      <dd className="mt-1 text-sm text-gray-700 sm:mt-0 sm:col-span-2 sm:text-right">
-                        8:00 - 17:00 Uhr
-                      </dd>
-                    </div>
-                    <div className="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                      <dt className="text-sm font-medium text-gray-500">Mittwoch</dt>
-                      <dd className="mt-1 text-sm text-gray-700 sm:mt-0 sm:col-span-2 sm:text-right">
-                        8:00 - 17:00 Uhr
-                      </dd>
-                    </div>
-                    <div className="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                      <dt className="text-sm font-medium text-gray-500">Donnerstag</dt>
-                      <dd className="mt-1 text-sm text-gray-700 sm:mt-0 sm:col-span-2 sm:text-right">
-                        8:00 - 17:00 Uhr
-                      </dd>
-                    </div>
-                    <div className="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                      <dt className="text-sm font-medium text-gray-500">Freitag</dt>
-                      <dd className="mt-1 text-sm text-gray-700 sm:mt-0 sm:col-span-2 sm:text-right">
-                        8:00 - 17:00 Uhr
-                      </dd>
-                    </div>
-                    <div className="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                      <dt className="text-sm font-medium text-gray-500">Samstag</dt>
-                      <dd className="mt-1 text-sm text-gray-700 sm:mt-0 sm:col-span-2 sm:text-right">
-                        Geschlossen
-                      </dd>
-                    </div>
-                  </dl>
+                  <Appointments />
                 </div>
               </div>
             </div>

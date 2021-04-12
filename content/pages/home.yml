@@ -4,5 +4,34 @@ meta:
   description: Beschreibung
   title: Facharztpraxis
   image: ../media/elch.jpg
+header:
+  title: Ihre Facharztpraxis in
+  titleColor: Stadt
+  text: Wir helfen Ihnen mit Fachkentniss, nicht operativen und operativen
+    Methoden. Wir freuen uns darauf Sie in unserer Praxis begrüßen zu dürfen.
+  buttonLeft: Zu den Sprechstunden
+  buttonRight: Krankheitsbilder
+  image: ../media/boot.jpg
+illness:
+  title: Krankheitsbilder
+  text: Wir behandeln Sie modern und zuverlässig bei folgenden Krankheitsbildern.
+team:
+  title: Wir sind für Sie da
+  text: Nulla quam felis, enim faucibus proin velit, ornare id pretium. Augue
+    ultrices sed arcu condimentum vestibulum suspendisse. Volutpat eu faucibus
+    vivamus eget bibendum cras.
+  button: Mehr erfahren
+appointment:
+  title: Unsere Sprechstundenzeiten
+  text: Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa
+    dictumst amet. Sapien tortor lacus arcu.
 antiAging:
   image: ../media/r-d-smith-7ibuzq6cugs-unsplash.jpg
+  pretitle: "NEU: ANTI AGING"
+  title: Faltenunterspritzung mit Botox und Hyaluronsäure
+  text: Falten bekommt jeder im Laufe seines Lebens. Doch oft lassen Falten einen
+    Menschen älter aussehen, als er sich eigentlich fühlt und es entsteht ein
+    falscher Eindruck, unter dem vor allem Frauen häufig leiden. Moderne
+    Behandlungsmethoden zur Reduzierung von Falten sind sanft und setzen auf
+    Wirkstoffe wie die Hyaluronsäure.
+  button: Jetzt mehr erfahren

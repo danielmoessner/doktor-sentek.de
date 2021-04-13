@@ -33,11 +33,24 @@ function Component() {
         phone
         email
       }
+      footer: settingsYaml(slug: { eq: "footer" }) {
+        text
+        column1
+        column2
+        column3
+        column4
+        link11
+        link12
+        link13
+        link14
+        link41
+        link42
+      }
     }
   `);
   const illnessLinks = data.illnesses.nodes.map((node) => node.frontmatter);
   const operationLinks = data.operations.nodes.map((node) => node.frontmatter);
-  const { contact } = data;
+  const { contact, footer } = data;
 
   return (
     <footer className="bg-gray-50 shadow-inner" aria-labelledby="footerHeading">
@@ -48,9 +61,7 @@ function Component() {
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8 xl:col-span-1 text-teal-900">
             <Logo />
-            <p className="text-gray-500 text-base">
-              Making the world a better place through constructing elegant hierarchies.
-            </p>
+            <p className="text-gray-500 text-base">{footer.text}</p>
             <div className="flex flex-col space-y-3">
               <div className="flex flex-row items-center">
                 <svg
@@ -102,12 +113,12 @@ function Component() {
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
                 <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-                  Navigation
+                  {footer.column1}
                 </h3>
                 <ul className="mt-4 space-y-4">
                   <li>
                     <Link to="/" className="text-base text-gray-500 hover:text-gray-900">
-                      Startseite
+                      {footer.link11}
                     </Link>
                   </li>
                   <li>
@@ -115,24 +126,24 @@ function Component() {
                       to="/nicht-operative-therapie/"
                       className="text-base text-gray-500 hover:text-gray-900"
                     >
-                      Nicht-operative Therapie
+                      {footer.link12}
                     </Link>
                   </li>
                   <li>
                     <Link to="/team/" className="text-base text-gray-500 hover:text-gray-900">
-                      Team
+                      {footer.link13}
                     </Link>
                   </li>
                   <li>
                     <Link to="/kontakt/" className="text-base text-gray-500 hover:text-gray-900">
-                      Sprechstunden
+                      {footer.link14}
                     </Link>
                   </li>
                 </ul>
               </div>
               <div className="mt-12 md:mt-0">
                 <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-                  Krankheitsbilder
+                  {footer.column2}
                 </h3>
                 <ul className="mt-4 space-y-4">
                   {illnessLinks.map((link) => (
@@ -151,7 +162,7 @@ function Component() {
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
                 <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-                  Operationen
+                  {footer.column3}
                 </h3>
                 <ul className="mt-4 space-y-4">
                   {operationLinks.map((link) => (
@@ -168,18 +179,21 @@ function Component() {
               </div>
               <div className="mt-12 md:mt-0">
                 <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-                  Rechtliches
+                  {footer.column4}
                 </h3>
                 <ul className="mt-4 space-y-4">
                   <li>
-                    <Link to="/" className="text-base text-gray-500 hover:text-gray-900">
-                      Impressum
+                    <Link to="/impressum/" className="text-base text-gray-500 hover:text-gray-900">
+                      {footer.link41}
                     </Link>
                   </li>
 
                   <li>
-                    <Link to="/" className="text-base text-gray-500 hover:text-gray-900">
-                      Datenschutz
+                    <Link
+                      to="/datenschutz/"
+                      className="text-base text-gray-500 hover:text-gray-900"
+                    >
+                      {footer.link42}
                     </Link>
                   </li>
                 </ul>

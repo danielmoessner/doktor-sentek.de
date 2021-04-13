@@ -1,0 +1,9 @@
+collection: page
+slug: team
+meta:
+  title: Team
+  description: team beschr
+  image: ../media/boot.jpg
+header:
+  title: Team
+  text: Lernen Sie uns kennen

@@ -38,11 +38,21 @@ function Component() {
           }
         }
       }
+      navigation: settingsYaml(slug: { eq: "navigation" }) {
+        link1
+        link2
+        link3
+        link4
+        link5
+        link6
+        mobileLink2
+        mobileLink4
+      }
     }
   `);
   const illnessLinks = data.illnesses.nodes.map((node) => node.frontmatter);
   const operationLinks = data.operations.nodes.map((node) => node.frontmatter);
-  const { contact } = data;
+  const { contact, navigation } = data;
 
   return (
     <>
@@ -102,7 +112,7 @@ function Component() {
           </div>
         </div>
       </div>
-      <nav className="border-b border-gray-100 sticky top-0 bg-white z-50 shadow-sm">
+      <nav className="border-b border-gray-100 lg:sticky lg:top-0 bg-white z-50 shadow-sm">
         <div className="max-w-7xl mx-auto lg:px-6">
           <div className="">
             <div>
@@ -154,20 +164,20 @@ function Component() {
                       <Logo />
                     </Link>
                     <div className="hidden lg:ml-6 lg:flex lg:space-x-4">
-                      <NavigationLink to="/">Startseite</NavigationLink>
+                      <NavigationLink to="/">{navigation.link1}</NavigationLink>
                       <NavigationDropdown linkPrepend="krankheitsbilder/" links={illnessLinks}>
-                        Krankheitsbilder
+                        {navigation.link2}
                       </NavigationDropdown>
                       <NavigationLink to="/nicht-operative-therapie/">
-                        Nicht-operative Therapie
+                        {navigation.link3}
                       </NavigationLink>
                       <NavigationDropdown linkPrepend="operationen/" links={operationLinks}>
-                        Operationen
+                        {navigation.link4}
                       </NavigationDropdown>
-                      <NavigationLink to="/team/">Team</NavigationLink>
+                      <NavigationLink to="/team/">{navigation.link5}</NavigationLink>
                       <div className="self-center">
                         <Button small to="/kontakt/">
-                          Sprechstunden
+                          {navigation.link6}
                         </Button>
                       </div>
                     </div>
@@ -176,28 +186,28 @@ function Component() {
 
                 <div className={`lg:hidden ${menuOpen ? 'block' : 'hidden'}`} id="mobile-menu">
                   <div className="pt-2 pb-4 space-y-1">
-                    <NavigationMobileLink to="/">Startseite</NavigationMobileLink>
+                    <NavigationMobileLink to="/">{navigation.link1}</NavigationMobileLink>
                     {illnessLinks.map((link) => (
                       <NavigationMobileLink key={link.slug} to={`/krankheitsbilder/${link.slug}/`}>
                         <div className="flex space-x-2">
-                          <div>Krankheitsbild:</div>
+                          <div>{navigation.mobileLink2}</div>
                           <div>{link.title}</div>
                         </div>
                       </NavigationMobileLink>
                     ))}
                     <NavigationMobileLink to="/nicht-operative-therapie/">
-                      Nicht-operative Therapie
+                      {navigation.link3}
                     </NavigationMobileLink>
                     {operationLinks.map((link) => (
                       <NavigationMobileLink key={link.slug} to={`/operationen/${link.slug}/`}>
                         <div className="flex space-x-2">
-                          <div>Operation:</div>
+                          <div>{navigation.mobileLink4}</div>
                           <div>{link.title}</div>
                         </div>
                       </NavigationMobileLink>
                     ))}
-                    <NavigationMobileLink to="/team/">Team</NavigationMobileLink>
-                    <NavigationMobileLink to="/kontakt/">Sprechstunden</NavigationMobileLink>
+                    <NavigationMobileLink to="/team/">{navigation.link5}</NavigationMobileLink>
+                    <NavigationMobileLink to="/kontakt/">{navigation.link6}</NavigationMobileLink>
                   </div>
                 </div>
               </nav>

@@ -5,17 +5,19 @@ import Layout from '../components/Layout';
 import Seo from '../components/Seo';
 import Appointments from '../components/Appointments';
 import Header from '../components/Header';
+import lineBreaks from '../utils/lineBreaks';
 
 function Page({ data }) {
   const page = data.pagesYaml;
+  const contact = data.settingsYaml;
 
   return (
     <Layout
       header={
         // eslint-disable-next-line
         <Header
-          title="Kontakt"
-          subtitle="Wir freuen uns darauf Sie in unserer Praxis begrüßen zu dürfen"
+          title={page.header.title}
+          subtitle={page.header.text}
         />
       }
     >
@@ -29,9 +31,15 @@ function Page({ data }) {
           <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
             <div className="max-w-lg mx-auto md:max-w-none md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h2 className="text-2xl font-extrabold text-gray-900 sm:text-3xl">Kontakt</h2>
+                <h2 className="text-2xl font-extrabold text-gray-900 sm:text-3xl">
+                  {page.contact.title1}
+                </h2>
                 <div className="mt-3">
-                  <p className="text-lg text-gray-500">Wir freuen uns auf Ihren Anruf</p>
+                  <p
+                    className="text-lg text-gray-500"
+                    // eslint-disable-next-line
+                    dangerouslySetInnerHTML={{ __html: lineBreaks(page.contact.text1) }}
+                  />
                 </div>
                 <div className="mt-9">
                   <div className="flex">
@@ -53,7 +61,7 @@ function Page({ data }) {
                       </svg>
                     </div>
                     <div className="ml-3 text-base text-gray-500">
-                      <p>+1 (555) 123 4567</p>
+                      <p>{contact.phone}</p>
                     </div>
                   </div>
                   <div className="mt-6 flex">
@@ -75,7 +83,7 @@ function Page({ data }) {
                       </svg>
                     </div>
                     <div className="ml-3 text-base text-gray-500">
-                      <p>support@example.com</p>
+                      <p>{contact.email}</p>
                     </div>
                   </div>
                   <div className="mt-6 flex">
@@ -102,16 +110,18 @@ function Page({ data }) {
                       </svg>
                     </div>
                     <div className="ml-3 text-base text-gray-500">
-                      <address>
-                        Straße 123
-                        <br />
-                        12345 Stadt
-                      </address>
+                      <address
+                        className=""
+                        // eslint-disable-next-line
+                        dangerouslySetInnerHTML={{ __html: lineBreaks(contact.address) }} 
+                      />
                     </div>
                   </div>
                 </div>
                 <div className="mt-9">
-                  <h2 className="text-2xl font-extrabold text-gray-900 sm:text-3xl">Anfahrt</h2>
+                  <h2 className="text-2xl font-extrabold text-gray-900 sm:text-3xl">
+                    {page.contact.title2}
+                  </h2>
                   <iframe
                     className="w-full mt-3"
                     title="Maps"
@@ -126,7 +136,7 @@ function Page({ data }) {
               </div>
               <div className="mt-12 sm:mt-16 md:mt-0">
                 <h2 className="text-2xl font-extrabold text-gray-900 sm:text-3xl">
-                  Sprechstundenzeiten
+                  {page.contact.title3}
                 </h2>
                 <div className="mt-3">
                   <Appointments />
@@ -161,6 +171,21 @@ export const query = graphql`
         description
         title
       }
+      header {
+        title
+        text
+      }
+      contact {
+        title1
+        title2
+        title3
+        text1
+      }
+    }
+    settingsYaml(slug: { eq: "contact" }) {
+      phone
+      address
+      email
     }
   }
 `;

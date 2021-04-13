@@ -1,7 +1,6 @@
-kontakt seite ins cms
-team ins cms
-krankheitsbilder ins cms mit meta bild optional
-operation ins cms mit meta bild optional
 bilder einfügen
-footer vom cms verwenden
+
 buttons aktivieren
+
+operationsgespräch seite
+anti aging seite

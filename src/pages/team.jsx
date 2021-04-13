@@ -4,23 +4,30 @@ import PropTypes from 'prop-types';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import Layout from '../components/Layout';
 import Header from '../components/Header';
+import Seo from '../components/Seo';
 
 function Page({ data }) {
   const members = data.allMarkdownRemark.nodes.map((node) => ({
     ...node.frontmatter,
     html: node.html,
   }));
+  const page = data.pagesYaml;
 
   return (
     <Layout
       header={
         // eslint-disable-next-line
         <Header
-          title="Team"
-          subtitle="Wir freuen uns darauf Sie in unserer Praxis begrüßen zu dürfen"
+          title={page.header.title}
+          subtitle={page.header.text}
         />
       }
     >
+      <Seo
+        title={page.meta.title}
+        description={page.meta.description}
+        image={page.meta.image.childImageSharp.resize.src}
+      />
       <section>
         <div className="bg-white" id="aerzte">
           <div className="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
@@ -86,6 +93,23 @@ export const query = graphql`
             }
           }
         }
+      }
+    }
+    pagesYaml(slug: { eq: "team" }) {
+      meta {
+        image {
+          childImageSharp {
+            resize(width: 1200) {
+              src
+            }
+          }
+        }
+        description
+        title
+      }
+      header {
+        title
+        text
       }
     }
   }

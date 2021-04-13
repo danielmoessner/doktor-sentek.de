@@ -84,13 +84,22 @@ collections:
               - { label: Titel, name: title, widget: string }
               - { label: Text, name: text, widget: text }
               - { label: Button, name: button, widget: string }
+      
+      - file: content/pages/illness.yml
+        label: Krankheitsbilder
+        name: illness
+        fields:
+          - { label: Sammlung, name: collection, widget: hidden, default: page }
+          - { label: Slug, name: slug, widget: hidden, default: illness }
+          - { label: Vortitel, name: pretitle, widget: string }
+
 
       - file: content/pages/nonSurgicalTherapies.md
         label: Nicht-operative Therapien
         name: nonSurgicalTherapies
         fields:
           - { label: Sammlung, name: collection, widget: hidden, default: page }
-          - { label: Slug, name: slug, widget: hidden, default: home }
+          - { label: Slug, name: slug, widget: hidden, default: non-surgical-therapies }
           - label: Meta
             name: meta
             widget: object
@@ -111,6 +120,36 @@ collections:
             name: body
             widget: markdown
             hint: Bitte nur Überschrift 2-6 verwenden für SEO.
+     
+      - file: content/pages/operation.yml
+        label: Operationen
+        name: operation
+        fields:
+          - { label: Sammlung, name: collection, widget: hidden, default: page }
+          - { label: Slug, name: slug, widget: hidden, default: operation }
+          - { label: Vortitel, name: pretitle, widget: string }
+
+      - file: content/pages/team.yml
+        label: Team
+        name: team
+        fields:
+          - { label: Sammlung, name: collection, widget: hidden, default: page }
+          - { label: Slug, name: slug, widget: hidden, default: contact }
+          - label: Meta
+            name: meta
+            widget: object
+            fields:
+              - { label: Titel, name: title, widget: string }
+              - label: Beschreibung
+                name: description
+                widget: text
+              - { label: Bild, name: image, widget: image }    
+          - label: Header
+            name: header
+            widget: object
+            fields:
+              - { label: Titel, name: title, widget: string }
+              - { label: Text, name: text, widget: string }     
 
       - file: content/pages/contact.yml
         label: Kontakt
@@ -126,7 +165,67 @@ collections:
               - label: Beschreibung
                 name: description
                 widget: text
-              - { label: Bild, name: image, widget: image }         
+              - { label: Bild, name: image, widget: image }     
+          - label: Header
+            name: header
+            widget: object
+            fields:
+              - { label: Titel, name: title, widget: string }
+              - { label: Text, name: text, widget: string }     
+          - label: Kontakt
+            name: contact
+            widget: object
+            fields: 
+              - { label: Titel 1, name: title1, widget: string }
+              - { label: Text 1, name: text1, widget: text }
+              - { label: Titel 2, name: title2, widget: string }
+              - { label: Titel 3, name: title3, widget: string }
+      
+      - file: content/pages/imprint.md
+        label: Impressum
+        name: imprint
+        fields:
+          - { label: Sammlung, name: collection, widget: hidden, default: page }
+          - { label: Slug, name: slug, widget: hidden, default: imprint }
+          - label: Meta
+            name: meta
+            widget: object
+            fields:
+              - { label: Titel, name: title, widget: string }
+              - label: Beschreibung
+                name: description
+                widget: text
+          - label: Header
+            name: header
+            widget: object
+            fields:
+              - { label: Vortitel, name: pretitle, widget: string }
+              - { label: Titel, name: title, widget: string }
+              - { label: Text, name: text, widget: text }
+          - { label: Inhalt, name: body, widget: markdown, hint: Bitte nur Überschrift 2-6 verwenden für SEO. }
+
+      - file: content/pages/dataProtection.md
+        label: Datenschutz
+        name: dataProtection
+        fields:
+          - { label: Sammlung, name: collection, widget: hidden, default: page }
+          - { label: Slug, name: slug, widget: hidden, default: dataProtection }
+          - label: Meta
+            name: meta
+            widget: object
+            fields:
+              - { label: Titel, name: title, widget: string }
+              - label: Beschreibung
+                name: description
+                widget: text
+          - label: Header
+            name: header
+            widget: object
+            fields:
+              - { label: Vortitel, name: pretitle, widget: string }
+              - { label: Titel, name: title, widget: string }
+              - { label: Text, name: text, widget: text }
+          - { label: Inhalt, name: body, widget: markdown, hint: Bitte nur Überschrift 2-6 verwenden für SEO. }
 
   - name: member
     label: Teammitglieder
@@ -136,7 +235,6 @@ collections:
     folder: content/member
     slug: '{{fields.slug}}'
     create: true
-    # preview_path: wildtiere/{{fields.slug}}
     fields:
       - { label: Sammlung, name: collection, widget: hidden, default: member }
       - { label: Titel, name: title, widget: string }
@@ -166,7 +264,7 @@ collections:
           - label: Beschreibung
             name: description
             widget: text
-          - { label: Bild, name: image, widget: image }
+          - { label: Bild, name: image, widget: image, required: false }
       - { label: Titel, name: title, widget: string }
       - { label: Slug, name: slug, widget: string }
       - { label: Auszug, name: excerpt, widget: text }
@@ -195,7 +293,7 @@ collections:
           - label: Beschreibung
             name: description
             widget: text
-          - { label: Bild, name: image, widget: image }
+          - { label: Bild, name: image, widget: image, required: false }
       - { label: Titel, name: title, widget: string }
       - { label: Slug, name: slug, widget: string }
       - { label: Auszug, name: excerpt, widget: text }
@@ -245,14 +343,6 @@ collections:
             fields:
               - { label: Tag, name: day, widget: string }
               - { label: Öffnungszeiten, name: openingHours, widget: string }
-      - file: content/settings/footer.yml
-        label: Footer
-        name: footer
-        preview: false
-        fields:
-          - { label: Sammlung, name: collection, widget: hidden, default: setting }
-          - { label: Slug, name: slug, widget: hidden, default: footer }
-          - { label: Text, name: text, widget: text }
       - file: content/settings/contact.yml
         label: Kontaktinformationen
         name: contact
@@ -263,3 +353,36 @@ collections:
           - { label: Telefon, name: phone, widget: string }
           - { label: E-Mail, name: email, widget: string }
           - { label: Adresse, name: address, widget: text }
+      - file: content/settings/navigation.yml
+        label: Navigation
+        name: navigation
+        preview: false
+        fields:
+          - { label: Sammlung, name: collection, widget: hidden, default: setting }
+          - { label: Slug, name: slug, widget: hidden, default: footer }
+          - { label: Link 1, name: link1, widget: string }
+          - { label: Link 2, name: link2, widget: string }
+          - { label: Link 3, name: link3, widget: string }
+          - { label: Link 4, name: link4, widget: string }
+          - { label: Link 5, name: link5, widget: string }
+          - { label: Link 6, name: link6, widget: string }
+          - { label: Mobil Link 2, name: mobileLink2, widget: string }
+          - { label: Mobil Link 4, name: mobileLink4, widget: string }
+      - file: content/settings/footer.yml
+        label: Footer
+        name: footer
+        preview: false
+        fields:
+          - { label: Sammlung, name: collection, widget: hidden, default: setting }
+          - { label: Slug, name: slug, widget: hidden, default: footer }
+          - { label: Text, name: text, widget: text }
+          - { label: Spalte 1, name: column1, widget: string }
+          - { label: Spalte 2, name: column2, widget: string }
+          - { label: Spalte 3, name: column3, widget: string }
+          - { label: Spalte 4, name: column4, widget: string }
+          - { label: Link 1-1, name: link11, widget: string }
+          - { label: Link 1-2, name: link12, widget: string }
+          - { label: Link 1-3, name: link13, widget: string }
+          - { label: Link 1-4, name: link14, widget: string }
+          - { label: Link 4-1, name: link41, widget: string }
+          - { label: Link 4-2, name: link42, widget: string }

@@ -4,3 +4,11 @@ meta:
   title: Kontakt
   description: beschr
   image: ../media/boot.jpg
+header:
+  title: Kontakt
+  text: Wir freuen uns Sie in unserer Praxis begrüßen zu dürfen.
+contact:
+  title1: Kontakt
+  text1: Wir freuen uns auf Sie
+  title2: Anfahrt
+  title3: Sprechstundenzeiten

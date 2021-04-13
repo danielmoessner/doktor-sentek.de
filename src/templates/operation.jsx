@@ -6,20 +6,19 @@ import Seo from '../components/Seo';
 import Article from '../components/Article';
 
 function Page({ data }) {
-  const page = { html: data.markdownRemark.html, ...data.markdownRemark.frontmatter };
+  const operation = { html: data.markdownRemark.html, ...data.markdownRemark.frontmatter };
+  const page = data.pagesYaml;
   const header = {
-    pretitle: 'Operation',
-    title: page.title,
-    text: page.excerpt,
+    pretitle: page.pretitle,
+    title: operation.title,
+    text: operation.excerpt,
   };
+  const image = operation.meta.image ? operation.meta.image.childImageSharp.resize.src : '';
+
   return (
     <Layout>
-      <Seo
-        title={page.meta.title}
-        description={page.meta.description}
-        image={page.meta.image.childImageSharp.resize.src}
-      />
-      <Article header={header} html={page.html} />
+      <Seo title={operation.meta.title} description={operation.meta.description} image={image} />
+      <Article header={header} html={operation.html} />
     </Layout>
   );
 }
@@ -33,6 +32,9 @@ export default Page;
 
 export const query = graphql`
   query($slug: String!) {
+    pagesYaml(slug: { eq: "operation" }) {
+      pretitle
+    }
     markdownRemark(frontmatter: { collection: { eq: "operation" }, slug: { eq: $slug } }) {
       id
       html

@@ -13,11 +13,14 @@ function Page({ data }) {
     title: illness.title,
     text: illness.excerpt,
   };
-  const image = illness.meta.image ? illness.meta.image.childImageSharp.resize.src : '';
 
   return (
     <Layout>
-      <Seo title={illness.meta.title} description={illness.meta.description} image={image} />
+      <Seo
+        title={illness.meta.title}
+        description={illness.meta.description}
+        image={illness.meta.image.childImageSharp.resize.src}
+      />
       <Article header={header} html={illness.html} />
     </Layout>
   );

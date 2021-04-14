@@ -3,7 +3,7 @@ collection: illness
 meta:
   title: Krankheitsbild - Ellenbogen
   description: Ellenbogen
-  image: ""
+  image: ../media/boot.jpg
 title: Ellenbogen
 slug: ellenbogen
 excerpt: |-

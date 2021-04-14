@@ -3,7 +3,7 @@ collection: operation
 meta:
   title: "Operation: Hand"
   description: beschr
-  image: ""
+  image: ../media/boot.jpg
 title: Hand
 slug: hand
 excerpt: Als Handchirurg stellt für mich die operative Behandlung von Pat mit

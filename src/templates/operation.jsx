@@ -15,12 +15,15 @@ function Page({ data, location }) {
     title: operation.title,
     text: operation.excerpt,
   };
-  const image = operation.meta.image ? operation.meta.image.childImageSharp.resize.src : '';
   const [enabled, setEnabled] = useState(false);
 
   return (
     <Layout>
-      <Seo title={operation.meta.title} description={operation.meta.description} image={image} />
+      <Seo
+        title={operation.meta.title}
+        description={operation.meta.description}
+        image={operation.meta.image.childImageSharp.resize.src}
+      />
       <Article header={header} html={operation.html} />
 
       <div

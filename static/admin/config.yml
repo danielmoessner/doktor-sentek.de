@@ -319,7 +319,7 @@ collections:
           - label: Beschreibung
             name: description
             widget: text
-          - { label: Bild, name: image, widget: image, required: false }
+          - { label: Bild, name: image, widget: image }
       - { label: Titel, name: title, widget: string }
       - { label: Slug, name: slug, widget: string }
       - { label: Auszug, name: excerpt, widget: text }
@@ -348,7 +348,7 @@ collections:
           - label: Beschreibung
             name: description
             widget: text
-          - { label: Bild, name: image, widget: image, required: false }
+          - { label: Bild, name: image, widget: image }
       - { label: Titel, name: title, widget: string }
       - { label: Slug, name: slug, widget: string }
       - { label: Auszug, name: excerpt, widget: text }

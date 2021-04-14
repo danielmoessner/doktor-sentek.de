@@ -1,4 +1,0 @@
----
-title: Säugetiere
-slug: saeugetiere
----

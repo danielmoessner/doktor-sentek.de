@@ -108,7 +108,7 @@ function Component({ header, html }) {
             <p className="mt-8 text-xl text-gray-500 leading-8">{header.text}</p>
           </header>
           <div
-            className="mt-6 prose prose-teal prose-lg text-gray-500 mx-auto"
+            className="mt-6 prose prose-teal lg:prose-lg text-gray-500 mx-auto"
             // eslint-disable-next-line
             dangerouslySetInnerHTML={{ __html: html }}
           />

@@ -62,6 +62,7 @@ collections:
             fields: 
               - { label: Titel, name: title, widget: string }
               - { label: Text, name: text, widget: string }
+              - { label: Button, name: button, widget: string }
           - label: Team
             name: team 
             widget: object
@@ -127,7 +128,34 @@ collections:
         fields:
           - { label: Sammlung, name: collection, widget: hidden, default: page }
           - { label: Slug, name: slug, widget: hidden, default: operation }
-          - { label: Vortitel, name: pretitle, widget: string }
+          - label: Inhalt
+            name: content
+            widget: object
+            fields: 
+              - { label: Vortitel, name: pretitle, widget: string }
+          - label: Formular
+            name: form
+            widget: object
+            fields:
+              - { label: Titel, name: title, widget: string }
+              - { label: Text, name: text, widget: string }
+              - { label: Name 1, name: name1, widget: string }
+              - { label: Name 2, name: name2, widget: string }
+              - { label: Telefon, name: phone, widget: string }
+              - { label: Mail, name: email, widget: string }
+              - { label: Operation, name: operation, widget: string }
+              - { label: Zeiten, name: hoursLabel, widget: string }
+              - label: Verfügbare Zeiten
+                name: hours
+                widget: list
+                fields:
+                  - { label: Zeit, name: hour, widget: string }
+                  - { label: Aktiv, name: active, widget: boolean, required: false }
+              - { label: Nachricht, name: message, widget: string }
+              - { label: Datenschutz, name: dataProtection, widget: string }
+              - { label: Button, name: button, widget: string }
+              - { label: Titel abgesendet, name: successTitle, widget: string }
+              - { label: Text abgesende, name: successText, widget: string }
 
       - file: content/pages/team.yml
         label: Team
@@ -180,7 +208,34 @@ collections:
               - { label: Text 1, name: text1, widget: text }
               - { label: Titel 2, name: title2, widget: string }
               - { label: Titel 3, name: title3, widget: string }
-      
+            
+      - file: content/pages/antiAging.md
+        label: Anti Aging
+        name: antiAging
+        fields:
+          - { label: Sammlung, name: collection, widget: hidden, default: page }
+          - { label: Slug, name: slug, widget: hidden, default: anti-aging }
+          - label: Meta
+            name: meta
+            widget: object
+            fields:
+              - { label: Titel, name: title, widget: string }
+              - label: Beschreibung
+                name: description
+                widget: text
+              - { label: Bild, name: image, widget: image }
+          - label: Header
+            name: header
+            widget: object
+            fields:
+              - { label: Vortitel, name: pretitle, widget: string }
+              - { label: Titel, name: title, widget: string }
+              - { label: Text, name: text, widget: text }
+          - label: Inhalt
+            name: body
+            widget: markdown
+            hint: Bitte nur Überschrift 2-6 verwenden für SEO.
+
       - file: content/pages/imprint.md
         label: Impressum
         name: imprint
@@ -231,7 +286,7 @@ collections:
     label: Teammitglieder
     label_singular: Teammitglied
     editor:
-      preview: true
+      preview: false
     folder: content/member
     slug: '{{fields.slug}}'
     create: true
@@ -248,7 +303,7 @@ collections:
     label: Krankheitsbilder
     label_singular: Krankheitsbild
     editor:
-      preview: true
+      preview: false
     extension: md
     folder: content/illness
     slug: '{{fields.slug}}'
@@ -277,7 +332,7 @@ collections:
     label: Operationen
     label_singular: Operationen
     editor:
-      preview: true
+      preview: false
     extension: md
     folder: content/operation
     slug: '{{fields.slug}}'
@@ -301,18 +356,6 @@ collections:
         name: body
         widget: markdown
         hint: Bitte nur Überschrift 2-6 verwenden für SEO.
-
-  - name: category
-    label: Kategorien
-    label_singular: Kategorie
-    editor:
-      preview: false
-    folder: content/categories
-    slug: '{{slug}}'
-    create: true
-    fields:
-      - { label: Sammlung, name: collection, widget: hidden, default: category }
-      - { label: Titel, name: title, widget: string }
 
   - name: 'setting'
     label: Einstellungen

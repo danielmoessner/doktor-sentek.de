@@ -1,3 +1,27 @@
 collection: page
 slug: operation
 pretitle: Operation
+content:
+  pretitle: Operation
+form:
+  dataProtection: Ich stimme zu, dass meine Daten zum Bearbeiten der Anfrage
+    vorübergehend gespeichert werden.
+  hoursLabel: Zeit
+  name1: Vorname
+  message: Nachricht (optional)
+  operation: Operation
+  name2: Nachname
+  successTitle: Vielen Dank für Ihren Termin
+  text: Fragen? Wir helfen Ihnen gerne in einem Beratungsgespräch weiter.
+  phone: Telefonnummer
+  hours:
+    - hour: Nächsten Montag 10:00 Uhr
+      active: true
+    - hour: Nächsten Dienstag 17:00 Uhr
+      active: true
+    - hour: Nächsten Mittwoch 13:00 Uhr
+      active: false
+  button: Jetzt buchen
+  successText: Wir freuen uns darauf Sie demnächst in unserer Praxis kennen zu lernen.
+  title: Jetzt Operations-Beratungsgespräch buchen
+  email: E-Mail

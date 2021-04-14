@@ -11,6 +11,7 @@ header:
   text: Nicht-operative Therapien können oft eine Operation verhindern und zur
     körpereigenen Heilung beitragen.
 ---
+![alt](../media/boot.jpg "title")
 
 ## Manuelle Medizin / Chirotherapie 
 
@@ -21,6 +22,8 @@ Die Manuelle Medizin beschäftigt sich mit den Funktionsstörungen der Gelenke u
 Es gibt etliche schulmedizinische wie auch rein pflanzliche Wirkstoffe, mit denen sich Leiden am Bewegungsapparat effektiv behandeln lassen. Die wichtigsten Einsatzgebiete sind die Schmerzlinderung, die Förderung der Durchblutung, die Bekämpfung von Entzündungen und Schwellungen sowie die Entspannung von Muskeln. Dabei können die Medikamente je nach Wirkstoff und Krankheitsbild entweder als Tablette oder über eine Spritze verabreicht werden. Mit Spritzen kann man auch knorpelschützende und aufbauende Präparate direkt in ein Gelenk injizieren, bei dem ein Knorpelschaden zur Arthrose zu werden droht.
 
 ## Autologes Conditioniertes Plasma (ACP) 
+
+![alt](../media/boot.jpg "tit")
 
 Für eine Vielzahl von Erkrankungen bzw. Verletzungen von Gelenken, Muskeln oder Sehnen gibt es seit kurzer Zeit eine Alternative zu den herkömmlichen Therapien. Mit Hilfe von körpereigenem, konditioniertem Blutplasma (ACP) kann die Regeneration des Gewebes beschleunigt und dadurch eine Heilung unterstützt und Schmerzen gelindert werden.
 
@@ -48,6 +51,8 @@ Die Kosten der Therapie werden bisher noch nicht von den gesetzlichen Krankenkas
 
 ## Elektrotherapie 
 
+![alt](../media/boot.jpg "title")
+
 Bei der Elektrotherapie wird elektrischer Strom über Elektroden in den Körper geleitet, um die Muskulatur zu entkrampfen oder zu stimulieren, die Durchblutung zu fördern oder Schmerzen zu lindern. Ein Sonderfall der Elektrotherapie ist die Iontophorese, bei der Strom genutzt wird, um ein medikamentöses Gel durch die Haut an die krankhafte oder schmerzhafte Stelle zu treiben, welches durch einfaches Aufreiben nicht genügend in die Tiefe dringen würde bzw. seine Wirkung dort nicht entfalten könnte.
 
 ## Wärmetherapie 
@@ -60,15 +65,11 @@ Ihren Ursprung hat die Stoßwellentherapie in der Behandlung von Nierensteinen: 
 
 Ob und in welchem Umfang die Stoßwellentherapie sinnvoll ist, muss immer individuell nach Rücksprache mit Ihrem behandelnden Arzt entschieden werden. Grundsätzlich ist die Therapie möglich bei folgenden Krankheitsbildern:
 
-- Tennis- oder Golferarm (Epikondylopathie)
-
-- Chronische Erkrankungen an der Achillessehne (Achillodynie)
-
-- Fersensporn (Plantarfasciitis)
-
-- Knochennahe Weichteilschmerzen und Verspannungen (Myogelosen)
-
-- Einigen Formen der Kalkschulter (Tendinitis calcarea)
+* Tennis- oder Golferarm (Epikondylopathie)
+* Chronische Erkrankungen an der Achillessehne (Achillodynie)
+* Fersensporn (Plantarfasciitis)
+* Knochennahe Weichteilschmerzen und Verspannungen (Myogelosen)
+* Einigen Formen der Kalkschulter (Tendinitis calcarea)
 
 ### Kosten
 

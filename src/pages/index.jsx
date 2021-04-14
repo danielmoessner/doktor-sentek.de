@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import Layout from '../components/Layout';
@@ -33,22 +33,20 @@ function Page({ data }) {
               </p>
               <div className="mt-10 sm:flex sm:justify-center lg:justify-start">
                 <div className="rounded-md shadow">
-                  <button
-                    type="button"
-                    href="#"
+                  <Link
+                    to="#sprechstunden"
                     className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-teal-600 hover:bg-teal-700 md:py-4 md:text-lg md:px-10"
                   >
                     {page.header.buttonLeft}
-                  </button>
+                  </Link>
                 </div>
                 <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
-                  <button
-                    type="button"
-                    href="#"
+                  <Link
+                    to="#krankheitsbilder"
                     className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-teal-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10"
                   >
                     {page.header.buttonRight}
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -61,7 +59,7 @@ function Page({ data }) {
             />
           </div>
         </section>
-        <section>
+        <section id="krankheitsbilder">
           <div className="bg-white">
             <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-24 lg:px-8">
               <div className="max-w-3xl mx-auto text-center">
@@ -91,11 +89,19 @@ function Page({ data }) {
                         {illness.title}
                       </p>
                     </dt>
-                    <dd
-                      className="mt-2 ml-9 text-base text-gray-500 line-clamp-3"
-                      // eslint-disable-next-line react/no-danger
-                      dangerouslySetInnerHTML={{ __html: lineBreaks(illness.excerpt) }}
-                    />
+                    <dd className="mt-2 ml-9 text-base text-gray-500">
+                      <p
+                        className="line-clamp-3"
+                        // eslint-disable-next-line react/no-danger
+                        dangerouslySetInnerHTML={{ __html: lineBreaks(illness.excerpt) }}
+                      />
+                      <Link
+                        className="mt-2 block text-base font-semibold text-teal-600 hover:text-teal-500"
+                        to={`/krankheitsbilder/${illness.slug}/`}
+                      >
+                        {page.illness.button}
+                      </Link>
+                    </dd>
                   </div>
                 ))}
               </dl>
@@ -141,12 +147,12 @@ function Page({ data }) {
                                 />
                               </div>
                               <div className="pt-4">
-                                <a
+                                <Link
                                   className="text-base font-semibold text-teal-600 hover:text-teal-500"
-                                  href="/team/#aerzte"
+                                  to="/team/"
                                 >
                                   {page.team.button}
-                                </a>
+                                </Link>
                               </div>
                             </div>
                           </div>
@@ -159,7 +165,7 @@ function Page({ data }) {
             </div>
           </div>
         </section>
-        <section>
+        <section id="sprechstunden">
           <div className="relative bg-white">
             <div className="absolute inset-0">
               <div className="absolute inset-y-0 left-0 w-1/2" />
@@ -253,13 +259,12 @@ function Page({ data }) {
                 <p className="mt-3 text-lg text-teal-050 text-opacity-80">{page.antiAging.text}</p>
                 <div className="mt-8">
                   <div className="inline-flex rounded-md shadow">
-                    <button
-                      type="button"
-                      href="#"
-                      className="block items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-teal-800 bg-white hover:bg-gray-50"
+                    <Link
+                      to="/anti-aging/"
+                      className="block items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-teal-800 bg-white hover:bg-gray-50 focus:outline-none ring-gray-50 focus:ring-2 ring-offset-teal-900 focus:ring-offset-2"
                     >
                       {page.antiAging.button}
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -311,6 +316,7 @@ export const query = graphql`
       }
       illness {
         text
+        button
         title
       }
       team {
@@ -357,6 +363,7 @@ export const query = graphql`
         frontmatter {
           title
           excerpt
+          slug
         }
       }
     }

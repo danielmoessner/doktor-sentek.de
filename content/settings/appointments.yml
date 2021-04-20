@@ -11,5 +11,3 @@ appointments:
     openingHours: 8:00 - 17:00 Uhr
   - day: Freitag
     openingHours: 8:00 - 17:00 Uhr
-  - day: Samstag
-    openingHours: Geschlossen

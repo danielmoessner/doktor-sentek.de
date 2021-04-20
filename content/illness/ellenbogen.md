@@ -24,7 +24,7 @@ Wichtig ist eine frühzeitig einsetzende Diagnostik und Therapie, um chronische 
 ### Behandlung
 
 * Medikamentöse Therapie 
-* Operation bei gescheiterter konservativer Therapie 
+* [Operation bei gescheiterter konservativer Therapie](/operationen/ellenbogen/)
 
 ## Schleimbeutelentzündung
 

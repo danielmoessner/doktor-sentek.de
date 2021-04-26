@@ -11,7 +11,6 @@ form:
   message: Nachricht (optional)
   operation: Operation
   name2: Nachname
-  successTitle: Vielen Dank für Ihren Termin
   text: Fragen? Wir helfen Ihnen gerne in einem Beratungsgespräch weiter.
   phone: Telefonnummer
   hours:
@@ -21,7 +20,8 @@ form:
       active: true
     - hour: Nächsten Mittwoch 13:00 Uhr
       active: false
-  button: Jetzt buchen
   successText: Wir freuen uns darauf Sie demnächst in unserer Praxis kennen zu lernen.
+  button: Jetzt absenden
+  successTitle: Vielen Dank für Ihren Termin
   title: Jetzt Operations-Beratungsgespräch buchen
   email: E-Mail

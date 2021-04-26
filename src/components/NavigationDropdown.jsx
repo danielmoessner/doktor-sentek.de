@@ -1,16 +1,40 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import PropTypes, { string } from 'prop-types';
 import { Transition } from '@headlessui/react';
+import { Link } from 'gatsby';
 import NavigationDropdownLink from './NavigationDropdownLink';
 
-function Component({ children, links, linkPrepend }) {
+function Component({
+  children,
+  links,
+  linkPrepend,
+  linksTitle,
+  links2,
+  startLinks,
+  endLinks,
+  links2Title,
+  pageLink,
+}) {
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  let timeout;
+  const close = () => {
+    timeout = setTimeout(() => setDropdownOpen(false), 200);
+  };
+  const open = () => {
+    clearTimeout(timeout);
+    setDropdownOpen(true);
+  };
+  const instantClose = () => {
+    setDropdownOpen(false);
+  };
 
   return (
     <div className="relative inline-flex items-center">
-      <button
-        type="button"
-        onClick={() => setDropdownOpen(!dropdownOpen)}
+      <Link
+        to={pageLink}
+        onMouseOver={open}
+        onMouseLeave={close}
+        onFocus={() => {}}
         className="group border-transparent text-gray-500 transition hover:border-teal-600 hover:text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-base font-medium h-full focus:outline-none"
         aria-expanded="false"
       >
@@ -29,7 +53,7 @@ function Component({ children, links, linkPrepend }) {
             clipRule="evenodd"
           />
         </svg>
-      </button>
+      </Link>
 
       <Transition
         enter="transition ease-out duration-200"
@@ -39,15 +63,55 @@ function Component({ children, links, linkPrepend }) {
         leave="transition ease-in duration-150"
         leaveFrom="opacity-100 translate-y-0"
         leaveTo="opacity-0 translate-y-1"
-        className="absolute z-10 transform translate-y-20 top-0 w-screen max-w-xs"
+        className="absolute z-10 transform translate-y-20 top-0 w-screen max-w-sm"
+        onMouseOver={open}
+        onMouseLeave={close}
+        onFocus={() => {}}
       >
         <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
           <div className="relative grid gap-1 bg-white py-3">
+            <div className="-ml-2">
+              {startLinks.map((link) => (
+                <NavigationDropdownLink key={link.link} to={link.link} close={instantClose}>
+                  {link.text}
+                </NavigationDropdownLink>
+              ))}
+            </div>
+            {linksTitle && (
+              <div className="text-sm pt-5 text-teal-800 uppercase px-3 font-medium tracking-wide">
+                {linksTitle}
+              </div>
+            )}
             {links.map((link) => (
-              <NavigationDropdownLink key={link.slug} to={`/${linkPrepend}${link.slug}/`}>
+              <NavigationDropdownLink
+                key={link.title}
+                to={`${linkPrepend}${link.slug}/`}
+                close={instantClose}
+              >
                 {link.title}
               </NavigationDropdownLink>
             ))}
+            {links2Title && (
+              <div className="pt-5 text-sm text-teal-800 uppercase px-3 font-medium tracking-wide">
+                {links2Title}
+              </div>
+            )}
+            {links2.map((link) => (
+              <NavigationDropdownLink
+                key={link.slug}
+                to={`${linkPrepend}${link.slug}/`}
+                close={instantClose}
+              >
+                {link.title}
+              </NavigationDropdownLink>
+            ))}
+            <div className="-ml-2">
+              {endLinks.map((link) => (
+                <NavigationDropdownLink key={link.link} to={link.link} close={instantClose}>
+                  {link.text}
+                </NavigationDropdownLink>
+              ))}
+            </div>
           </div>
         </div>
       </Transition>
@@ -55,7 +119,14 @@ function Component({ children, links, linkPrepend }) {
   );
 }
 
-Component.defaultProps = {};
+Component.defaultProps = {
+  startLinks: [],
+  endLinks: [],
+  linksTitle: '',
+  links2Title: '',
+  links2: [],
+  linkPrepend: '',
+};
 
 Component.propTypes = {
   children: PropTypes.oneOfType([PropTypes.element, PropTypes.string]).isRequired,
@@ -65,7 +136,28 @@ Component.propTypes = {
       slug: PropTypes.string,
     })
   ).isRequired,
-  linkPrepend: PropTypes.string.isRequired,
+  links2: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string,
+      slug: PropTypes.string,
+    })
+  ),
+  startLinks: PropTypes.arrayOf(
+    PropTypes.shape({
+      text: PropTypes.string,
+      link: PropTypes.string,
+    })
+  ),
+  endLinks: PropTypes.arrayOf(
+    PropTypes.shape({
+      text: PropTypes.string,
+      link: PropTypes.string,
+    })
+  ),
+  linksTitle: string,
+  links2Title: string,
+  linkPrepend: PropTypes.string,
+  pageLink: PropTypes.string.isRequired,
 };
 
 export default Component;

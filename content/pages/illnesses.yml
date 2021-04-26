@@ -1,0 +1,9 @@
+collection: page
+slug: illnesses
+meta:
+  title: Krankheitsbilder
+  description: beschr
+  image: ../media/boot.jpg
+header:
+  title: Krankheitsbilder
+  text: Krankheitsbilder

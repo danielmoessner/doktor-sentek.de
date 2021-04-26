@@ -1,10 +1,17 @@
 slug: navigation
 colleciton: setting
 link1: Startseite
-link2: Krankheitsbilder
-link3: Nicht-operative Therapie
-link4: Operationen
-link5: Team
+link2: Zur Person
+link3: Krankheitsbilder
+link4: Schwerpunkte
+link5: Kontakt
 link6: Sprechstunden
+focus:
+  inpatientOperations: Stationäres Operieren
+  outpatientSurgery: Ambulantes Operieren
+  operations: Operationen
+  therapies: Konservative Therapien
+  antiAging: Anti Aging
+  inpatientSurgery: Stationäres Operieren
 mobileLink2: "Krankheitsbild:"
 mobileLink4: "Operation:"

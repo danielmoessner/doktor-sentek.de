@@ -38,6 +38,17 @@ function Component() {
           }
         }
       }
+      therapies: allMarkdownRemark(
+        filter: { frontmatter: { collection: { eq: "therapy" } } }
+        sort: { fields: frontmatter___title }
+      ) {
+        nodes {
+          frontmatter {
+            slug
+            title
+          }
+        }
+      }
       navigation: settingsYaml(slug: { eq: "navigation" }) {
         link1
         link2
@@ -45,14 +56,62 @@ function Component() {
         link4
         link5
         link6
+        focus {
+          inpatientSurgery
+          outpatientSurgery
+          operations
+          therapies
+          antiAging
+        }
         mobileLink2
         mobileLink4
       }
     }
   `);
-  const illnessLinks = data.illnesses.nodes.map((node) => node.frontmatter);
-  const operationLinks = data.operations.nodes.map((node) => node.frontmatter);
   const { contact, navigation } = data;
+  const illnessLinks = data.illnesses.nodes.map((node) => node.frontmatter);
+  const operationLinks = data.operations.nodes
+    .map((node) => node.frontmatter)
+    .map((frontmatter) => ({
+      title: frontmatter.title,
+      slug: `/krankheitsbilder/${frontmatter.slug}`,
+    }));
+  const therapyLinks = data.therapies.nodes
+    .map((node) => node.frontmatter)
+    .map((frontmatter) => ({
+      title: frontmatter.title,
+      slug: `/konservative-therapie/${frontmatter.slug}`,
+    }));
+  const endLinks = [
+    {
+      text: navigation.focus.antiAging,
+      link: '/anti-aging/',
+    },
+  ];
+  const startLinks = [
+    {
+      text: navigation.focus.inpatientSurgery,
+      link: '/stationaeres-operieren/',
+    },
+    {
+      text: navigation.focus.outpatientSurgery,
+      link: '/ambulantes-operieren/',
+    },
+  ];
+  const contactLinks = [
+    {
+      title: 'Kontaktdaten',
+      slug: '/kontakt',
+    },
+    {
+      title: 'Sprechzeiten',
+      slug: '/kontakt',
+    },
+    {
+      title: 'Anfahrt',
+      slug: '/kontakt',
+    },
+  ];
 
   return (
     <>
@@ -168,16 +227,28 @@ function Component() {
                     </Link>
                     <div className="hidden lg:ml-6 lg:flex lg:space-x-4">
                       <NavigationLink to="/">{navigation.link1}</NavigationLink>
-                      <NavigationDropdown linkPrepend="krankheitsbilder/" links={illnessLinks}>
-                        {navigation.link2}
-                      </NavigationDropdown>
-                      <NavigationLink to="/nicht-operative-therapie/">
+                      <NavigationLink to="/team/">{navigation.link2}</NavigationLink>
+                      <NavigationDropdown
+                        pageLink="/krankheitsbilder/"
+                        linkPrepend="/krankheitsbilder/"
+                        links={illnessLinks}
+                      >
                         {navigation.link3}
-                      </NavigationLink>
-                      <NavigationDropdown linkPrepend="operationen/" links={operationLinks}>
+                      </NavigationDropdown>
+                      <NavigationDropdown
+                        pageLink="/schwerpunkte/"
+                        startLinks={startLinks}
+                        linksTitle={navigation.focus.operations}
+                        links={operationLinks}
+                        links2Title={navigation.focus.therapies}
+                        links2={therapyLinks}
+                        endLinks={endLinks}
+                      >
                         {navigation.link4}
                       </NavigationDropdown>
-                      <NavigationLink to="/team/">{navigation.link5}</NavigationLink>
+                      <NavigationDropdown pageLink="/kontakt/" links={contactLinks}>
+                        {navigation.link5}
+                      </NavigationDropdown>
                       <div className="self-center">
                         <Button small to="/kontakt/">
                           {navigation.link6}

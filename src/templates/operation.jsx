@@ -154,22 +154,6 @@ function Page({ data, location }) {
                   </label>
                 </div>
                 <div className="sm:col-span-2">
-                  <label htmlFor="time" className="block text-sm font-medium text-gray-700">
-                    {page.form.hoursLabel}
-                    <select
-                      id="time"
-                      name="time"
-                      className="mt-1 py-3 px-4 block w-full pr-10 shadow-sm border-gray-300 focus:ring-teal-500 focus:border-teal-500 rounded-md"
-                    >
-                      {page.form.hours
-                        .filter((hour) => hour.active)
-                        .map((hour) => (
-                          <option key={hour.hour}>{hour.hour}</option>
-                        ))}
-                    </select>
-                  </label>
-                </div>
-                <div className="sm:col-span-2">
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700">
                     {page.form.message}
                     <div className="mt-1">

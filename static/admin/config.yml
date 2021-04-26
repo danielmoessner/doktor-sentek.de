@@ -86,21 +86,86 @@ collections:
               - { label: Text, name: text, widget: text }
               - { label: Button, name: button, widget: string }
       
-      - file: content/pages/illness.yml
+      - file: content/pages/team.yml
+        label: Team
+        name: team
+        fields:
+          - { label: Sammlung, name: collection, widget: hidden, default: page }
+          - { label: Slug, name: slug, widget: hidden, default: contact }
+          - label: Meta
+            name: meta
+            widget: object
+            fields:
+              - { label: Titel, name: title, widget: string }
+              - label: Beschreibung
+                name: description
+                widget: text
+              - { label: Bild, name: image, widget: image }    
+          - label: Header
+            name: header
+            widget: object
+            fields:
+              - { label: Titel, name: title, widget: string }
+              - { label: Text, name: text, widget: string }     
+
+      - file: content/pages/illnesses.yml
         label: Krankheitsbilder
+        name: illnesses
+        fields:
+          - { label: Sammlung, name: collection, widget: hidden, default: page }
+          - { label: Slug, name: slug, widget: hidden, default: illnesses }
+          - label: Meta
+            name: meta
+            widget: object
+            fields:
+              - { label: Titel, name: title, widget: string }
+              - label: Beschreibung
+                name: description
+                widget: text
+              - { label: Bild, name: image, widget: image }     
+          - label: Header
+            name: header
+            widget: object
+            fields:
+              - { label: Titel, name: title, widget: string }
+              - { label: Text, name: text, widget: string }  
+             
+      - file: content/pages/illness.yml
+        label: "Detail: Krankheitsbild"
         name: illness
         fields:
           - { label: Sammlung, name: collection, widget: hidden, default: page }
           - { label: Slug, name: slug, widget: hidden, default: illness }
-          - { label: Vortitel, name: pretitle, widget: string }
+          - { label: Vortitel, name: pretitle, widget: string }              
 
-
-      - file: content/pages/nonSurgicalTherapies.md
-        label: Nicht-operative Therapien
-        name: nonSurgicalTherapies
+      - file: content/pages/focus.yml
+        label: Schwerpunkte
+        name: focus
         fields:
           - { label: Sammlung, name: collection, widget: hidden, default: page }
-          - { label: Slug, name: slug, widget: hidden, default: non-surgical-therapies }
+          - { label: Slug, name: slug, widget: hidden, default: focus }
+          - label: Meta
+            name: meta
+            widget: object
+            fields:
+              - { label: Titel, name: title, widget: string }
+              - label: Beschreibung
+                name: description
+                widget: text
+              - { label: Bild, name: image, widget: image }     
+          - label: Header
+            name: header
+            widget: object
+            fields:
+              - { label: Titel, name: title, widget: string }
+              - { label: Text, name: text, widget: string }  
+            
+      - file: content/pages/inpatientSurgery.md
+        label: Stationäres Operieren
+        name: inpatientSurgery
+        fields:
+          - { label: Sammlung, name: collection, widget: hidden, default: page }
+          - { label: Slug, name: slug, widget: hidden, default: inpatient-surgery }
           - label: Meta
             name: meta
             widget: object
@@ -121,9 +186,36 @@ collections:
             name: body
             widget: markdown
             hint: Bitte nur Überschrift 2-6 verwenden für SEO.
-     
+      
+      - file: content/pages/outpatientSurgery.md
+        label: Ambulantes Operieren
+        name: outpatientSurgery
+        fields:
+          - { label: Sammlung, name: collection, widget: hidden, default: page }
+          - { label: Slug, name: slug, widget: hidden, default: outpatient-surgery }
+          - label: Meta
+            name: meta
+            widget: object
+            fields:
+              - { label: Titel, name: title, widget: string }
+              - label: Beschreibung
+                name: description
+                widget: text
+              - { label: Bild, name: image, widget: image }
+          - label: Header
+            name: header
+            widget: object
+            fields:
+              - { label: Vortitel, name: pretitle, widget: string }
+              - { label: Titel, name: title, widget: string }
+              - { label: Text, name: text, widget: text }
+          - label: Inhalt
+            name: body
+            widget: markdown
+            hint: Bitte nur Überschrift 2-6 verwenden für SEO.
+
       - file: content/pages/operation.yml
-        label: Operationen
+        label: "Detail: Operation"
         name: operation
         fields:
           - { label: Sammlung, name: collection, widget: hidden, default: page }
@@ -157,12 +249,20 @@ collections:
               - { label: Titel abgesendet, name: successTitle, widget: string }
               - { label: Text abgesende, name: successText, widget: string }
 
-      - file: content/pages/team.yml
-        label: Team
-        name: team
+      - file: content/pages/therapy.yml
+        label: "Detail: Konservative Therapie"
+        name: therapy
         fields:
           - { label: Sammlung, name: collection, widget: hidden, default: page }
-          - { label: Slug, name: slug, widget: hidden, default: contact }
+          - { label: Slug, name: slug, widget: hidden, default: therapy }
+          - { label: Vortitel, name: pretitle, widget: string }
+
+      - file: content/pages/antiAging.md
+        label: Anti Aging
+        name: antiAging
+        fields:
+          - { label: Sammlung, name: collection, widget: hidden, default: page }
+          - { label: Slug, name: slug, widget: hidden, default: anti-aging }
           - label: Meta
             name: meta
             widget: object
@@ -171,13 +271,18 @@ collections:
               - label: Beschreibung
                 name: description
                 widget: text
-              - { label: Bild, name: image, widget: image }    
+              - { label: Bild, name: image, widget: image }
           - label: Header
             name: header
             widget: object
             fields:
+              - { label: Vortitel, name: pretitle, widget: string }
               - { label: Titel, name: title, widget: string }
-              - { label: Text, name: text, widget: string }     
+              - { label: Text, name: text, widget: text }
+          - label: Inhalt
+            name: body
+            widget: markdown
+            hint: Bitte nur Überschrift 2-6 verwenden für SEO.
 
       - file: content/pages/contact.yml
         label: Kontakt
@@ -208,33 +313,6 @@ collections:
               - { label: Text 1, name: text1, widget: text }
               - { label: Titel 2, name: title2, widget: string }
               - { label: Titel 3, name: title3, widget: string }
-            
-      - file: content/pages/antiAging.md
-        label: Anti Aging
-        name: antiAging
-        fields:
-          - { label: Sammlung, name: collection, widget: hidden, default: page }
-          - { label: Slug, name: slug, widget: hidden, default: anti-aging }
-          - label: Meta
-            name: meta
-            widget: object
-            fields:
-              - { label: Titel, name: title, widget: string }
-              - label: Beschreibung
-                name: description
-                widget: text
-              - { label: Bild, name: image, widget: image }
-          - label: Header
-            name: header
-            widget: object
-            fields:
-              - { label: Vortitel, name: pretitle, widget: string }
-              - { label: Titel, name: title, widget: string }
-              - { label: Text, name: text, widget: text }
-          - label: Inhalt
-            name: body
-            widget: markdown
-            hint: Bitte nur Überschrift 2-6 verwenden für SEO.
 
       - file: content/pages/imprint.md
         label: Impressum
@@ -311,6 +389,35 @@ collections:
     preview_path: krankheitsbild/{{fields.slug}}
     fields:
       - { label: Sammlung, name: collection, widget: hidden, default: illness }
+      - label: Meta
+        name: meta
+        widget: object
+        fields:
+          - { label: Titel, name: title, widget: string }
+          - label: Beschreibung
+            name: description
+            widget: text
+          - { label: Bild, name: image, widget: image }
+      - { label: Titel, name: title, widget: string }
+      - { label: Slug, name: slug, widget: string }
+      - { label: Auszug, name: excerpt, widget: text }
+      - label: Inhalt
+        name: body
+        widget: markdown
+        hint: Bitte nur Überschrift 2-6 verwenden für SEO.
+
+  - name: therapy
+    label: Konservative Therapien
+    label_singular: Konservative Therapie
+    editor:
+      preview: false
+    extension: md
+    folder: content/therapy
+    slug: '{{fields.slug}}'
+    create: true
+    preview_path: konservative-therapie/{{fields.slug}}
+    fields:
+      - { label: Sammlung, name: collection, widget: hidden, default: therapy }
       - label: Meta
         name: meta
         widget: object
@@ -409,6 +516,15 @@ collections:
           - { label: Link 4, name: link4, widget: string }
           - { label: Link 5, name: link5, widget: string }
           - { label: Link 6, name: link6, widget: string }
+          - label: Schwerpunkte
+            name: focus
+            widget: object
+            fields:
+              - { label: Stationäres Operieren, name: inpatientSurgery, widget: string }
+              - { label: Ambulantes Operieren, name: outpatientSurgery, widget: string }
+              - { label: Operationen, name: operations, widget: string }
+              - { label: Konservative Therapien, name: therapies, widget: string }
+              - { label: Anti Aging, name: antiAging, widget: string }
           - { label: Mobil Link 2, name: mobileLink2, widget: string }
           - { label: Mobil Link 4, name: mobileLink4, widget: string }
       - file: content/settings/footer.yml

@@ -65,3 +65,61 @@ Page.propTypes = {
 };
 
 export default Page;
+
+export const query = graphql`
+  {
+    pagesYaml(slug: { eq: "search" }) {
+      meta {
+        image {
+          childImageSharp {
+            resize(width: 1200) {
+              src
+            }
+          }
+        }
+        description
+        title
+      }
+      header {
+        title
+        text
+      }
+    }
+    operations: allMarkdownRemark(
+      filter: { frontmatter: { collection: { eq: "operation" } } }
+      sort: { fields: frontmatter___order }
+    ) {
+      nodes {
+        frontmatter {
+          title
+          excerpt
+          slug
+        }
+      }
+    }
+    therapies: allMarkdownRemark(
+      filter: { frontmatter: { collection: { eq: "therapy" } } }
+      sort: { fields: frontmatter___order }
+    ) {
+      nodes {
+        frontmatter {
+          title
+          excerpt
+          slug
+        }
+      }
+    }
+    illnesses: allMarkdownRemark(
+      filter: { frontmatter: { collection: { eq: "illness" } } }
+      sort: { fields: frontmatter___order }
+    ) {
+      nodes {
+        frontmatter {
+          title
+          excerpt
+          slug
+        }
+      }
+    }
+  }
+`;

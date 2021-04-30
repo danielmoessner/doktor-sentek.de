@@ -6,6 +6,7 @@ import Layout from '../components/Layout';
 import Seo from '../components/Seo';
 import lineBreaks from '../utils/lineBreaks';
 import Appointments from '../components/Appointments';
+import Indication from '../components/Indication';
 
 function Page({ data }) {
   const page = data.pagesYaml;
@@ -20,6 +21,7 @@ function Page({ data }) {
         description={page.meta.description}
         image={page.meta.image.childImageSharp.resize.src}
       />
+      <Indication />
       <main className="bg-gray-50">
         <section className="lg:relative">
           <div className="mx-auto max-w-7xl w-full pt-16 pb-20 text-center lg:py-48 lg:text-left">
@@ -357,7 +359,7 @@ export const query = graphql`
     }
     illnesses: allMarkdownRemark(
       filter: { frontmatter: { collection: { eq: "illness" } } }
-      sort: { fields: frontmatter___title }
+      sort: { fields: frontmatter___order }
     ) {
       nodes {
         frontmatter {

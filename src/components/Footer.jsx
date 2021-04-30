@@ -9,7 +9,7 @@ function Component() {
     {
       operations: allMarkdownRemark(
         filter: { frontmatter: { collection: { eq: "operation" } } }
-        sort: { fields: frontmatter___title }
+        sort: { fields: frontmatter___order }
       ) {
         nodes {
           frontmatter {
@@ -20,7 +20,7 @@ function Component() {
       }
       illnesses: allMarkdownRemark(
         filter: { frontmatter: { collection: { eq: "illness" } } }
-        sort: { fields: frontmatter___title }
+        sort: { fields: frontmatter___order }
       ) {
         nodes {
           frontmatter {
@@ -42,6 +42,9 @@ function Component() {
         link11
         link12
         link13
+        link14
+        link15
+        link16
         link14
         link41
         link42
@@ -122,21 +125,37 @@ function Component() {
                     </Link>
                   </li>
                   <li>
-                    <Link
-                      to="/nicht-operative-therapie/"
-                      className="text-base text-gray-500 hover:text-gray-900"
-                    >
+                    <Link to="/team/" className="text-base text-gray-500 hover:text-gray-900">
                       {footer.link12}
                     </Link>
                   </li>
                   <li>
-                    <Link to="/team/" className="text-base text-gray-500 hover:text-gray-900">
+                    <Link
+                      to="/krankheitsbilder/"
+                      className="text-base text-gray-500 hover:text-gray-900"
+                    >
                       {footer.link13}
                     </Link>
                   </li>
                   <li>
-                    <Link to="/kontakt/" className="text-base text-gray-500 hover:text-gray-900">
+                    <Link
+                      to="/operationen/"
+                      className="text-base text-gray-500 hover:text-gray-900"
+                    >
                       {footer.link14}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/konservative-therapien/"
+                      className="text-base text-gray-500 hover:text-gray-900"
+                    >
+                      {footer.link15}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/kontakt/" className="text-base text-gray-500 hover:text-gray-900">
+                      {footer.link16}
                     </Link>
                   </li>
                 </ul>

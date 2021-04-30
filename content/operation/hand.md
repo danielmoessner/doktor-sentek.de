@@ -6,6 +6,7 @@ meta:
   image: ../media/boot.jpg
 title: Hand
 slug: hand
+order: 5
 excerpt: Als Handchirurg stellt für mich die operative Behandlung von Pat mit
   Erkrankungen und Verletzungen der Hand eine zentrale Säule dar. Der Einsatz
   von optischen Vergrößerungshilfen (Lupenbrille) sowie der Einsatz von

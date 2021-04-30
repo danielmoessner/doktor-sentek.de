@@ -6,6 +6,7 @@ meta:
   image: ../media/boot.jpg
 title: Ellenbogen
 slug: ellenbogen
+order: 1
 excerpt: |-
   Tennisellenbogen / Golferellenbogen
   Schleimbeutelentzündung

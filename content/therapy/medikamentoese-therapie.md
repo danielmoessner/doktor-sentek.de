@@ -8,6 +8,7 @@ meta:
   image: ../media/boot.jpg
 title: Medikamentöse Therapie
 slug: medikamentoese-therapie
+order: 5
 excerpt: Es gibt etliche schulmedizinische wie auch rein pflanzliche Wirkstoffe,
   mit denen sich Leiden am Bewegungsapparat effektiv behandeln lassen.
 ---

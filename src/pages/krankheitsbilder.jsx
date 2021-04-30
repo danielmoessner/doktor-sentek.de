@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Layout from '../components/Layout';
 import Seo from '../components/Seo';
 import Header from '../components/Header';
+import Indication from '../components/Indication';
 
 function Page({ data }) {
   const page = data.pagesYaml;
@@ -24,6 +25,7 @@ function Page({ data }) {
         description={page.meta.description}
         image={page.meta.image.childImageSharp.resize.src}
       />
+      <Indication />
       <section className="bg-white">
         <div className="max-w-7xl mx-auto py-20 px-4 sm:px-6 lg:px-8">
           <div className="grid gap-16 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-12">
@@ -78,7 +80,7 @@ export const query = graphql`
     }
     illnesses: allMarkdownRemark(
       filter: { frontmatter: { collection: { eq: "illness" } } }
-      sort: { fields: frontmatter___title }
+      sort: { fields: frontmatter___order }
     ) {
       nodes {
         frontmatter {

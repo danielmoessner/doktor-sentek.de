@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 // import PropTypes from 'prop-types';
 // import { Transition } from '@headlessui/react';
 import { Link, useStaticQuery, graphql } from 'gatsby';
-import Button from './Button';
+// import { SearchIcon } from '@heroicons/react/solid';
 import NavigationLink from './NavigationLink';
 import NavigationDropdown from './NavigationDropdown';
 import NavigationMobileLink from './NavigationMobileLink';
@@ -18,7 +18,7 @@ function Component() {
       }
       operations: allMarkdownRemark(
         filter: { frontmatter: { collection: { eq: "operation" } } }
-        sort: { fields: frontmatter___title }
+        sort: { fields: frontmatter___order }
       ) {
         nodes {
           frontmatter {
@@ -29,7 +29,7 @@ function Component() {
       }
       illnesses: allMarkdownRemark(
         filter: { frontmatter: { collection: { eq: "illness" } } }
-        sort: { fields: frontmatter___title }
+        sort: { fields: frontmatter___order }
       ) {
         nodes {
           frontmatter {
@@ -40,7 +40,7 @@ function Component() {
       }
       therapies: allMarkdownRemark(
         filter: { frontmatter: { collection: { eq: "therapy" } } }
-        sort: { fields: frontmatter___title }
+        sort: { fields: frontmatter___order }
       ) {
         nodes {
           frontmatter {
@@ -76,28 +76,42 @@ function Component() {
       title: frontmatter.title,
       slug: `/krankheitsbilder/${frontmatter.slug}`,
     }));
-  const therapyLinks = data.therapies.nodes
-    .map((node) => node.frontmatter)
-    .map((frontmatter) => ({
-      title: frontmatter.title,
-      slug: `/konservative-therapie/${frontmatter.slug}`,
-    }));
+  const focusLinks = [
+    {
+      title: navigation.focus.inpatientSurgery,
+      slug: '/stationaeres-operieren',
+    },
+    {
+      title: navigation.focus.outpatientSurgery,
+      slug: '/ambulantes-operieren',
+    },
+    {
+      title: navigation.focus.operations,
+      slug: '/operationen',
+    },
+    {
+      title: navigation.focus.therapies,
+      slug: '/konservative-therapien',
+    },
+    {
+      title: navigation.focus.antiAging,
+      slug: '/anti-aging',
+    },
+  ];
+
+  // data.therapies.nodes
+  //   .map((node) => node.frontmatter)
+  //   .map((frontmatter) => ({
+  //     title: frontmatter.title,
+  //     slug: `/konservative-therapie/${frontmatter.slug}`,
+  //   }));
   const endLinks = [
     {
       text: navigation.focus.antiAging,
       link: '/anti-aging/',
     },
   ];
-  const startLinks = [
-    {
-      text: navigation.focus.inpatientSurgery,
-      link: '/stationaeres-operieren/',
-    },
-    {
-      text: navigation.focus.outpatientSurgery,
-      link: '/ambulantes-operieren/',
-    },
-  ];
+  const startLinks = [];
   const contactLinks = [
     {
       title: 'Kontaktdaten',
@@ -120,50 +134,81 @@ function Component() {
           <div className="">
             <div className="border-b border-gray-100">
               <div className="pt-3 pb-4 px-4 sm:px-6 lg:px-0">
-                <div className="flex flex-row space-x-7">
-                  <div className="flex flex-row items-center">
-                    <svg
-                      className="w-6 h-6 text-teal-800 mr-2"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                      />
-                    </svg>
-                    <a
-                      className="text-base font-medium text-gray-600 hover:text-teal-800"
-                      href={`tel:${contact.phone}`}
-                    >
-                      {contact.phone}
-                    </a>
+                <div className="flex flex-row">
+                  <div className="flex flex-row space-x-7">
+                    <div className="flex flex-row items-center">
+                      <svg
+                        className="w-6 h-6 text-teal-800 mr-2"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                        />
+                      </svg>
+                      <a
+                        className="text-base font-medium text-gray-600 hover:text-teal-800"
+                        href={`tel:${contact.phone}`}
+                      >
+                        {contact.phone}
+                      </a>
+                    </div>
+                    <div className="flex flex-row items-center">
+                      <svg
+                        className="w-6 h-6 text-teal-800 mr-2"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                        />
+                      </svg>
+                      <a
+                        className="text-base font-medium text-gray-600 hover:text-teal-800"
+                        href={`mailto:${contact.email}`}
+                      >
+                        {contact.email}
+                      </a>
+                    </div>
                   </div>
-                  <div className="flex flex-row items-center">
-                    <svg
-                      className="w-6 h-6 text-teal-800 mr-2"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                      />
-                    </svg>
-                    <a
-                      className="text-base font-medium text-gray-600 hover:text-teal-800"
-                      href={`mailto:${contact.email}`}
-                    >
-                      {contact.email}
-                    </a>
+                  <div className="ml-auto">
+                    <div className="flex-1 flex items-center justify-center pl-2 lg:ml-6 lg:justify-end">
+                      <div className="max-w-lg w-full lg:max-w-xs">
+                        <form method="GET" action="/suche/" className="relative">
+                          <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              className="h-5 w-5"
+                              viewBox="0 0 20 20"
+                              fill="currentColor"
+                            >
+                              <path
+                                fillRule="evenodd"
+                                d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                                clipRule="evenodd"
+                              />
+                            </svg>
+                          </div>
+                          <input
+                            id="search"
+                            name="suche"
+                            className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md leading-5 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:ring-1 focus:ring-teal-500 focus:border-teal-500 sm:text-sm"
+                            placeholder="Suche"
+                            type="search"
+                          />
+                        </form>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -225,7 +270,7 @@ function Component() {
                     >
                       <Logo />
                     </Link>
-                    <div className="hidden lg:ml-6 lg:flex lg:space-x-4">
+                    <div className="hidden lg:ml-6 lg:flex">
                       <NavigationLink to="/">{navigation.link1}</NavigationLink>
                       <NavigationLink to="/team/">{navigation.link2}</NavigationLink>
                       <NavigationDropdown
@@ -235,25 +280,12 @@ function Component() {
                       >
                         {navigation.link3}
                       </NavigationDropdown>
-                      <NavigationDropdown
-                        pageLink="/schwerpunkte/"
-                        startLinks={startLinks}
-                        linksTitle={navigation.focus.operations}
-                        links={operationLinks}
-                        links2Title={navigation.focus.therapies}
-                        links2={therapyLinks}
-                        endLinks={endLinks}
-                      >
+                      <NavigationDropdown pageLink="/schwerpunkte/" links={focusLinks}>
                         {navigation.link4}
                       </NavigationDropdown>
                       <NavigationDropdown pageLink="/kontakt/" links={contactLinks}>
                         {navigation.link5}
                       </NavigationDropdown>
-                      <div className="self-center">
-                        <Button small to="/kontakt/">
-                          {navigation.link6}
-                        </Button>
-                      </div>
                     </div>
                   </div>
                 </div>

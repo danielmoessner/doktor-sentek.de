@@ -6,8 +6,8 @@ function Component({ to, children }) {
   return (
     <Link
       to={to}
-      className="border-transparent text-gray-500 transition hover:border-teal-600 hover:text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-base font-medium"
-      activeClassName="border-teal-600 text-gray-900" // , Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700"
+      className="border-transparent px-4 text-gray-500 transition hover:border-teal-600 hover:bg-teal-700 hover:text-teal-050 inline-flex items-center pt-1 border-b-2 text-base font-medium"
+      activeClassName="border-teal-700 text-gray-900" // , Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700"
     >
       {children}
     </Link>

@@ -5,6 +5,7 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 import Layout from '../components/Layout';
 import Header from '../components/Header';
 import Seo from '../components/Seo';
+import Indication from '../components/Indication';
 
 function Page({ data }) {
   const members = data.allMarkdownRemark.nodes.map((node) => ({
@@ -28,6 +29,7 @@ function Page({ data }) {
         description={page.meta.description}
         image={page.meta.image.childImageSharp.resize.src}
       />
+      <Indication />
       <section>
         <div className="bg-white" id="aerzte">
           <div className="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">

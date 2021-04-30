@@ -29,19 +29,19 @@ function Component({
   };
 
   return (
-    <div className="relative inline-flex items-center">
+    <div className="relative inline-flex items-center group text-gray-500 hover:bg-teal-700 hover:text-teal-050">
       <Link
         to={pageLink}
         onMouseOver={open}
         onMouseLeave={close}
         onFocus={() => {}}
-        className="group border-transparent text-gray-500 transition hover:border-teal-600 hover:text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-base font-medium h-full focus:outline-none"
+        className="border-transparent px-4 transition hover:border-teal-700 inline-flex items-center pt-1 border-b-2 text-base font-medium h-full focus:outline-none"
         aria-expanded="false"
       >
         <span>{children}</span>
 
         <svg
-          className="text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-800"
+          className="text-gray-400 ml-2 h-5 w-5 group-hover:text-teal-050"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           fill="currentColor"
@@ -69,7 +69,7 @@ function Component({
         onFocus={() => {}}
       >
         <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-          <div className="relative grid gap-1 bg-white py-3">
+          <div className="relative grid gap-1 bg-teal-900 bg-opacity-80 py-3">
             <div className="-ml-2">
               {startLinks.map((link) => (
                 <NavigationDropdownLink key={link.link} to={link.link} close={instantClose}>

@@ -6,6 +6,7 @@ import Seo from '../components/Seo';
 import Appointments from '../components/Appointments';
 import Header from '../components/Header';
 import lineBreaks from '../utils/lineBreaks';
+import Indication from '../components/Indication';
 
 function Page({ data }) {
   const page = data.pagesYaml;
@@ -26,6 +27,7 @@ function Page({ data }) {
         description={page.meta.description}
         image={page.meta.image.childImageSharp.resize.src}
       />
+      <Indication />
       <section>
         <div className="bg-white">
           <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">

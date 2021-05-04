@@ -98,4 +98,4 @@ Nach einer Botoxbehandlung sollten Sie in den nächsten drei Tagen Massagen an d
 
 ## Kosten
 
-Eine Behandlung mit Botox oder Hyaluronsäure kostet in der Regel zwischen 200 und 600,- € inkl. MwSt. Je mehr Regionen behandelt werden, desto höher ist der Aufwand und auch der Materialverbrauch. Deshalb ermittelt sich der genaue Preis individuell und wird im Aufklärungsgespräch festgelegt.
+Bei einer Behandlung mit Botox oder Hyaluronsäure müssen sie mit Kosten ab 200,- € inkl. MwSt. rechnen. Je mehr Regionen behandelt werden, desto höher ist der Aufwand und auch der Materialverbrauch. Deshalb ermittelt sich der genaue Preis individuell und wird im Aufklärungsgespräch festgelegt.

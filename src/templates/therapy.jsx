@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Layout from '../components/Layout';
 import Seo from '../components/Seo';
 import Article from '../components/Article';
+import Header from '../components/Header';
 
 function Page({ data }) {
   const therapy = { html: data.markdownRemark.html, ...data.markdownRemark.frontmatter };
@@ -21,6 +22,7 @@ function Page({ data }) {
         description={therapy.meta.description}
         image={therapy.meta.image.childImageSharp.resize.src}
       />
+      <Header image={therapy.image.childImageSharp.gatsbyImageData} />
       <Article header={header} html={therapy.html} />
     </Layout>
   );
@@ -55,6 +57,11 @@ export const query = graphql`
         }
         title
         excerpt
+        image {
+          childImageSharp {
+            gatsbyImageData(layout: FULL_WIDTH)
+          }
+        }
       }
     }
   }

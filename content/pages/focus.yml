@@ -3,7 +3,13 @@ slug: focus
 meta:
   title: Schwerpunkte
   description: beschr
-  image: ../media/boot.jpg
+  image: ../media/fav Schwerpunkte allgemein.jpg
 header:
   title: Schwerpunkte
   text: Schwerpunkte
+  image: ../media/fav Schwerpunkte allgemein.jpg
+content:
+  button: Mehr erfahren
+  operationsHeading: Operationen
+  therapiesHeading: Therapien
+  moreHeading: Weiteres

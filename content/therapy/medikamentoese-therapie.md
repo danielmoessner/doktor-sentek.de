@@ -5,9 +5,10 @@ meta:
   description: Es gibt etliche schulmedizinische wie auch rein pflanzliche
     Wirkstoffe, mit denen sich Leiden am Bewegungsapparat effektiv behandeln
     lassen.
-  image: ../media/boot.jpg
+  image: ../media/fav Hand Krankheitsbild allg..jpg
 title: Medikamentöse Therapie
 slug: medikamentoese-therapie
+image: ../media/fav Hand Krankheitsbild allg..jpg
 order: 5
 excerpt: Es gibt etliche schulmedizinische wie auch rein pflanzliche Wirkstoffe,
   mit denen sich Leiden am Bewegungsapparat effektiv behandeln lassen.

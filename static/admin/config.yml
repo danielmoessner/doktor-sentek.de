@@ -129,6 +129,12 @@ collections:
             fields:
               - { label: Titel, name: title, widget: string }
               - { label: Text, name: text, widget: string }  
+              - { label: Bild, name: image, widget: image }
+          - label: Inhalt
+            name: content
+            widget: object
+            fields:
+              - { label: Button, name: button, widget: string }
              
       - file: content/pages/illness.yml
         label: "Detail: Krankheitsbild"
@@ -159,6 +165,15 @@ collections:
             fields:
               - { label: Titel, name: title, widget: string }
               - { label: Text, name: text, widget: string }  
+              - { label: Bild, name: image, widget: image }
+          - label: Inhalt
+            name: content
+            widget: object
+            fields:
+              - { label: Operationen, name: operationsHeading, widget: string }
+              - { label: Therapien, name: therapiesHeading, widget: string }
+              - { label: Weiteres, name: moreHeading, widget: string }
+              - { label: Button, name: button, widget: string }
             
       - file: content/pages/inpatientSurgery.md
         label: Stationäres Operieren
@@ -236,6 +251,11 @@ collections:
               - { label: Titel, name: title, widget: string }
               - { label: Text, name: text, widget: string }  
               - { label: Bild, name: image, widget: image }
+          - label: Inhalt
+            name: content
+            widget: object
+            fields:
+              - { label: Button, name: button, widget: string }
       
       - file: content/pages/therapies.yml
         label: Konservative Therapien
@@ -258,6 +278,12 @@ collections:
             fields:
               - { label: Titel, name: title, widget: string }
               - { label: Text, name: text, widget: string }  
+              - { label: Bild, name: image, widget: image }
+          - label: Inhalt
+            name: content
+            widget: object
+            fields:
+              - { label: Button, name: button, widget: string }
 
       - file: content/pages/operation.yml
         label: "Detail: Operation"
@@ -380,6 +406,12 @@ collections:
             fields:
               - { label: Titel, name: title, widget: string }
               - { label: Text, name: text, widget: string }   
+          - label: Inhalt
+            name: content
+            widget: object
+            fields:
+              - { label: Button, name: button, widget: string }
+              - { label: Keine Ergebnisse, name: noResults, widget: string }
 
       - file: content/pages/imprint.md
         label: Impressum
@@ -467,6 +499,7 @@ collections:
           - { label: Bild, name: image, widget: image }
       - { label: Titel, name: title, widget: string }
       - { label: Slug, name: slug, widget: string }
+      - { label: Bild, name: image, widget: image }
       - { label: Sortierung, name: order, widget: number }
       - { label: Auszug, name: excerpt, widget: text }
       - label: Inhalt
@@ -497,6 +530,7 @@ collections:
           - { label: Bild, name: image, widget: image }
       - { label: Titel, name: title, widget: string }
       - { label: Slug, name: slug, widget: string }
+      - { label: Bild, name: image, widget: image }
       - { label: Sortierung, name: order, widget: number }
       - { label: Auszug, name: excerpt, widget: text }
       - label: Inhalt
@@ -527,6 +561,7 @@ collections:
           - { label: Bild, name: image, widget: image }
       - { label: Titel, name: title, widget: string }
       - { label: Slug, name: slug, widget: string }
+      - { label: Bild, name: image, widget: image }
       - { label: Sortierung, name: order, widget: number }
       - { label: Auszug, name: excerpt, widget: text }
       - label: Inhalt
@@ -585,17 +620,13 @@ collections:
           - { label: Link 3, name: link3, widget: string }
           - { label: Link 4, name: link4, widget: string }
           - { label: Link 5, name: link5, widget: string }
-          - { label: Link 6, name: link6, widget: string }
           - label: Schwerpunkte
             name: focus
             widget: object
             fields:
-              - { label: Stationäres Operieren, name: inpatientSurgery, widget: string }
-              - { label: Ambulantes Operieren, name: outpatientSurgery, widget: string }
               - { label: Operationen, name: operations, widget: string }
               - { label: Konservative Therapien, name: therapies, widget: string }
               - { label: Anti Aging, name: antiAging, widget: string }
-          - { label: Mobil Link 2, name: mobileLink2, widget: string }
           - { label: Mobil Link 4, name: mobileLink4, widget: string }
       - file: content/settings/indication.yml
         label: Hinweis

@@ -3,9 +3,11 @@ collection: illness
 meta:
   title: Krankheitsbild - Hand
   description: beschreibung
-  image: ../media/boot.jpg
+  image: ../media/fav Hand Krankheitsbild allg..jpg
 title: Hand
 slug: hand
+image: ../media/fav Hand Krankheitsbild allg..jpg
+order: 1
 excerpt: |-
   Morbus Dupuytren
   Schnellender Finger

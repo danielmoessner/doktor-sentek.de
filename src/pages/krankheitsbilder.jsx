@@ -17,6 +17,7 @@ function Page({ data }) {
         <Header
           title={page.header.title}
           subtitle={page.header.text}
+          image={page.header.image.childImageSharp.gatsbyImageData}
         />
       }
     >
@@ -40,7 +41,7 @@ function Page({ data }) {
                     to={`/krankheitsbilder/${illness.slug}`}
                     className="text-base font-semibold text-teal-600 hover:text-teal-500"
                   >
-                    Mehr erfahren
+                    {page.content.button}
                   </Link>
                 </div>
               </div>
@@ -76,6 +77,14 @@ export const query = graphql`
       header {
         title
         text
+        image {
+          childImageSharp {
+            gatsbyImageData(layout: FULL_WIDTH)
+          }
+        }
+      }
+      content {
+        button
       }
     }
     illnesses: allMarkdownRemark(

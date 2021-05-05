@@ -3,9 +3,10 @@ collection: illness
 meta:
   title: Krankheitsbild - Ellenbogen
   description: Ellenbogen
-  image: ../media/boot.jpg
+  image: ../media/fav Ellenbogen Krankheitsbild allg..jpg
 title: Ellenbogen
 slug: ellenbogen
+image: ../media/fav Ellenbogen Krankheitsbild allg..jpg
 order: 1
 excerpt: |-
   Tennisellenbogen / Golferellenbogen

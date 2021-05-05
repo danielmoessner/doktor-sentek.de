@@ -5,9 +5,11 @@ meta:
   description: Bei der Elektrotherapie wird elektrischer Strom über Elektroden in
     den Körper geleitet, um die Muskulatur zu entkrampfen oder zu stimulieren,
     die Durchblutung zu fördern oder Schmerzen zu lindern.
-  image: ../media/boot.jpg
+  image: ../media/fav Hand Krankheitsbild allg..jpg
 title: Elektrotherapie
 slug: elektrotherapie
+image: ../media/fav Hand Krankheitsbild allg..jpg
+order: 8
 excerpt: Bei der Elektrotherapie wird elektrischer Strom über Elektroden in den
   Körper geleitet, um die Muskulatur zu entkrampfen oder zu stimulieren, die
   Durchblutung zu fördern oder Schmerzen zu lindern.

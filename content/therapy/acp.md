@@ -7,9 +7,11 @@ meta:
     herkömmlichen Therapien. Mit Hilfe von körpereigenem, konditioniertem
     Blutplasma (ACP) kann die Regeneration des Gewebes beschleunigt und dadurch
     eine Heilung unterstützt und Schmerzen gelindert werden.
-  image: ../media/boot.jpg
+  image: ../media/fav Hand Krankheitsbild allg..jpg
 title: Autologes Conditioniertes Plasma (ACP)
 slug: acp
+image: ../media/fav Hand Krankheitsbild allg..jpg
+order: 1
 excerpt: Für eine Vielzahl von Erkrankungen bzw. Verletzungen von Gelenken,
   Muskeln oder Sehnen gibt es seit kurzer Zeit eine Alternative zu den
   herkömmlichen Therapien. Mit Hilfe von körpereigenem, konditioniertem

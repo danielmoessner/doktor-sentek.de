@@ -2,11 +2,19 @@
 collection: operation
 meta:
   title: "Operation: Ellenbogen"
-  description: beschr
-  image: ../media/boot.jpg
+  description: Sollte sich durch eine konservative Behandlung keine
+    Beschwerdelinderung bei vorliegen eines Tennisarms einstellen kann die
+    Operation die letzte Option sein. Die Streckermuskulatur des Handgelenks und
+    der Finger setzt am äußeren Ellenbogen an.
+  image: ../media/fav Ellenbogen Krankheitsbild allg..jpg
 title: Ellenbogen
 slug: ellenbogen
-excerpt: auszug
+image: ../media/fav Ellenbogen Krankheitsbild allg..jpg
+order: 4
+excerpt: Sollte sich durch eine konservative Behandlung keine
+  Beschwerdelinderung bei vorliegen eines Tennisarms einstellen kann die
+  Operation die letzte Option sein. Die Streckermuskulatur des Handgelenks und
+  der Finger setzt am äußeren Ellenbogen an.
 ---
 ## Denervation 
 

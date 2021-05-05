@@ -2,17 +2,19 @@
 collection: illness
 meta:
   title: Krankheitsbild - Ellenbogen
-  description: beschreibung
-  image: ../media/boot.jpg
+  description: Bei chronischer und langanhaltender Reizung (Entzündung) kann es zu
+    einer sogenannten Kalkschulter kommen. In der Rotatorenmanschette entstehen
+    Kalkdepots, die ein Impingement und den damit verbundenen Schulterschmerz
+    weiter verstärken. Das Liegen auf der Schulter ist dann häufig unmöglich.
+  image: ../media/fav Schulter Krankheitsbild allg..jpg
 title: Schulter
 slug: schulter
-excerpt: |-
-  Kalkschulter: Schulterschmerz durch Kalkeinlagerung
-  Schleimbeutelentzündung
-  Rotatorenmaschettenruptur / Rotatorenmanschettenriss
-  Schulterluxation / Ausgekugelte Schulter
-  Schultersteife - „Frozen Shoulder“
-  Impingementsyndrom
+image: ../media/fav Schulter Krankheitsbild allg..jpg
+order: 4
+excerpt: Bei chronischer und langanhaltender Reizung (Entzündung) kann es zu
+  einer sogenannten Kalkschulter kommen. In der Rotatorenmanschette entstehen
+  Kalkdepots, die ein Impingement und den damit verbundenen Schulterschmerz
+  weiter verstärken. Das Liegen auf der Schulter ist dann häufig unmöglich.
 ---
 ## Kalkschulter: Schulterschmerz durch Kalkeinlagerung 
 

@@ -17,6 +17,7 @@ function Page({ data }) {
         <Header
           title={page.header.title}
           subtitle={page.header.text}
+          image={page.header.image.childImageSharp.gatsbyImageData}
         />
       }
     >
@@ -31,16 +32,16 @@ function Page({ data }) {
           <div className="grid gap-16 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-12">
             {therapies.map((therapy) => (
               <div key={therapy.slug}>
-                <Link to={`/konservative-therapie/${therapy.slug}`} className="mt-2 block">
+                <Link to={`/konservative-therapien/${therapy.slug}/`} className="mt-2 block">
                   <p className="text-xl font-semibold text-gray-900">{therapy.title}</p>
                   <p className="mt-3 text-base text-gray-500 line-clamp-3">{therapy.excerpt}</p>
                 </Link>
                 <div className="mt-3">
                   <Link
-                    to={`/konservative-therapie/${therapy.slug}`}
+                    to={`/konservative-therapien/${therapy.slug}/`}
                     className="text-base font-semibold text-teal-600 hover:text-teal-500"
                   >
-                    Mehr erfahren
+                    {page.content.button}
                   </Link>
                 </div>
               </div>
@@ -76,6 +77,14 @@ export const query = graphql`
       header {
         title
         text
+        image {
+          childImageSharp {
+            gatsbyImageData(layout: FULL_WIDTH)
+          }
+        }
+      }
+      content {
+        button
       }
     }
     therapies: allMarkdownRemark(

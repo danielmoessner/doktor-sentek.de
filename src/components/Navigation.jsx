@@ -16,30 +16,8 @@ function Component() {
         phone
         email
       }
-      operations: allMarkdownRemark(
-        filter: { frontmatter: { collection: { eq: "operation" } } }
-        sort: { fields: frontmatter___order }
-      ) {
-        nodes {
-          frontmatter {
-            slug
-            title
-          }
-        }
-      }
       illnesses: allMarkdownRemark(
         filter: { frontmatter: { collection: { eq: "illness" } } }
-        sort: { fields: frontmatter___order }
-      ) {
-        nodes {
-          frontmatter {
-            slug
-            title
-          }
-        }
-      }
-      therapies: allMarkdownRemark(
-        filter: { frontmatter: { collection: { eq: "therapy" } } }
         sort: { fields: frontmatter___order }
       ) {
         nodes {
@@ -70,21 +48,7 @@ function Component() {
   `);
   const { contact, navigation } = data;
   const illnessLinks = data.illnesses.nodes.map((node) => node.frontmatter);
-  const operationLinks = data.operations.nodes
-    .map((node) => node.frontmatter)
-    .map((frontmatter) => ({
-      title: frontmatter.title,
-      slug: `/krankheitsbilder/${frontmatter.slug}`,
-    }));
   const focusLinks = [
-    {
-      title: navigation.focus.inpatientSurgery,
-      slug: '/stationaeres-operieren',
-    },
-    {
-      title: navigation.focus.outpatientSurgery,
-      slug: '/ambulantes-operieren',
-    },
     {
       title: navigation.focus.operations,
       slug: '/operationen',
@@ -98,20 +62,6 @@ function Component() {
       slug: '/anti-aging',
     },
   ];
-
-  // data.therapies.nodes
-  //   .map((node) => node.frontmatter)
-  //   .map((frontmatter) => ({
-  //     title: frontmatter.title,
-  //     slug: `/konservative-therapie/${frontmatter.slug}`,
-  //   }));
-  const endLinks = [
-    {
-      text: navigation.focus.antiAging,
-      link: '/anti-aging/',
-    },
-  ];
-  const startLinks = [];
   const contactLinks = [
     {
       title: 'Kontaktdaten',
@@ -293,6 +243,7 @@ function Component() {
                 <div className={`lg:hidden ${menuOpen ? 'block' : 'hidden'}`} id="mobile-menu">
                   <div className="pt-2 pb-4 space-y-1">
                     <NavigationMobileLink to="/">{navigation.link1}</NavigationMobileLink>
+                    <NavigationMobileLink to="/team/">{navigation.link2}</NavigationMobileLink>
                     {illnessLinks.map((link) => (
                       <NavigationMobileLink key={link.slug} to={`/krankheitsbilder/${link.slug}/`}>
                         <div className="flex space-x-2">
@@ -301,19 +252,16 @@ function Component() {
                         </div>
                       </NavigationMobileLink>
                     ))}
-                    <NavigationMobileLink to="/nicht-operative-therapie/">
-                      {navigation.link3}
+                    <NavigationMobileLink to="/operationen/">
+                      {navigation.focus.operations}
                     </NavigationMobileLink>
-                    {operationLinks.map((link) => (
-                      <NavigationMobileLink key={link.slug} to={`/operationen/${link.slug}/`}>
-                        <div className="flex space-x-2">
-                          <div>{navigation.mobileLink4}</div>
-                          <div>{link.title}</div>
-                        </div>
-                      </NavigationMobileLink>
-                    ))}
-                    <NavigationMobileLink to="/team/">{navigation.link5}</NavigationMobileLink>
-                    <NavigationMobileLink to="/kontakt/">{navigation.link6}</NavigationMobileLink>
+                    <NavigationMobileLink to="/operationen/">
+                      {navigation.focus.therapies}
+                    </NavigationMobileLink>
+                    <NavigationMobileLink to="/operationen/">
+                      {navigation.focus.antiAging}
+                    </NavigationMobileLink>
+                    <NavigationMobileLink to="/kontakt/">{navigation.link5}</NavigationMobileLink>
                   </div>
                 </div>
               </nav>

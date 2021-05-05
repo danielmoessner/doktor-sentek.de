@@ -29,7 +29,11 @@ function Component({
   };
 
   return (
-    <div className="relative inline-flex items-center group text-gray-500 hover:bg-teal-700 hover:text-teal-050">
+    <div
+      className={`relative inline-flex items-center group text-gray-500 ${
+        dropdownOpen ? 'bg-teal-700 text-teal-050' : ''
+      }`}
+    >
       <Link
         to={pageLink}
         onMouseOver={open}
@@ -63,12 +67,12 @@ function Component({
         leave="transition ease-in duration-150"
         leaveFrom="opacity-100 translate-y-0"
         leaveTo="opacity-0 translate-y-1"
-        className="absolute z-10 transform translate-y-20 top-0 w-screen max-w-sm"
+        className="absolute z-10 transform translate-y-full bottom-0 w-screen max-w-sm"
         onMouseOver={open}
         onMouseLeave={close}
         onFocus={() => {}}
       >
-        <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
+        <div className="rounded-b-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
           <div className="relative grid gap-1 bg-teal-900 bg-opacity-80 py-3">
             <div className="-ml-2">
               {startLinks.map((link) => (

@@ -17,7 +17,7 @@ function Component() {
   const indication = data.settingsYaml;
 
   return (
-    <div className="fixed right-0 z-40 top-0 bottom-0" style={{ paddingTop: '15vh' }}>
+    <div className="fixed right-0 z-50" style={{ top: '15vh' }}>
       <button
         type="button"
         onClick={() => setOpen(!open)}

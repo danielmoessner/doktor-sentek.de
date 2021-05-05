@@ -7,9 +7,11 @@ meta:
     Teile zertrümmert, die dann auf natürlichem Wege ausgeschieden werden
     können. In der Orthopädie werden die Stoßwellen seit den 1990ern genutzt, um
     Weichteilbeschwerden auch ohne Operation zu behandeln."
-  image: ../media/boot.jpg
+  image: ../media/fav Hand Krankheitsbild allg..jpg
 title: Stoßwellentherapie
 slug: stosswellentherapie
+image: ../media/fav Hand Krankheitsbild allg..jpg
+order: 3
 excerpt: "Ihren Ursprung hat die Stoßwellentherapie in der Behandlung von
   Nierensteinen: Größere Steine werden seit den 1980er Jahren in kleinere Teile
   zertrümmert, die dann auf natürlichem Wege ausgeschieden werden können. In der

@@ -21,6 +21,7 @@ function Page({ data }) {
         <Header
           title={page.header.title}
           subtitle={page.header.text}
+          image={page.header.image.childImageSharp.gatsbyImageData}
         />
       }
     >
@@ -48,7 +49,7 @@ function Page({ data }) {
                     to="/stationaeres-operieren/"
                     className="text-base font-semibold text-teal-600 hover:text-teal-500"
                   >
-                    Mehr erfahren
+                    {page.content.button}
                   </Link>
                 </div>
               </div>
@@ -66,7 +67,7 @@ function Page({ data }) {
                     to="/ambulantes-operieren/"
                     className="text-base font-semibold text-teal-600 hover:text-teal-500"
                   >
-                    Mehr erfahren
+                    {page.content.button}
                   </Link>
                 </div>
               </div>
@@ -79,7 +80,7 @@ function Page({ data }) {
           <div className="relative max-w-lg mx-auto divide-y-2 divide-gray-100 lg:max-w-7xl">
             <div>
               <h2 className="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">
-                Operationen
+                {page.content.operationsHeading}
               </h2>
             </div>
             <div className="mt-6 pt-10 grid gap-16 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-12">
@@ -94,7 +95,7 @@ function Page({ data }) {
                       to={`/krankheitsbilder/${post.slug}`}
                       className="text-base font-semibold text-teal-600 hover:text-teal-500"
                     >
-                      Mehr erfahren
+                      {page.content.button}
                     </Link>
                   </div>
                 </div>
@@ -108,7 +109,7 @@ function Page({ data }) {
           <div className="relative max-w-lg mx-auto divide-y-2 divide-gray-100 lg:max-w-7xl">
             <div>
               <h2 className="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">
-                Konservative Therapie
+                {page.content.therapiesHeading}
               </h2>
             </div>
             <div className="mt-6 pt-10 grid gap-16 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-12">
@@ -123,7 +124,7 @@ function Page({ data }) {
                       to={`/krankheitsbilder/${post.slug}`}
                       className="text-base font-semibold text-teal-600 hover:text-teal-500"
                     >
-                      Mehr erfahren
+                      {page.content.button}
                     </Link>
                   </div>
                 </div>
@@ -137,7 +138,7 @@ function Page({ data }) {
           <div className="relative max-w-lg mx-auto divide-y-2 divide-gray-100 lg:max-w-7xl">
             <div>
               <h2 className="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">
-                Weiteres
+                {page.content.moreHeading}
               </h2>
             </div>
             <div className="mt-6 pt-10 grid gap-16 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-12">
@@ -153,7 +154,7 @@ function Page({ data }) {
                     to="/anti-aging/"
                     className="text-base font-semibold text-teal-600 hover:text-teal-500"
                   >
-                    Mehr erfahren
+                    {page.content.button}
                   </Link>
                 </div>
               </div>
@@ -189,6 +190,17 @@ export const query = graphql`
       header {
         title
         text
+        image {
+          childImageSharp {
+            gatsbyImageData(layout: FULL_WIDTH)
+          }
+        }
+      }
+      content {
+        operationsHeading
+        therapiesHeading
+        moreHeading
+        button
       }
     }
     outpatientSurgery: markdownRemark(

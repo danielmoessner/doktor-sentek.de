@@ -2,10 +2,15 @@
 collection: operation
 meta:
   title: "Operation: Hand"
-  description: beschr
-  image: ../media/boot.jpg
+  description: Als Handchirurg stellt für mich die operative Behandlung von Pat
+    mit Erkrankungen und Verletzungen der Hand eine zentrale Säule dar. Der
+    Einsatz von optischen Vergrößerungshilfen (Lupenbrille) sowie der Einsatz
+    von atraumatischen (gewebeschonenden) Operationstechniken kommen
+    standardmäßig zum Einsatz.
+  image: ../media/Wolf - bei OP Hand Hintergrund.jpg
 title: Hand
 slug: hand
+image: ../media/Wolf - bei OP Hand Hintergrund.jpg
 order: 5
 excerpt: Als Handchirurg stellt für mich die operative Behandlung von Pat mit
   Erkrankungen und Verletzungen der Hand eine zentrale Säule dar. Der Einsatz

@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Layout from '../components/Layout';
 import Seo from '../components/Seo';
 import Article from '../components/Article';
+import Header from '../components/Header';
 
 function Page({ data, location }) {
   let formSent = false;
@@ -24,6 +25,7 @@ function Page({ data, location }) {
         description={operation.meta.description}
         image={operation.meta.image.childImageSharp.resize.src}
       />
+      <Header image={operation.image.childImageSharp.gatsbyImageData} />
       <Article header={header} html={operation.html} />
 
       <div
@@ -267,6 +269,11 @@ export const query = graphql`
         }
         title
         excerpt
+        image {
+          childImageSharp {
+            gatsbyImageData(layout: FULL_WIDTH)
+          }
+        }
       }
     }
   }

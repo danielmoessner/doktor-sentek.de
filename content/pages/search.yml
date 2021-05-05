@@ -7,3 +7,6 @@ meta:
 header:
   title: Suche
   text: suche
+content:
+  button: Mehr erfahren
+  noResults: Leider keine Ergebnisse gefunden.

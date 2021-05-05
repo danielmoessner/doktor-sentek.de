@@ -2,11 +2,21 @@
 collection: operation
 meta:
   title: "Operation: Schulter"
-  description: beschr
-  image: ../media/boot.jpg
+  description: Eine subakromiale Dekompression verschafft der eingeklemmten
+    Rotatorenmanschette beim Impingementsydrom / Schulterengpass-Syndrom wieder
+    Platz. Dabei werden Weichteile (Teile des Schleimbeutels) und Teile der
+    Unterseite des Acromions (Schulterdach) mittels einer Fräse sparsam
+    entfernt, so dass wieder ein ungehinderter Gleitvorgang möglich ist.
+  image: ../media/bei  OP  Schulter.jpg
 title: Schulter
 slug: schulter
-excerpt: auszug
+image: ../media/bei  OP  Schulter.jpg
+order: 3
+excerpt: Eine subakromiale Dekompression verschafft der eingeklemmten
+  Rotatorenmanschette beim Impingementsydrom / Schulterengpass-Syndrom wieder
+  Platz. Dabei werden Weichteile (Teile des Schleimbeutels) und Teile der
+  Unterseite des Acromions (Schulterdach) mittels einer Fräse sparsam entfernt,
+  so dass wieder ein ungehinderter Gleitvorgang möglich ist.
 ---
 ## Subakromiale Dekompression 
 

@@ -53,7 +53,7 @@ exports.createPages = async ({ graphql, actions }) => {
   });
   result.data.therapies.nodes.forEach((node) => {
     createPage({
-      path: `konservative-therapie/${node.frontmatter.slug}/`,
+      path: `konservative-therapien/${node.frontmatter.slug}/`,
       component: path.resolve(`./src/templates/therapy.jsx`),
       context: {
         slug: node.frontmatter.slug,

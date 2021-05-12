@@ -24,6 +24,8 @@ Eine subakromiale Dekompression verschafft der eingeklemmten Rotatorenmanschett
 
 ## Rotatorenmanschetten-Operation / Rotatorenmanschetten-Naht 
 
+![Schulter](../media/fav Schulter Rotatorenmanschette OP.JPG "Schulter")
+
 Bei der Rotatorenmanschetten-Operation ist die Rotatorenmanschette meist gerissen und zieht sich ein Ende wie ein Gummiband zurück. Durch die Rotatorenmanschettenoperation / Rotatorenmanschettennaht werden die Rissenden wieder an die ursprüngliche Stelle zurückgezogen und dort mittels Schrauben fest verankert. 
 
 ## Stabilisierende Operation bei Schulterluxation (Auskugeln) 

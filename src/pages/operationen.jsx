@@ -5,6 +5,7 @@ import Layout from '../components/Layout';
 import Seo from '../components/Seo';
 import Header from '../components/Header';
 import Indication from '../components/Indication';
+import Container from '../components/Container';
 
 function Page({ data }) {
   const page = data.pagesYaml;
@@ -19,7 +20,7 @@ function Page({ data }) {
         <Header
           title={page.header.title}
           subtitle={page.header.text}
-          image={page.header.image.childImageSharp.gatsbyImageData}
+          sideImage={page.header.image.childImageSharp.gatsbyImageData}
         />
       }
     >
@@ -30,62 +31,64 @@ function Page({ data }) {
       />
       <Indication />
       <section className="bg-white">
-        <div className="max-w-7xl mx-auto py-20 px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-16 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-12">
-            <div>
-              <Link to="/stationaeres-operieren/" className="mt-2 block">
-                <p className="text-xl font-semibold text-gray-900">
-                  {inpatientSurgery.header.title}
-                </p>
-                <p className="mt-3 text-base text-gray-500 line-clamp-3">
-                  {inpatientSurgery.header.text}
-                </p>
-              </Link>
-              <div className="mt-3">
-                <Link
-                  to="/stationaeres-operieren/"
-                  className="text-base font-semibold text-teal-600 hover:text-teal-500"
-                >
-                  {page.content.button}
-                </Link>
-              </div>
-            </div>
-            <div>
-              <Link to="/ambulantes-operieren/" className="mt-2 block">
-                <p className="text-xl font-semibold text-gray-900">
-                  {outpatientSurgery.header.title}
-                </p>
-                <p className="mt-3 text-base text-gray-500 line-clamp-3">
-                  {outpatientSurgery.header.text}
-                </p>
-              </Link>
-              <div className="mt-3">
-                <Link
-                  to="/ambulantes-operieren/"
-                  className="text-base font-semibold text-teal-600 hover:text-teal-500"
-                >
-                  {page.content.button}
-                </Link>
-              </div>
-            </div>
-            {operations.map((operation) => (
-              <div key={operation.slug}>
-                <Link to={`/operationen/${operation.slug}`} className="mt-2 block">
-                  <p className="text-xl font-semibold text-gray-900">{operation.title}</p>
-                  <p className="mt-3 text-base text-gray-500 line-clamp-3">{operation.excerpt}</p>
+        <Container>
+          <div className="py-20 lg:px-4">
+            <div className="grid gap-16 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-12">
+              <div>
+                <Link to="/stationaeres-operieren/" className="mt-2 block">
+                  <p className="text-xl font-semibold text-gray-900">
+                    {inpatientSurgery.header.title}
+                  </p>
+                  <p className="mt-3 text-base text-gray-500 line-clamp-3">
+                    {inpatientSurgery.header.text}
+                  </p>
                 </Link>
                 <div className="mt-3">
                   <Link
-                    to={`/operationen/${operation.slug}`}
+                    to="/stationaeres-operieren/"
                     className="text-base font-semibold text-teal-600 hover:text-teal-500"
                   >
                     {page.content.button}
                   </Link>
                 </div>
               </div>
-            ))}
+              <div>
+                <Link to="/ambulantes-operieren/" className="mt-2 block">
+                  <p className="text-xl font-semibold text-gray-900">
+                    {outpatientSurgery.header.title}
+                  </p>
+                  <p className="mt-3 text-base text-gray-500 line-clamp-3">
+                    {outpatientSurgery.header.text}
+                  </p>
+                </Link>
+                <div className="mt-3">
+                  <Link
+                    to="/ambulantes-operieren/"
+                    className="text-base font-semibold text-teal-600 hover:text-teal-500"
+                  >
+                    {page.content.button}
+                  </Link>
+                </div>
+              </div>
+              {operations.map((operation) => (
+                <div key={operation.slug}>
+                  <Link to={`/operationen/${operation.slug}`} className="mt-2 block">
+                    <p className="text-xl font-semibold text-gray-900">{operation.title}</p>
+                    <p className="mt-3 text-base text-gray-500 line-clamp-3">{operation.excerpt}</p>
+                  </Link>
+                  <div className="mt-3">
+                    <Link
+                      to={`/operationen/${operation.slug}`}
+                      className="text-base font-semibold text-teal-600 hover:text-teal-500"
+                    >
+                      {page.content.button}
+                    </Link>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
+        </Container>
       </section>
     </Layout>
   );

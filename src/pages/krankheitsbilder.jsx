@@ -17,7 +17,7 @@ function Page({ data }) {
         <Header
           title={page.header.title}
           subtitle={page.header.text}
-          image={page.header.image.childImageSharp.gatsbyImageData}
+          sideImage={page.header.image.childImageSharp.gatsbyImageData}
         />
       }
     >

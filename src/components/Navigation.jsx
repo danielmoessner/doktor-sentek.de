@@ -79,7 +79,7 @@ function Component() {
 
   return (
     <>
-      <div className="">
+      <nav className="">
         <div className="max-w-7xl mx-auto lg:px-6">
           <div className="">
             <div className="border-b border-gray-100">
@@ -165,13 +165,13 @@ function Component() {
             </div>
           </div>
         </div>
-      </div>
+      </nav>
       <nav className="border-b border-gray-100 lg:sticky lg:top-0 bg-white z-50 shadow-sm">
         <div className="max-w-7xl mx-auto lg:px-6">
           <div className="">
             <div>
               <nav className="bg-white">
-                <div className="relative flex flex-row-reverse justify-between h-24 px-4 sm:px-6 lg:px-0">
+                <div className="relative flex flex-row-reverse justify-between h-16 px-4 sm:px-6 lg:px-0">
                   <div className="flex items-center lg:hidden relative">
                     <button
                       onClick={() => setMenuOpen(!menuOpen)}
@@ -244,14 +244,9 @@ function Component() {
                   <div className="pt-2 pb-4 space-y-1">
                     <NavigationMobileLink to="/">{navigation.link1}</NavigationMobileLink>
                     <NavigationMobileLink to="/team/">{navigation.link2}</NavigationMobileLink>
-                    {illnessLinks.map((link) => (
-                      <NavigationMobileLink key={link.slug} to={`/krankheitsbilder/${link.slug}/`}>
-                        <div className="flex space-x-2">
-                          <div>{navigation.mobileLink2}</div>
-                          <div>{link.title}</div>
-                        </div>
-                      </NavigationMobileLink>
-                    ))}
+                    <NavigationMobileLink to="/krankheitsbilder/">
+                      {navigation.link3}
+                    </NavigationMobileLink>
                     <NavigationMobileLink to="/operationen/">
                       {navigation.focus.operations}
                     </NavigationMobileLink>

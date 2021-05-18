@@ -2,12 +2,12 @@
 collection: page
 slug: anti-aging
 meta:
-  title: Anti Aging
-  description: Anti Aging beschr
+  title: Anti Aging Rostock
+  description: Anti Aging Rostock
   image: ../media/r-d-smith-7ibuzq6cugs-unsplash.jpg
 header:
-  pretitle: Neu
-  title: Anti Aging
+  pretitle: Anti Aging
+  title: Ihre Ausstrahlung ist uns wichtig
   text: Falten bekommt jeder im Laufe seines Lebens. Doch oft lassen Falten einen
     Menschen älter aussehen, als er sich eigentlich fühlt und es entsteht ein
     falscher Eindruck, unter dem vor allem Frauen häufig leiden. Moderne

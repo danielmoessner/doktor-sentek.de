@@ -10,7 +10,7 @@ meta:
   image: ../media/Wolf - bei OP Hand Hintergrund.jpg
 title: Hand
 slug: hand
-image: ../media/Wolf - bei OP Hand Hintergrund.jpg
+image: ../media/Touch 01 - bei OP Daumensattelgelenk.JPG
 order: 5
 excerpt: Als Handchirurg stellt für mich die operative Behandlung von Pat mit
   Erkrankungen und Verletzungen der Hand eine zentrale Säule dar. Der Einsatz

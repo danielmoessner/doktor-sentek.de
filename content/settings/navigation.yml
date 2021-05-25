@@ -1,11 +1,16 @@
 slug: navigation
+contact:
+  link1: Kontaktdaten
+  link2: Sprechzeiten
+  link3: Anfahrt
+  link4: Stellenangebote
 colleciton: setting
+mobileLink2: "Krankheitsbild:"
 link1: Startseite
 link2: Zur Person
 link3: Krankheitsbilder
 link4: Schwerpunkte
 link5: Kontakt
-link6: Sprechstunden
 focus:
   inpatientOperations: Stationäres Operieren
   outpatientSurgery: Ambulantes Operieren
@@ -13,5 +18,5 @@ focus:
   therapies: Konservative Therapien
   antiAging: Anti Aging
   inpatientSurgery: Stationäres Operieren
-mobileLink2: "Krankheitsbild:"
 mobileLink4: "Operation:"
+link6: Sprechstunden

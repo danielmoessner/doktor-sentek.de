@@ -13,21 +13,13 @@ function Page({ data }) {
   const contact = data.settingsYaml;
 
   return (
-    <Layout
-      header={
-        // eslint-disable-next-line
-        <Header
-          title={page.header.title}
-          subtitle={page.header.text}
-        />
-      }
-    >
+    <Layout>
       <Seo
         title={page.meta.title}
         description={page.meta.description}
         image={page.meta.image.childImageSharp.resize.src}
       />
-      <Indication />
+      <Header title={page.header.title} subtitle={page.header.text} />
       <section>
         <div className="bg-white">
           <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
@@ -148,6 +140,7 @@ function Page({ data }) {
           </div>
         </div>
       </section>
+      <Indication />
     </Layout>
   );
 }

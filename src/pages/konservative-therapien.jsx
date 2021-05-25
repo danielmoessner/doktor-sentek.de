@@ -12,22 +12,17 @@ function Page({ data }) {
   const therapies = data.therapies.nodes.map((node) => node.frontmatter);
 
   return (
-    <Layout
-      header={
-        // eslint-disable-next-line
-        <Header
-          title={page.header.title}
-          subtitle={page.header.text}
-          sideImage={page.header.image.childImageSharp.gatsbyImageData}
-        />
-      }
-    >
+    <Layout>
       <Seo
         title={page.meta.title}
         description={page.meta.description}
         image={page.meta.image.childImageSharp.resize.src}
       />
-      <Indication />
+      <Header
+        title={page.header.title}
+        subtitle={page.header.text}
+        sideImage={page.header.image.childImageSharp.gatsbyImageData}
+      />
       <section className="bg-white">
         <Container>
           <div className="py-20 lg:px-4">
@@ -52,6 +47,7 @@ function Page({ data }) {
           </div>
         </Container>
       </section>
+      <Indication />
     </Layout>
   );
 }

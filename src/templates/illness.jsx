@@ -8,12 +8,7 @@ import Header from '../components/Header';
 
 function Page({ data }) {
   const illness = { html: data.markdownRemark.html, ...data.markdownRemark.frontmatter };
-  const page = data.pagesYaml;
-  const header = {
-    pretitle: page.pretitle,
-    title: illness.title,
-    text: illness.excerpt,
-  };
+  // const page = data.pagesYaml;
 
   return (
     <Layout>
@@ -22,8 +17,12 @@ function Page({ data }) {
         description={illness.meta.description}
         image={illness.meta.image.childImageSharp.resize.src}
       />
-      <Header image={illness.image.childImageSharp.gatsbyImageData} />
-      <Article header={header} html={illness.html} />
+      <Header
+        title={illness.title}
+        subtitle={illness.excerpt}
+        sideImage={illness.image.childImageSharp.gatsbyImageData}
+      />
+      <Article html={illness.html} />
     </Layout>
   );
 }

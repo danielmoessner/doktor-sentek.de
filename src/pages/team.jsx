@@ -15,21 +15,13 @@ function Page({ data }) {
   const page = data.pagesYaml;
 
   return (
-    <Layout
-      header={
-        // eslint-disable-next-line
-        <Header
-          title={page.header.title}
-          subtitle={page.header.text}
-        />
-      }
-    >
+    <Layout>
       <Seo
         title={page.meta.title}
         description={page.meta.description}
         image={page.meta.image.childImageSharp.resize.src}
       />
-      <Indication />
+      <Header title={page.header.title} subtitle={page.header.text} />
       <section>
         <div className="bg-white" id="aerzte">
           <div className="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
@@ -51,7 +43,7 @@ function Page({ data }) {
                     <div className="sm:col-span-9">
                       <div className="space-y-4">
                         <div className="text-lg leading-6 font-medium space-y-1">
-                          <h3>{member.title}</h3>
+                          <h2>{member.title}</h2>
                           <p className="text-teal-600">{member.subtitle}</p>
                         </div>
                         <div
@@ -68,6 +60,7 @@ function Page({ data }) {
           </div>
         </div>
       </section>
+      <Indication />
     </Layout>
   );
 }

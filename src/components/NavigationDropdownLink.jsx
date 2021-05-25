@@ -7,7 +7,7 @@ function Component({ to, children, close }) {
     <Link
       to={to}
       onClick={close}
-      className="py-3 px-5 block hover:bg-teal-700 hover:text-teal-050 text-teal-050"
+      className="py-3 px-5 block hover:bg-teal-050 hover:text-teal-700 text-teal-050"
     >
       <p className="text-base font-medium">{children}</p>
     </Link>

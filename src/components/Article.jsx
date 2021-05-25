@@ -96,19 +96,21 @@ function Component({ header, html }) {
           </div>
         </div>
         <div className="relative px-4 sm:px-6 lg:px-8">
-          <header className="text-lg max-w-prose mx-auto">
-            <h1>
-              <span className="block text-base text-center text-teal-800 font-semibold tracking-wide uppercase">
-                {header.pretitle}
-              </span>
-              <span className="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                {header.title}
-              </span>
-            </h1>
-            <p className="mt-8 text-xl text-gray-500 leading-8">{header.text}</p>
-          </header>
+          {header && (
+            <header className="mb-6 text-lg max-w-prose mx-auto">
+              <h1>
+                <span className="block text-base text-center text-teal-800 font-semibold tracking-wide uppercase">
+                  {header.pretitle}
+                </span>
+                <span className="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                  {header.title}
+                </span>
+              </h1>
+              <p className="mt-8 text-xl text-gray-500 leading-8">{header.text}</p>
+            </header>
+          )}
           <div
-            className="mt-6 prose prose-teal lg:prose-lg text-gray-500 mx-auto"
+            className="prose prose-teal lg:prose-lg text-gray-500 mx-auto"
             // eslint-disable-next-line
             dangerouslySetInnerHTML={{ __html: html }}
           />
@@ -118,14 +120,16 @@ function Component({ header, html }) {
   );
 }
 
-Component.defaultProps = {};
+Component.defaultProps = {
+  header: null,
+};
 
 Component.propTypes = {
   header: PropTypes.shape({
     pretitle: PropTypes.string,
     title: PropTypes.string,
     text: PropTypes.string,
-  }).isRequired,
+  }),
   html: PropTypes.string.isRequired,
 };
 

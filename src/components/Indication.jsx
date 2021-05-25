@@ -17,12 +17,12 @@ function Component() {
   const indication = data.settingsYaml;
 
   return (
-    <section>
-      <div className="fixed right-0 z-50" style={{ top: '15vh' }}>
+    <aside>
+      <div className="fixed right-0 z-50 top-[25vh] lg:top-[15vh]">
         <button
           type="button"
           onClick={() => setOpen(!open)}
-          className="bg-teal-700 text-teal-050 p-3 w-12 rounded-l-full cursor-pointer hover:bg-teal-800 focus:outline-none"
+          className="bg-gray-900 text-gray-050 p-3 w-12 rounded-l-full cursor-pointer hover:bg-gray-800 focus:outline-none"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -49,15 +49,15 @@ function Component() {
           leaveFrom="translate-x-0"
           leaveTo="translate-x-full"
         >
-          <aside className="bg-teal-700 text-teal-050 rounded-l-lg">
+          <div className="bg-gray-050 text-gray-900 rounded-l-lg">
             <div className="p-4">
-              <h2 className="text-lg font-medium text-white">{indication.title}</h2>
-              <p className="mt-2 text-teal-050">{indication.text}</p>
+              <h2 className="text-lg font-medium">{indication.title}</h2>
+              <p className="mt-2">{indication.text}</p>
             </div>
-          </aside>
+          </div>
         </Transition>
       </div>
-    </section>
+    </aside>
   );
 }
 

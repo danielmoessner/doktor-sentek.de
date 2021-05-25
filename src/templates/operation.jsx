@@ -11,11 +11,6 @@ function Page({ data, location }) {
   if (location.hash && location.hash === '#formular-danke') formSent = true;
   const operation = { html: data.markdownRemark.html, ...data.markdownRemark.frontmatter };
   const page = data.pagesYaml;
-  const header = {
-    pretitle: page.pretitle,
-    title: operation.title,
-    text: operation.excerpt,
-  };
   const [enabled, setEnabled] = useState(false);
 
   return (
@@ -25,10 +20,13 @@ function Page({ data, location }) {
         description={operation.meta.description}
         image={operation.meta.image.childImageSharp.resize.src}
       />
-      <Header image={operation.image.childImageSharp.gatsbyImageData} />
-      <Article header={header} html={operation.html} />
-
-      <div
+      <Header
+        title={operation.title}
+        subtitle={operation.excerpt}
+        sideImage={operation.image.childImageSharp.gatsbyImageData}
+      />
+      <Article html={operation.html} />
+      <section
         className="relative py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-24"
         id="formular-danke"
       >
@@ -212,7 +210,7 @@ function Page({ data, location }) {
             </div>
           )}
         </div>
-      </div>
+      </section>
     </Layout>
   );
 }

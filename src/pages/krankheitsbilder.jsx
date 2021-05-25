@@ -11,22 +11,17 @@ function Page({ data }) {
   const illnesses = data.illnesses.nodes.map((node) => node.frontmatter);
 
   return (
-    <Layout
-      header={
-        // eslint-disable-next-line
-        <Header
-          title={page.header.title}
-          subtitle={page.header.text}
-          sideImage={page.header.image.childImageSharp.gatsbyImageData}
-        />
-      }
-    >
+    <Layout>
       <Seo
         title={page.meta.title}
         description={page.meta.description}
         image={page.meta.image.childImageSharp.resize.src}
       />
-      <Indication />
+      <Header
+        title={page.header.title}
+        subtitle={page.header.text}
+        sideImage={page.header.image.childImageSharp.gatsbyImageData}
+      />
       <section className="bg-white">
         <div className="max-w-7xl mx-auto py-20 px-4 sm:px-6 lg:px-8">
           <div className="grid gap-16 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-12">
@@ -49,6 +44,7 @@ function Page({ data }) {
           </div>
         </div>
       </section>
+      <Indication />
     </Layout>
   );
 }

@@ -23,7 +23,7 @@ function Component({ title, subtitle, image, sideImage }) {
                 <p className="mt-2 text-xl text-teal-050 lg:mt-5">{subtitle}</p>
               </div>
               {sideImage && (
-                <div className="w-full md:w-1/2">
+                <div className="w-full md:w-1/2 pt-5 md:pt-0">
                   <GatsbyImage className="w-full max-w-full h-auto" image={sideImage} alt={title} />
                 </div>
               )}

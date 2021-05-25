@@ -41,8 +41,12 @@ function Component() {
           therapies
           antiAging
         }
-        mobileLink2
-        mobileLink4
+        contact {
+          link1
+          link2
+          link3
+          link4
+        }
       }
     }
   `);
@@ -64,22 +68,26 @@ function Component() {
   ];
   const contactLinks = [
     {
-      title: 'Kontaktdaten',
+      title: navigation.contact.link1,
       slug: '/kontakt',
     },
     {
-      title: 'Sprechzeiten',
+      title: navigation.contact.link2,
       slug: '/kontakt',
     },
     {
-      title: 'Anfahrt',
+      title: navigation.contact.link3,
       slug: '/kontakt',
+    },
+    {
+      title: navigation.contact.link4,
+      slug: '/stellenangebote',
     },
   ];
 
   return (
     <>
-      <nav className="">
+      <nav className="hidden lg:block">
         <div className="max-w-7xl mx-auto lg:px-6">
           <div className="">
             <div className="border-b border-gray-100">
@@ -171,7 +179,7 @@ function Component() {
           <div className="">
             <div>
               <nav className="bg-white">
-                <div className="relative flex flex-row-reverse justify-between h-16 px-4 sm:px-6 lg:px-0">
+                <div className="relative flex flex-row-reverse justify-between h-20 px-4 sm:px-6 lg:px-0">
                   <div className="flex items-center lg:hidden relative">
                     <button
                       onClick={() => setMenuOpen(!menuOpen)}
@@ -213,10 +221,10 @@ function Component() {
                       </svg>
                     </button>
                   </div>
-                  <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-between">
+                  <div className="flex-1 flex items-center sm:items-stretch sm:justify-between">
                     <Link
                       to="/"
-                      className="px-10 sm:px-4 md:px-0 flex-shrink-0 flex items-center text-teal-900 w-80"
+                      className="sm:px-4 md:px-0 flex-shrink-0 flex items-center text-teal-900 w-80 lg:w-96"
                     >
                       <Logo />
                     </Link>
@@ -250,13 +258,16 @@ function Component() {
                     <NavigationMobileLink to="/operationen/">
                       {navigation.focus.operations}
                     </NavigationMobileLink>
-                    <NavigationMobileLink to="/operationen/">
+                    <NavigationMobileLink to="/konservative-therapien/">
                       {navigation.focus.therapies}
                     </NavigationMobileLink>
-                    <NavigationMobileLink to="/operationen/">
+                    <NavigationMobileLink to="/anti-aging/">
                       {navigation.focus.antiAging}
                     </NavigationMobileLink>
                     <NavigationMobileLink to="/kontakt/">{navigation.link5}</NavigationMobileLink>
+                    <NavigationMobileLink to="/stellenangebote/">
+                      {navigation.contact.link4}
+                    </NavigationMobileLink>
                   </div>
                 </div>
               </nav>

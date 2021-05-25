@@ -385,6 +385,33 @@ collections:
               - { label: Titel 2, name: title2, widget: string }
               - { label: Titel 3, name: title3, widget: string }
 
+      - file: content/pages/jobs.md
+        label: Stellenangebote
+        name: jobs
+        fields:
+          - { label: Sammlung, name: collection, widget: hidden, default: page }
+          - { label: Slug, name: slug, widget: hidden, default: jobs }
+          - label: Meta
+            name: meta
+            widget: object
+            fields:
+              - { label: Titel, name: title, widget: string }
+              - label: Beschreibung
+                name: description
+                widget: text
+              - { label: Bild, name: image, widget: image }
+          - label: Header
+            name: header
+            widget: object
+            fields:
+              - { label: Vortitel, name: pretitle, widget: string }
+              - { label: Titel, name: title, widget: string }
+              - { label: Text, name: text, widget: text }
+          - label: Inhalt
+            name: body
+            widget: markdown
+            hint: Bitte nur Überschrift 2-6 verwenden für SEO.
+
       - file: content/pages/search.yml
         label: Suche
         name: search
@@ -627,7 +654,14 @@ collections:
               - { label: Operationen, name: operations, widget: string }
               - { label: Konservative Therapien, name: therapies, widget: string }
               - { label: Anti Aging, name: antiAging, widget: string }
-          - { label: Mobil Link 4, name: mobileLink4, widget: string }
+          - label: Kontakt
+            name: contact
+            widget: object
+            fields:
+              - { label: Link 1, name: link1, widget: string }
+              - { label: Link 2, name: link2, widget: string }
+              - { label: Link 3, name: link3, widget: string }
+              - { label: Stellenangebote Link, name: link4, widget: string }
       - file: content/settings/indication.yml
         label: Hinweis
         name: indication

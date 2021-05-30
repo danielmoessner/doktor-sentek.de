@@ -6,10 +6,10 @@ meta:
     Gegenstandes, heftige Schmerzen in der unteren und mittleren
     Lendenwirbelsäule aus. Der Betroffene hat das Gefühl, im Kreuz
     durchzubrechen und ist aufgrund der Schmerzen nahezu bewegungsunfähig.
-  image: ../media/boot.jpg
+  image: ../media/fav Wirbelsäule Krankheitsbild allg.jpg
 title: Wirbelsäule
 slug: wirbelsaeule
-image: ../media/boot.jpg
+image: ../media/fav Wirbelsäule Krankheitsbild allg.jpg
 order: 1
 excerpt: Oft löst eine falsche Bewegung, etwa das Anheben eines schweren
   Gegenstandes, heftige Schmerzen in der unteren und mittleren Lendenwirbelsäule

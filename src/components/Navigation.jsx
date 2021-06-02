@@ -180,7 +180,7 @@ function Component() {
             <div>
               <nav className="bg-white">
                 <div className="relative flex flex-row-reverse justify-between h-20 px-4 sm:px-6 lg:px-0">
-                  <div className="flex items-center lg:hidden relative">
+                  <div className="flex items-center xl:hidden relative">
                     <button
                       onClick={() => setMenuOpen(!menuOpen)}
                       type="button"
@@ -224,11 +224,11 @@ function Component() {
                   <div className="flex-1 flex items-center sm:items-stretch sm:justify-between">
                     <Link
                       to="/"
-                      className="sm:px-4 md:px-0 flex-shrink-0 flex items-center text-teal-900 w-80 lg:w-96"
+                      className="sm:px-4 md:px-0 flex-shrink-0 flex items-center text-teal-900 w-2/3 md:w-80 lg:w-96"
                     >
                       <Logo />
                     </Link>
-                    <div className="hidden lg:ml-6 lg:flex">
+                    <div className="hidden xl:ml-6 xl:flex">
                       <NavigationLink to="/">{navigation.link1}</NavigationLink>
                       <NavigationLink to="/team/">{navigation.link2}</NavigationLink>
                       <NavigationDropdown
@@ -248,7 +248,7 @@ function Component() {
                   </div>
                 </div>
 
-                <div className={`lg:hidden ${menuOpen ? 'block' : 'hidden'}`} id="mobile-menu">
+                <div className={`xl:hidden ${menuOpen ? 'block' : 'hidden'}`} id="mobile-menu">
                   <div className="pt-2 pb-4 space-y-1">
                     <NavigationMobileLink to="/">{navigation.link1}</NavigationMobileLink>
                     <NavigationMobileLink to="/team/">{navigation.link2}</NavigationMobileLink>

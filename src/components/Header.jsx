@@ -4,14 +4,9 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 import GatsbyImageData from '../types/GatsbyImageData';
 import Container from './Container';
 
-function Component({ title, subtitle, image, sideImage }) {
+function Component({ title, subtitle, sideImage }) {
   return (
     <header className="bg-teal-800 shadow">
-      {image && !title && !subtitle && (
-        <div className="">
-          <GatsbyImage image={image} alt={title} />
-        </div>
-      )}
       {title && subtitle && (
         <div className="relative overflow-hidden">
           <Container>
@@ -24,7 +19,18 @@ function Component({ title, subtitle, image, sideImage }) {
               </div>
               {sideImage && (
                 <div className="w-full md:w-1/2 pt-5 md:pt-0">
-                  <GatsbyImage className="w-full max-w-full h-auto" image={sideImage} alt={title} />
+                  <div className="aspect-h-9 aspect-w-16">
+                    <div className="">
+                      <GatsbyImage
+                        className="w-auto max-w-full h-full"
+                        objectFit="contain"
+                        loading="eager"
+                        image={sideImage}
+                        objectPosition="50% 50%"
+                        alt={title}
+                      />
+                    </div>
+                  </div>
                 </div>
               )}
             </div>
@@ -36,7 +42,6 @@ function Component({ title, subtitle, image, sideImage }) {
 }
 
 Component.defaultProps = {
-  image: null,
   title: '',
   subtitle: '',
   sideImage: null,
@@ -45,7 +50,6 @@ Component.defaultProps = {
 Component.propTypes = {
   title: PropTypes.string,
   subtitle: PropTypes.string,
-  image: GatsbyImageData,
   sideImage: GatsbyImageData,
 };
 

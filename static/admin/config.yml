@@ -45,7 +45,7 @@ collections:
               - label: Beschreibung
                 name: description
                 widget: text
-              - { label: Bild, name: image, widget: image }
+              - { label: Bild, name: image, widget: image, hint: "Bitte eines der folgenden Formate verwenden: [jpg, png, jpeg, webp]." }
           - label: Header
             name: header
             widget: object
@@ -55,7 +55,7 @@ collections:
               - { label: Text, name: text, widget: text }
               - { label: Button links, name: buttonLeft, widget: text }
               - { label: Button rechts, name: buttonRight, widget: text }
-              - { label: Bild, name: image, widget: image }
+              - { label: Bild, name: image, widget: image, hint: "Bitte eines der folgenden Formate verwenden: [jpg, png, jpeg, webp]." }
           - label: Krankheitsbilder
             name: illness
             widget: object
@@ -80,7 +80,7 @@ collections:
             name: antiAging
             widget: object
             fields:
-              - { label: Bild, name: image, widget: image }
+              - { label: Bild, name: image, widget: image, hint: "Bitte eines der folgenden Formate verwenden: [jpg, png, jpeg, webp]." }
               - { label: Vortitel, name: pretitle, widget: string }
               - { label: Titel, name: title, widget: string }
               - { label: Text, name: text, widget: text }
@@ -100,7 +100,7 @@ collections:
               - label: Beschreibung
                 name: description
                 widget: text
-              - { label: Bild, name: image, widget: image }    
+              - { label: Bild, name: image, widget: image, hint: "Bitte eines der folgenden Formate verwenden: [jpg, png, jpeg, webp]." }    
           - label: Header
             name: header
             widget: object
@@ -122,14 +122,14 @@ collections:
               - label: Beschreibung
                 name: description
                 widget: text
-              - { label: Bild, name: image, widget: image }     
+              - { label: Bild, name: image, widget: image, hint: "Bitte eines der folgenden Formate verwenden: [jpg, png, jpeg, webp]." }     
           - label: Header
             name: header
             widget: object
             fields:
               - { label: Titel, name: title, widget: string }
               - { label: Text, name: text, widget: string }  
-              - { label: Bild, name: image, widget: image }
+              - { label: Bild, name: image, widget: image, hint: "Bitte eines der folgenden Formate verwenden: [jpg, png, jpeg, webp]." }
           - label: Inhalt
             name: content
             widget: object
@@ -158,14 +158,14 @@ collections:
               - label: Beschreibung
                 name: description
                 widget: text
-              - { label: Bild, name: image, widget: image }     
+              - { label: Bild, name: image, widget: image, hint: "Bitte eines der folgenden Formate verwenden: [jpg, png, jpeg, webp]." }     
           - label: Header
             name: header
             widget: object
             fields:
               - { label: Titel, name: title, widget: string }
               - { label: Text, name: text, widget: string }  
-              - { label: Bild, name: image, widget: image }
+              - { label: Bild, name: image, widget: image, hint: "Bitte eines der folgenden Formate verwenden: [jpg, png, jpeg, webp]." }
           - label: Inhalt
             name: content
             widget: object
@@ -189,7 +189,7 @@ collections:
               - label: Beschreibung
                 name: description
                 widget: text
-              - { label: Bild, name: image, widget: image }
+              - { label: Bild, name: image, widget: image, hint: "Bitte eines der folgenden Formate verwenden: [jpg, png, jpeg, webp]." }
           - label: Header
             name: header
             widget: object
@@ -216,7 +216,7 @@ collections:
               - label: Beschreibung
                 name: description
                 widget: text
-              - { label: Bild, name: image, widget: image }
+              - { label: Bild, name: image, widget: image, hint: "Bitte eines der folgenden Formate verwenden: [jpg, png, jpeg, webp]." }
           - label: Header
             name: header
             widget: object
@@ -243,14 +243,14 @@ collections:
               - label: Beschreibung
                 name: description
                 widget: text
-              - { label: Bild, name: image, widget: image }     
+              - { label: Bild, name: image, widget: image, hint: "Bitte eines der folgenden Formate verwenden: [jpg, png, jpeg, webp]." }     
           - label: Header
             name: header
             widget: object
             fields:
               - { label: Titel, name: title, widget: string }
               - { label: Text, name: text, widget: string }  
-              - { label: Bild, name: image, widget: image }
+              - { label: Bild, name: image, widget: image, hint: "Bitte eines der folgenden Formate verwenden: [jpg, png, jpeg, webp]." }
           - label: Inhalt
             name: content
             widget: object
@@ -271,14 +271,14 @@ collections:
               - label: Beschreibung
                 name: description
                 widget: text
-              - { label: Bild, name: image, widget: image }     
+              - { label: Bild, name: image, widget: image, hint: "Bitte eines der folgenden Formate verwenden: [jpg, png, jpeg, webp]." }     
           - label: Header
             name: header
             widget: object
             fields:
               - { label: Titel, name: title, widget: string }
               - { label: Text, name: text, widget: string }  
-              - { label: Bild, name: image, widget: image }
+              - { label: Bild, name: image, widget: image, hint: "Bitte eines der folgenden Formate verwenden: [jpg, png, jpeg, webp]." }
           - label: Inhalt
             name: content
             widget: object
@@ -342,7 +342,7 @@ collections:
               - label: Beschreibung
                 name: description
                 widget: text
-              - { label: Bild, name: image, widget: image }
+              - { label: Bild, name: image, widget: image, hint: "Bitte eines der folgenden Formate verwenden: [jpg, png, jpeg, webp]." }
           - label: Header
             name: header
             widget: object
@@ -369,7 +369,7 @@ collections:
               - label: Beschreibung
                 name: description
                 widget: text
-              - { label: Bild, name: image, widget: image }     
+              - { label: Bild, name: image, widget: image, hint: "Bitte eines der folgenden Formate verwenden: [jpg, png, jpeg, webp]." }     
           - label: Header
             name: header
             widget: object
@@ -399,7 +399,7 @@ collections:
               - label: Beschreibung
                 name: description
                 widget: text
-              - { label: Bild, name: image, widget: image }
+              - { label: Bild, name: image, widget: image, hint: "Bitte eines der folgenden Formate verwenden: [jpg, png, jpeg, webp]." }
           - label: Header
             name: header
             widget: object
@@ -426,7 +426,7 @@ collections:
               - label: Beschreibung
                 name: description
                 widget: text
-              - { label: Bild, name: image, widget: image }    
+              - { label: Bild, name: image, widget: image, hint: "Bitte eines der folgenden Formate verwenden: [jpg, png, jpeg, webp]." }    
           - label: Header
             name: header
             widget: object
@@ -499,7 +499,7 @@ collections:
       - { label: Titel, name: title, widget: string }
       - { label: Slug, name: slug, widget: string }
       - { label: Untertitel, name: subtitle, widget: string }
-      - { label: Bild, name: image, widget: image }
+      - { label: Bild, name: image, widget: image, hint: "Bitte eines der folgenden Formate verwenden: [jpg, png, jpeg, webp]." }
       - { label: Auszug, name: excerpt, widget: text }
       - { label: Inhalt, name: body, widget: markdown }
 
@@ -523,10 +523,10 @@ collections:
           - label: Beschreibung
             name: description
             widget: text
-          - { label: Bild, name: image, widget: image }
+          - { label: Bild, name: image, widget: image, hint: "Bitte eines der folgenden Formate verwenden: [jpg, png, jpeg, webp]." }
       - { label: Titel, name: title, widget: string }
       - { label: Slug, name: slug, widget: string }
-      - { label: Bild, name: image, widget: image }
+      - { label: Bild, name: image, widget: image, hint: "Bitte eines der folgenden Formate verwenden: [jpg, png, jpeg, webp]." }
       - { label: Sortierung, name: order, widget: number }
       - { label: Auszug, name: excerpt, widget: text }
       - label: Inhalt
@@ -554,10 +554,10 @@ collections:
           - label: Beschreibung
             name: description
             widget: text
-          - { label: Bild, name: image, widget: image }
+          - { label: Bild, name: image, widget: image, hint: "Bitte eines der folgenden Formate verwenden: [jpg, png, jpeg, webp]." }
       - { label: Titel, name: title, widget: string }
       - { label: Slug, name: slug, widget: string }
-      - { label: Bild, name: image, widget: image }
+      - { label: Bild, name: image, widget: image, hint: "Bitte eines der folgenden Formate verwenden: [jpg, png, jpeg, webp]." }
       - { label: Sortierung, name: order, widget: number }
       - { label: Auszug, name: excerpt, widget: text }
       - label: Inhalt
@@ -585,10 +585,10 @@ collections:
           - label: Beschreibung
             name: description
             widget: text
-          - { label: Bild, name: image, widget: image }
+          - { label: Bild, name: image, widget: image, hint: "Bitte eines der folgenden Formate verwenden: [jpg, png, jpeg, webp]." }
       - { label: Titel, name: title, widget: string }
       - { label: Slug, name: slug, widget: string }
-      - { label: Bild, name: image, widget: image }
+      - { label: Bild, name: image, widget: image, hint: "Bitte eines der folgenden Formate verwenden: [jpg, png, jpeg, webp]." }
       - { label: Sortierung, name: order, widget: number }
       - { label: Auszug, name: excerpt, widget: text }
       - label: Inhalt
@@ -610,7 +610,7 @@ collections:
         fields:
           - { label: Sammlung, name: collection, widget: hidden, default: setting }
           - { label: Slug, name: slug, widget: hidden, default: global }
-          - { label: Favicon, name: favicon, widget: image }
+          - { label: Favicon, name: favicon, widget: image, hint: "Bitte eines der folgenden Formate verwenden: [jpg, png, jpeg, webp]." }
           - { label: Svg Logo, name: logo, widget: text, hint: Bitte nur ändern wenn man weiß was man macht. }
       - file: content/settings/appointments.yml
         label: Sprechstunden

@@ -63,7 +63,9 @@ function Component() {
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:pt-16 lg:pb-20 lg:px-6">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8 xl:col-span-1 text-teal-900">
-            <Logo />
+            <div className="max-w-lg">
+              <Logo />
+            </div>
             <p className="text-gray-500 text-base">{footer.text}</p>
             <div className="flex flex-col space-y-3">
               <div className="flex flex-row items-center">

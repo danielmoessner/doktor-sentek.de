@@ -51,10 +51,11 @@ excerpt: >
 
 **Fachkunden und Zertifikate:**
 
-* 20--: Fachkunde Rettungsdienst
-* 20--: Fachkunde Strahlenschutz
-* 20--: Fußchirurgie
-* 20--: Osteosynthese
+* 2005: Fachkunde Rettungsdienst
+* 2009: Fachkunde Strahlenschutz
+
+  * 2016: Fußchirurgie
+* 2014: Osteosynthese
 * 2020: Manuelle Medizin / Chirotherapeut
 
 **Berufsverbände:**

@@ -2,12 +2,12 @@ collection: settings
 slug: appointments
 appointments:
   - day: Montag
-    openingHours: 8:00 - 17:00 Uhr
+    openingHours: 8:00 - 17:00 Uhr - PD Dr. med. M. Witt
   - day: Dienstag
-    openingHours: 8:00 - 17:00 Uhr
+    openingHours: 13:00 - 17:00 Uhr
   - day: Mittwoch
-    openingHours: 8:00 - 17:00 Uhr
+    openingHours: 8:00 - 13:00 Uhr
   - day: Donnerstag
-    openingHours: 8:00 - 17:00 Uhr
+    openingHours: 8:00 - 17:00 Uhr - PD Dr. med. M. Witt
   - day: Freitag
-    openingHours: 8:00 - 17:00 Uhr
+    openingHours: 8:00 - 12:00 Uhr

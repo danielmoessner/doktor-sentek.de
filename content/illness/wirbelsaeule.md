@@ -40,7 +40,7 @@ verhindern, dass wir nach vorne oder nach hinten fallen. Tauchen hier Störfakto
 
 Für Schmerzen am unteren Teil der Wirbelsäule werden immer wieder vorschnell Bandscheibenvorfälle verantwortlich gemacht. In der Mehrzahl der Fälle haben die Beschwerden jedoch nichts mit der Bandscheibe zu tun, es handelt sich vielmehr um Lumbago. 
 
-![](../media/wirbelsäule-02-bei-konservativer-therapie-wirbelsäule-bessere-qualität.bmp)
+![](../media/fav Wirbelsäule Krankheitsbild allg.jpg)
 
 An der gesamten Wirbelsäule liegen zwischen den eigentlichen knöchernen Wirbeln die Bandscheiben, die als Puffer gegen Stossbelastungen dienen. Wenn diese Scheiben allzu beweglich werden, können sie auf Rückenmark oder Nervenwurzeln drücken. Relevant wird ein Bandscheibenvorfall vor allem dann, wenn er andere Gewebe beeinträchtigt bzw. Raum beansprucht, den andere Strukturen wie zum Beispiel eine Nervenwurzel benötigen, um störungsfrei funktionieren zu können. Wird eine Nervenwurzel durch einen Bandscheibenvorfall bedrängt, treten Symptome in dem Versorgungsgebiet des betroffenen Nervs auf. Dabei ist nie das ganze Bein betroffen, sondern z.B. die Außenseite von Ober- und Unterschenkel. Charakteristisch sind auch ein Pelzigkeitsgefühl oder eine Taubheit in bestimmten Bereichen. Im schlimmsten Fall treten Schwächegefühle bestimmter Muskeln auf – der Fuß kann etwa nicht mehr gehoben werden. 
 

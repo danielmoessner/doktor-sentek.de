@@ -4,7 +4,7 @@ slug: jobs
 meta:
   title: Stellenangebote
   description: Stellenangebote
-  image: ../media/fav Hand Krankheitsbild allg..jpg
+  image: ../media/stellenangebote.jpg
 header:
   pretitle: Stellenagebote
   title: Aktuell haben wir 1 Position

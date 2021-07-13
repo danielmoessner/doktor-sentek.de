@@ -119,7 +119,7 @@ function Page({ data }) {
                   <iframe
                     className="w-full mt-3"
                     title="Maps"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2371.9845732358253!2d12.683652515845118!3d53.52233238001632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47abf8e87c9242b5%3A0xe046cee4ec56306c!2sMEDICLIN%20M%C3%BCritz-Klinikum!5e0!3m2!1sde!2sde!4v1617796258987!5m2!1sde!2sde"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2337.4125763402276!2d12.056870416396459!3d54.137337122867955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47ac56621be6c67b%3A0xfbc52ed0b5426d9c!2sTrelleborger%20Str.%2010B%2C%2018107%20Rostock!5e0!3m2!1sde!2sde!4v1626190176670!5m2!1sde!2sde"
                     width="600"
                     height="450"
                     style={{ border: 0 }}

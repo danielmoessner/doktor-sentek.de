@@ -21,30 +21,22 @@ Dr. med. Robert Sentek
 Trelleborger Str. 10B\
 18107 Rostock\
 \
-Telefon (0 89) 1234 1234 88\
-Fax (0 89) 1234 1234 89\
+Telefon: (0381) 724351 \
+Fax:        (0381) 724351 \
 \
 E-Mail: praxis@doktor-sentek.de
 
 ### Gesetzliche Berufsbezeichnung
 
-Fachärzte für Orthopädie, verliehen in der Bundesrepublik Deutschland
+Facharzt für Orthopädie, Unfall- und Handchirurgie, verliehen in der Bundesrepublik Deutschland
 
 ### Ärztekammer
 
-Bayerische Landesärztekammer\
-Mühlbaurstr. 16\
-81677 München\
-[www.blaek.de](http://www.blaek.de/) 
-
-### Kassenärztliche Vereinigung (zuständige Aufsichtsbehörde)
-
-Kassenärztliche Vereinigung Bayerns\
-Arabellastraße 30\
-81925 München\
-[www.kvb.de](http://www.kvb.de/) 
+Ärztekammer Mecklenburg-Vorpommern\
+Körperschaft des öffentlichen Rechts\
+August-Bebel-Straße 9a\
+18055 Rostock
 
 ### Berufsrechtliche Regelungen
 
-Berufsordnung für die Ärzte Bayerns\
-[www.blaek.de/hauptseite.cfm?id_seite=127](http://www.blaek.de/hauptseite.cfm?id_seite=127)
+Berufsordnung für die Ärzte Mecklenburg Vorpommerns[](http://www.blaek.de/hauptseite.cfm?id_seite=127)

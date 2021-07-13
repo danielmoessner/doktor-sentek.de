@@ -9,7 +9,7 @@ meta:
   image: ../media/fav Wirbelsäule Krankheitsbild allg.jpg
 title: Wirbelsäule
 slug: wirbelsaeule
-image: ../media/fav Wirbelsäule Krankheitsbild allg.jpg
+image: ../media/wirbelsaeule.jpg
 order: 1
 excerpt: Oft löst eine falsche Bewegung, etwa das Anheben eines schweren
   Gegenstandes, heftige Schmerzen in der unteren und mittleren Lendenwirbelsäule

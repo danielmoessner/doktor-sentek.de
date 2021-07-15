@@ -43,3 +43,5 @@ Die Versorgung erfolgt in der Regel als ambulante Operation im GDZ.
 Bei der fortgeschrittenen Daumensattelgelenksarthrose kommen zwei Operationsverfahren in Frage. Wenn immer möglich kann versucht werden das verschlissene Gelenk mit einer Gelenkendoprothese ersetzt werden. Sollte dies aufgrund von unzureichender Knochenqualität nicht mehr möglich sein wird das sich an den Daumenstrahl anschließende Handwurzelknöchelchen entfernt und somit die schmerzauslösende Ursache behandelt. 
 
 Die Versorgung erfolgt als stationäre Operation.
+
+![](../media/Touch 02 - bei OP Daumensattelgelenk.JPG)

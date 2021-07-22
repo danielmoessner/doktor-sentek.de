@@ -23,8 +23,9 @@ team:
   button: Mehr erfahren
 appointment:
   title: Unsere Sprechstundenzeiten
-  text: Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa
-    dictumst amet. Sapien tortor lacus arcu.
+  text: |-
+    Praxis Dr. med. Robert Sentek
+    GDZ - Lütten Klein
 antiAging:
   image: ../media/r-d-smith-7ibuzq6cugs-unsplash.jpg
   pretitle: ANTI AGING

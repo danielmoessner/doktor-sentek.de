@@ -13,4 +13,6 @@ header:
     Weiterbildungsermächtigung für 12 Monate ist vorhanden. Bei Interesse email
     an robert.sentek@gmx.net
 ---
+![](../media/stellenangebote.jpg)
+
 ***content***

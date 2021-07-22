@@ -10,4 +10,4 @@ header:
   title: Stationäres Operieren
   text: beschr
 ---
-beschr
+Sprechen medizinische Günde gegen eine ambulante Operation (z.B. Vorliegen von schweren Begleiterkrankungen) besteht auch die Möglichkeit für eine stationäre Versorgung. Nähere Informationen erhalten sie in unserer Praxis.

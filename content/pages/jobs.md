@@ -13,6 +13,8 @@ header:
     Weiterbildungsermächtigung für 12 Monate ist vorhanden. Bei Interesse email
     an robert.sentek@gmx.net
 ---
-![](../media/stellenangebote.jpg)
+![Stellenangebot 2](../media/stellenangebote.jpg "Aktuell haben wir eine Position 2")
 
-***content***
+Suchen FA f. Orthopädie u. Unfallchirurgie oder Assistenzarzt in der Facharztausbildung zum Orthopäden und  Unfallchirurgen. Eine Weiterbildungsermächtigung für 12 Monate ist vorhanden. Des Weiteren bilden wir regelmäßig MFA aus. 
+
+Bei Interesse bitte email an robert.sentek@gmx.net

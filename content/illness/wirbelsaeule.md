@@ -1,7 +1,7 @@
 ---
 collection: illness
 meta:
-  title: "Kranheitsbild: Wirbelsäule"
+  title: "Kranheitsbild: Rücken"
   description: Oft löst eine falsche Bewegung, etwa das Anheben eines schweren
     Gegenstandes, heftige Schmerzen in der unteren und mittleren
     Lendenwirbelsäule aus. Der Betroffene hat das Gefühl, im Kreuz

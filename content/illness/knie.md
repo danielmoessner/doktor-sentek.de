@@ -10,7 +10,7 @@ meta:
 title: Knie
 slug: knie
 image: ../media/fav Knie Krankheitsbild allg..jpg
-order: 7
+order: 5
 excerpt: Im Kniegelenk befindet sich als Puffer zwischen Ober-
   und Unterschenkelknochen ein innerer und ein äußerer Meniskus. Der Meniskus
   besteht aus Knorpelgewebe und unterliegt dem gleichen Verschleiß wie der Rest

@@ -53,8 +53,7 @@ excerpt: >
 
 * 2005: Fachkunde Rettungsdienst
 * 2009: Fachkunde Strahlenschutz
-
-  * 2016: Fußchirurgie
+* 2016: Fußchirurgie
 * 2014: Osteosynthese
 * 2020: Manuelle Medizin / Chirotherapeut
 

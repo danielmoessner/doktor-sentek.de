@@ -7,8 +7,8 @@ meta:
     Lendenwirbelsäule aus. Der Betroffene hat das Gefühl, im Kreuz
     durchzubrechen und ist aufgrund der Schmerzen nahezu bewegungsunfähig.
   image: ../media/fav Wirbelsäule Krankheitsbild allg.jpg
-title: Wirbelsäule
-slug: wirbelsaeule
+title: Rücken
+slug: Rücken
 image: ../media/fav Wirbelsäule Krankheitsbild allg.jpg
 order: 1
 excerpt: Oft löst eine falsche Bewegung, etwa das Anheben eines schweren

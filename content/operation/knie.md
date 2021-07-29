@@ -56,11 +56,9 @@ Ist bei der Kniegelenkarthrose nur eine Gelenkseite betroffen kann eine Teilprot
 
 ## Umstellungsosteotomie 
 
-Eine Achsfehlstellung des Beines sog. X oder O Bein kann angeboren oder erworben sein. Diese Fehlstellung führt meistens zu einem vorzeitigem Gelenkverschleiß. Durch eine Umstellungsoperation kann die anatomische Beinachse wiederhergestellt und so der Verschleißprozeß verlangsamt werden. Bei der Operation wird nach einem Hautschnitt ein Knochenschnitt angelegt. Dieser ermöglicht das Bein korrekt auszurichten. Eine am Knochen mit Schrauben fixierte Platte sichert bis zur Heilung des Knochenschnittes über 6 Wochen das OP-Ergebnis. 
+Eine Achsfehlstellung des Beines sog. X oder O Bein kann angeboren oder erworben sein. Diese Fehlstellung führt meistens zu einem vorzeitigem Gelenkverschleiß. Durch eine Umstellungsoperation kann die anatomische Beinachse wiederhergestellt und so der Verschleißprozeß verlangsamt werden. Bei der Operation wird nach einem Hautschnitt ein Knochenschnitt angelegt. Dieser ermöglicht das Bein korrekt auszurichten. Eine am Knochen mit Schrauben fixierte Platte sichert bis zur Heilung des Knochenschnittes über 6 Wochen das OP-Ergebnis. Zu sehen sind Röntgenbilder vor und nach der Operation sowie in der Mitte die OP-Planungsskizze unter Verwendung einer Planungssoftware.  
 
 ![](../media/kohn-01.jpg "von der Diagnose")
-
-
 
 ![](../media/kohn-02.jpg "über die Planung")
 

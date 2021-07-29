@@ -10,7 +10,7 @@ meta:
 title: Fuß- und Sprunggelenk
 slug: fuss-und-sprunggelenk
 image: ../media/fav Fuß Krankheitsbild allg.jpg
-order: 2
+order: 6
 excerpt: Der Achillessehnenschmerz beginnt meist mit einem Anspannungs- und
   Dehnungsschmerz. Dabei stellen sich die Schmerzen in der Regel nicht direkt
   bei der Belastung ein (etwa beim Sport), sondern morgens nach dem Aufstehen

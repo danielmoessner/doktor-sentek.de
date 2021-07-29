@@ -11,7 +11,7 @@ meta:
 title: Hüfte
 slug: huefte
 image: ../media/fav Hüfte Krankheitsbild allg.jpg
-order: 2
+order: 4
 excerpt: Als Ursache von belastungsabhängigen Hüftschmerzen mit
   manchmal Schmerzausstrahlung in die Vorderseite des Oberschenkels, kommt ein
   Verschleiß des Hüftgelenks in Frage. Wenn ein Patient wegen Hüftschmerzen den

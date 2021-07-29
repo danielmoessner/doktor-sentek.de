@@ -47,7 +47,3 @@ An der gesamten Wirbelsäule liegen zwischen den eigentlichen knöchernen Wirbel
 ### Behandlung
 
 Wenn die Bandscheibe vorgewölbt ist und auf einen in das Bein strahlenden Nerv drückt, kann eine CT-gesteuerte Injektion sinnvoll sein. Als letzte Instanz bleibt bei schwerwiegenden Bandscheibenvorfällen mit entsprechend gravierenden Nervenausfällen die Bandscheiben-OP, die in der Regel von Neurochirurgen durchgeführt wird.
-
-## Unfallchirurgie
-
-Sekundär (mit zeitlicher Verzögerung) versorgbare Frakturen (Handgelenksfraktur, Mittelhandfraktur, Fingerfraktur, knöcherne Strecksehnenruptur, Sehnenverletzung der Hand, Sprunggelenksfraktur

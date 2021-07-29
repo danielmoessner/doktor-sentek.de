@@ -7,7 +7,7 @@ meta:
 title: Ellenbogen
 slug: ellenbogen
 image: ../media/fav Ellenbogen Krankheitsbild allg..jpg
-order: 1
+order: 3
 excerpt: |-
   Tennisellenbogen / Golferellenbogen
   Schleimbeutelentzündung

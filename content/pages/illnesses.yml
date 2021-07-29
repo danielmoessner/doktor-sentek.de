@@ -6,7 +6,7 @@ meta:
   image: ../media/boot.jpg
 header:
   title: Krankheitsbilder
-  text: Krankheitsbilder
+  text: Auswahl
   image: ../media/fav Krankheitsbilder allg.jpg
 content:
   button: Mehr erfahren

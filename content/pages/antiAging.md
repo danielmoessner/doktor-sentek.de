@@ -94,8 +94,4 @@ Die Injektion bei einer Botoxbehandlung ist kaum spürbar, da der Facharzt sehr 
 
 **Was ist nach einer Botoxbehandlung zu beachten?**
 
-Nach einer Botoxbehandlung sollten Sie in den nächsten drei Tagen Massagen an den behandelten Regionen, sowie Sonnenbäder und Saunagänge vermeiden, damit sich der Wirkstoff am Zielmuskel entfalten kann. 
-
-## Kosten
-
-Bei einer Behandlung mit Botox oder Hyaluronsäure müssen sie mit Kosten ab 200,- € inkl. MwSt. rechnen. Je mehr Regionen behandelt werden, desto höher ist der Aufwand und auch der Materialverbrauch. Deshalb ermittelt sich der genaue Preis individuell und wird im Aufklärungsgespräch festgelegt.
+Nach einer Botoxbehandlung sollten Sie in den nächsten drei Tagen Massagen an den behandelten Regionen, sowie Sonnenbäder und Saunagänge vermeiden, damit sich der Wirkstoff am Zielmuskel entfalten kann.

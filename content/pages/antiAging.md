@@ -32,9 +32,7 @@ Aufwendige und schmerzhafte Operationen oder Lasereingriffe sind bei der Faltenb
 
 ### Wichtig
 
-Falls Sie bereits eine Faltentherapie mit einem Filler bekommen haben ist es von entscheidender Wichtigkeit, den genauen Zeitpunkt (Monat) sowie das verwendete Produkt zu kennen, um keine unerwünschten Reaktionen durch 
-
-Produktunverträglichkeiten hervorzurufen. Sollte das vormals verwendete Produkt nicht bekannt sein ist eine Mindestwartezeit von sechs Monaten angezeigt, bevor erneut ein Filler gespritzt werden sollte. 
+Falls Sie bereits eine Faltentherapie mit einem Filler bekommen haben ist es von entscheidender Wichtigkeit, den genauen Zeitpunkt (Monat) sowie das verwendete Produkt zu kennen, um keine unerwünschten Reaktionen durch Produktunverträglichkeiten hervorzurufen. Sollte das vormals verwendete Produkt nicht bekannt sein ist eine Mindestwartezeit von sechs Monaten angezeigt, bevor erneut ein Filler gespritzt werden sollte. 
 
 ### Botox
 

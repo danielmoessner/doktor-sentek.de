@@ -22,8 +22,29 @@ Die Bezahlung erfolgt nach Tarif. Das Hauptaufgabengebiet wird die Anmeldung und
 Art der Stelle: Vollzeit, Festanstellung
 Arbeitszeiten: Montag bis Freitag
 
+
+
 Stellenbeschreibung Arzt: 
+
+Wir suchen zum nächstmöglichen Zeitpunkt eine/n
+
+**Fachärztin / Facharzt für Orthopädie und Unfallchirurgie**\
+Art der Stelle: Teilzeit, Festanstellung
+
+Arbeitszeiten: flexibel
+
+Wir bieten Ihnen:
+
+eine attraktive Arbeitszeit mit eigener Sprechstunde und Entwicklung eigener Schwerpunkte
+
+bei entsprechendem Interesse Unterstützung beim Auf- und Ausbau der operativen Versorgung eigener Patienten
+
+finanzielle Unterstützung bei Fort- und Weiterbildung
+
+eine leistungsgerechte attraktive Vergütung
+
+
 
 Eine Weiterbildungsermächtigung Orthopädie und Unfallchirurgie für 12 Monate ist vorhanden. Des Weiteren bilden wir regelmäßig MFA aus. 
 
-Bei Interesse bitte email an robert.sentek@gmx.net
+Bei Interesse bitte email an **robert.sentek@gmx.net**

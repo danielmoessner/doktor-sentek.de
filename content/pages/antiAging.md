@@ -2,8 +2,8 @@
 collection: page
 slug: anti-aging
 meta:
-  title: Anti Aging Rostock
-  description: Anti Aging Rostock
+  title: Anti-Aging Rostock
+  description: Anti-Aging Rostock
   image: ../media/r-d-smith-7ibuzq6cugs-unsplash.jpg
 header:
   pretitle: Anti Aging

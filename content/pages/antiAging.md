@@ -7,15 +7,13 @@ meta:
   image: ../media/r-d-smith-7ibuzq6cugs-unsplash.jpg
 header:
   pretitle: Anti Aging
-  title: Ihre Ausstrahlung ist uns wichtig
+  title: Faltenunterspritzung mit Botox und Hyaluronsäure
   text: Falten bekommt jeder im Laufe seines Lebens. Doch oft lassen Falten einen
     Menschen älter aussehen, als er sich eigentlich fühlt und es entsteht ein
     falscher Eindruck, unter dem vor allem Frauen häufig leiden. Moderne
     Behandlungsmethoden zur Reduzierung von Falten sind sanft und setzen auf
     Wirkstoffe wie die Hyaluronsäure.
 ---
-## Faltenunterspritzung mit Botox und Hyaluronsäure
-
 Die Haut ist das größte Organ des Körpers und besitzt einen komplexen Aufbau in ihrer Struktur. Verschiedenste Fasertypen (elastisch, kollagen) und körpereigene Hyaluronsäure sorgen für eine feste Struktur mit Spannkraft, Volumen und einer hohen Belastungsfähigkeit. Der Alterungsprozess sowie Umweltgifte, Sonne und Rauchen führen zu einer stetigen Störung des empfindlichen Systems Haut. Es kommt zur Änderung der strukturellen Zusammensetzung mit einem Verlust der einzelnen Fasertypen. Die Hauptursachen für diese Prozesse liegen in der immerwährenden Sonneneinstrahlung sowie im Rauchen. 
 
 Neben diesen Ursachen, die im Wesentlichen für die sogenannten „statischen Falten“ ursächlich sind, sorgt die Mimik unserer Gesichtsmuskulatur für das langsame Entstehen sogenannter „Mimischer Falten“. 

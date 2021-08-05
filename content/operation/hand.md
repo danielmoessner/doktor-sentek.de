@@ -18,7 +18,7 @@ excerpt: Als Handchirurg stellt für mich die operative Behandlung von Pat mit
   atraumatischen (gewebeschonenden) Operationstechniken kommen standardmäßig zum
   Einsatz.
 ---
-## Morbus Dupuytren,
+## Morbus Dupuytren
 
 Durch die Operation werden die zu meist stranghaften Gewebsanteile entfernt. Hierbei ist darauf zu achten das Gefäß- und Nervenstrukturen nicht verletzt werden. Unter Umständen kann die Operation etwas länger dauern wenn die krankhaften Gewebestränge die Fingernerven regelrecht eingemauert haben. 
 
@@ -28,7 +28,7 @@ Die Versorgung erfolgt in der Regel als stationäre Operation.
 
 Durch die Operation wird die Gleitfähigkeit der Sehne des betroffenen Fingers wiederhergestellt. Nach einem kleinen Hautschnitt über dem Gebiet wird die Stelle der größten Sehnenverengung (Ringband) aufgesucht und in Längsrichtung gespalten. Im Anschluss an die Operation kann die Hand sofort aktiv beübt werden. Die Versorgung erfolgt in der Regel als ambulante Operation im GDZ. 
 
-## Karpaltunnelsyndrom (offenes oder minimalinvasives Vorgehen),
+## Karpaltunnelsyndrom (offenes oder minimalinvasives Vorgehen)
 
 Am Handgelenk wird das verdickte Band über der Knochenrinne durchtrennt. Hierzu wird über einen etwa 2 cm langen Schnitt an der Beugefalte des Handgelenkes das Band unter Sicht mit einer Spezialkamara (endoskopisch) . Das Risiko der Verletzung von Nervenstrukturen in dieser Region wird somit deutlich gesenkt. 
 

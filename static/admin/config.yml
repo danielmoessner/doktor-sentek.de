@@ -85,6 +85,7 @@ collections:
               - { label: Titel, name: title, widget: string }
               - { label: Text, name: text, widget: text }
               - { label: Button, name: button, widget: string }
+              - { label: Button 2, name: button2, widget: string }
       
       - file: content/pages/team.yml
         label: Team
@@ -354,6 +355,20 @@ collections:
             name: body
             widget: markdown
             hint: Bitte nur Überschrift 2-6 verwenden für SEO.
+          - label: Formular
+            name: form
+            widget: object
+            fields:
+              - { label: Titel, name: title, widget: string }
+              - { label: Vorname, name: name1, widget: string }
+              - { label: Nachname, name: name2, widget: string }
+              - { label: Telefon, name: phone, widget: string }
+              - { label: Mail, name: email, widget: string }
+              - { label: Nachricht, name: message, widget: string }
+              - { label: Datenschutz, name: dataProtection, widget: string }
+              - { label: Button, name: button, widget: string }
+              - { label: Titel abgesendet, name: successTitle, widget: string }
+              - { label: Text abgesendet, name: successText, widget: text }
 
       - file: content/pages/contact.yml
         label: Kontakt

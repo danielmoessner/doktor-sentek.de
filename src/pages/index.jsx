@@ -24,7 +24,7 @@ function Page({ data }) {
       <Indication />
       <main className="bg-gray-50">
         <section className="lg:relative">
-          <div className="mx-auto max-w-7xl w-full pt-16 pb-20 text-center lg:py-48 lg:text-left">
+          <div className="mx-auto max-w-7xl w-full pt-16 pb-20 text-center lg:py-32 lg:text-left">
             <div className="px-4 lg:w-1/2 sm:px-6 xl:pr-16">
               <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl">
                 <span className="block xl:inline">{page.header.title}</span>
@@ -260,12 +260,18 @@ function Page({ data }) {
                 </p>
                 <p className="mt-3 text-lg text-teal-050 text-opacity-80">{page.antiAging.text}</p>
                 <div className="mt-8">
-                  <div className="inline-flex rounded-md shadow">
+                  <div className="inline-flex rounded-md shadow space-x-3">
                     <Link
                       to="/anti-aging/"
                       className="block items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-teal-800 bg-white hover:bg-gray-50 focus:outline-none ring-gray-50 focus:ring-2 ring-offset-teal-900 focus:ring-offset-2"
                     >
                       {page.antiAging.button}
+                    </Link>
+                    <Link
+                      to="/anti-aging/#formular"
+                      className="block items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-teal-800 bg-white hover:bg-gray-50 focus:outline-none ring-gray-50 focus:ring-2 ring-offset-teal-900 focus:ring-offset-2"
+                    >
+                      {page.antiAging.button2}
                     </Link>
                   </div>
                 </div>
@@ -332,6 +338,7 @@ export const query = graphql`
       }
       antiAging {
         button
+        button2
         pretitle
         text
         title

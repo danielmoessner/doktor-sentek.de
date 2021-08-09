@@ -13,6 +13,18 @@ header:
     falscher Eindruck, unter dem vor allem Frauen häufig leiden. Moderne
     Behandlungsmethoden zur Reduzierung von Falten sind sanft und setzen auf
     Wirkstoffe wie die Hyaluronsäure.
+form:
+  dataProtection: Ich stimme zu, dass meine Daten zum Bearbeiten der Anfrage
+    vorübergehend gespeichert werden.
+  name1: Vorname
+  message: Nachricht
+  name2: Nachname
+  phone: Telefon
+  successText: Wir werden und schnellstmöglich bei Ihnen melden.
+  button: Jetzt absenden
+  successTitle: Vielen Dank für Ihre Anfrage
+  title: Beratungsgespräch anfragen
+  email: E-Mail
 ---
 Die Haut ist das größte Organ des Körpers und besitzt einen komplexen Aufbau in ihrer Struktur. Verschiedenste Fasertypen (elastisch, kollagen) und körpereigene Hyaluronsäure sorgen für eine feste Struktur mit Spannkraft, Volumen und einer hohen Belastungsfähigkeit. Der Alterungsprozess sowie Umweltgifte, Sonne und Rauchen führen zu einer stetigen Störung des empfindlichen Systems Haut. Es kommt zur Änderung der strukturellen Zusammensetzung mit einem Verlust der einzelnen Fasertypen. Die Hauptursachen für diese Prozesse liegen in der immerwährenden Sonneneinstrahlung sowie im Rauchen. 
 

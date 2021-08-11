@@ -14,4 +14,4 @@ excerpt: Sekundär (mit zeitlicher Verzögerung) versorgbare Frakturen
   (Handgelenksfraktur, Mittelhandfraktur, Fingerfraktur, knöcherne
   Strecksehnenruptur, Sehnenverletzung der Hand, Sprunggelenksfraktur
 ---
-Sekundär (mit zeitlicher Verzögerung) versorgbare Frakturen (Handgelenksfraktur, Mittelhandfraktur, Fingerfraktur, knöcherne Strecksehnenruptur, Sehnenverletzung der Hand, Sprunggelenksfraktur
+Wir bieten die sekundäre (mit zeitlicher Verzögerung) Versorgung von Frakturen an so es aus medizinischer Sicht vertretbar ist. (Auswahl: Handgelenksfraktur, Mittelhandfraktur, Fingerfraktur, knöcherne Strecksehnenruptur, Sprunggelenksfraktur, Oberarmfraktur) Des Weiteren gehören auch Sehnenverletzungen wie z. B. Sehnenverletzungen der Hand, die Bizepssehenruptur oder die Achillessehnenruptur zum Versorgungsspektrum

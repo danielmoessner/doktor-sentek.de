@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: 'https://gatsby-netlifycms.tortuga-webdesign.de',
+    siteUrl: 'https://www.doktor-sentek.de',
   },
   plugins: [
     'gatsby-plugin-eslint',

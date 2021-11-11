@@ -3,7 +3,9 @@ collection: page
 slug: jobs
 meta:
   title: Stellenangebote
-  description: Stellenangebote
+  description: Aktuell haben wir2 Positionen ausgeschrieben. Wir suchen FA f.
+    Orthopädie u. Unfallchirurgie oder Assistenzarzt in der Facharztausbildung
+    zum Orthopäden und Unfallchirurgen sowie eine Auszubildende zur MFA.
   image: ../media/stellenangebote.jpg
 header:
   pretitle: Stellenagebote

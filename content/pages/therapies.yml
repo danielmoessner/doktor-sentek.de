@@ -2,7 +2,9 @@ collection: page
 slug: therapies
 meta:
   title: Konservative Therapien
-  description: beschr
+  description: "Therapien: Orthopädietechnik, ACP, Wärmetherapie,
+    Stoßwellentherapie, Manuelle Medizin, Medikamentöse Therapie,
+    Elektrotherapie."
   image: ../media/mathys-berg-03-bei-operation-allgemein.jpg
 header:
   title: Konservative Therapie

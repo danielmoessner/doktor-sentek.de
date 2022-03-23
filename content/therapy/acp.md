@@ -9,7 +9,7 @@ meta:
     Heilung unterstützt und Schmerzen gelindert werden.
   image: ../media/fav Hand Krankheitsbild allg..jpg
 title: Eigenbluttherapie (Plättchenreiches Plasma)
-slug: PRP
+slug: PRP - Platelet Rich Plasma
 image: ../media/fav Hand Krankheitsbild allg..jpg
 order: 1
 excerpt: Für eine Vielzahl von Erkrankungen bzw. Verletzungen von Gelenken,

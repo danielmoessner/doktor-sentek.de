@@ -8,7 +8,7 @@ meta:
     Blutplasma kann die Regeneration des Gewebes beschleunigt und dadurch eine
     Heilung unterstützt und Schmerzen gelindert werden.
   image: ../media/fav Hand Krankheitsbild allg..jpg
-title: "Plättchenreiches Plasma "
+title: Eigenbluttherapie (Plättchenreiches Plasma)
 slug: PRP
 image: ../media/fav Hand Krankheitsbild allg..jpg
 order: 1

@@ -1,7 +1,7 @@
 ---
 collection: therapy
 meta:
-  title: "Plättchenreiches Plasma "
+  title: Eigenbluttherapie (Plättchenreiches Plasma)
   description: Für eine Vielzahl von Erkrankungen bzw. Verletzungen von Gelenken,
     Muskeln oder Sehnen gibt es seit kurzer Zeit eine Alternative zu den
     herkömmlichen Therapien. Mit Hilfe von körpereigenem, konditioniertem

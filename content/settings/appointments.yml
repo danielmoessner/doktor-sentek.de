@@ -4,7 +4,7 @@ appointments:
   - day: Montag
     openingHours: 8.00 - 10.00 Uhr und 14.30 - 16.30
   - day: Dienstag
-    openingHours: 13:00 - 17:00 Uhr
+    openingHours: 8:00 -12:00 Uhr (Ambulante Operationen) und 12:30 - 17:30 Uhr
   - day: Mittwoch
     openingHours: 8:00 - 13:00 Uhr
   - day: Donnerstag

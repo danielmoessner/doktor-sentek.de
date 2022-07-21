@@ -6,10 +6,10 @@ subtitle: Facharzt für Orthopädie und Unfallchirurgie
 image: ../media/dr-med-robert-sentek.jpg
 excerpt: >
   Dr. med. Robert Sentek ist Facharzt f. Orthopädie und Unfallchirurgie,
-  Spezialist in Handchirurgie und manueller Medizin. Er ist seit 2017 Leiter der
-  Abteilung für Orthopädie, Unfall - und Handchirurgie am Müritzklinikum Waren
-  und hat 2020 eine orthopädische Gemeinschaftspraxis mit PD Dr. med. M. Witt
-  gegründet.
+  Spezialist in Handchirurgie und manueller Medizin. Er war zwischen 2017 und
+  2022 Leiter der Abteilung für Orthopädie, Unfall - und Handchirurgie am
+  Müritzklinikum Waren und hat 2021 eine orthopädische Gemeinschaftspraxis mit
+  PD Dr. med. M. Witt gegründet.
 ---
 **Berufliche Qualifikation:**
 
@@ -38,15 +38,14 @@ excerpt: >
     2015-2017 Facharztweiterbildung
   * „Handchirurgie“ an den Kliniken Neumünster und
     Schwerin
-* 2017 bis 2021:
+* 2017 bis 2022:
 
   * Leiter der Abteilung f. Orthopädie, Unfall- und
     Handchirurgie Müritzklinikum Waren
   * D-Arzt und stellv. Chefarzt der Klinik für Chirurgie
 * 2020 bis 2022:
 
-  * gemeinsame konservative und operative
-    Patientenversorgung zusammen mit PD Dr. med. M.
+  * Gemeinschaftspraxis mit PD Dr. med. Mathias
     Witt
 
 **Fachkunden und Zertifikate:**

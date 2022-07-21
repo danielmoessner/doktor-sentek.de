@@ -2,12 +2,12 @@ collection: settings
 slug: appointments
 appointments:
   - day: Montag
-    openingHours: 8:00 - 10:00 Uhr und 14:30 - 16:30
+    openingHours: 8:00 bis 10:00 und 14:30 bis 16:30
   - day: Dienstag
-    openingHours: 8:00 -12:00 Uhr (Ambulante Operationen) und 12:30 - 17:30 Uhr
+    openingHours: 8:00 bis 12:00 (Ambulante Operationen) und 12:30 bis 17:30
   - day: Mittwoch
-    openingHours: 8:00 - 13:00 Uhr
+    openingHours: 8:00 bis 13:00
   - day: Donnerstag
-    openingHours: 8:00 - 10:00 Uhr und 12:30 - 16:30 Uhr
+    openingHours: 8:00 bis 10:00 und 12:30 bis 16:30
   - day: Freitag
-    openingHours: 8:00 - 13:00 Uhr
+    openingHours: 8:00 bis 13:00

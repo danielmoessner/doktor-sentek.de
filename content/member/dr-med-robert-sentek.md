@@ -3,7 +3,7 @@ collection: member
 title: Dr. med. Robert Sentek
 slug: dr-med-robert-sentek
 subtitle: Facharzt für Orthopädie und Unfallchirurgie
-image: ../media/dr-med-robert-sentek.jpg
+image: ../media/stl_5551-1-kopie.jpg
 excerpt: >
   Dr. med. Robert Sentek ist Facharzt f. Orthopädie und Unfallchirurgie,
   Spezialist in Handchirurgie und manueller Medizin. Er war zwischen 2017 und

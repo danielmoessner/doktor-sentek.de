@@ -2,7 +2,8 @@ collection: page
 slug: team
 meta:
   title: Profil
-  description: Dr. med. Robert Sentek - Ihr Facharzt für Orthopädie und Unfallchirurgie.
+  description: Dr. med. Robert Sentek - Ihr Facharzt für Orthopädie,
+    Unfallchirurgie und Handchirurgie.
   image: ../media/stl_5551-1-kopie.jpg
 header:
   title: Profil

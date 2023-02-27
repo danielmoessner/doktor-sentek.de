@@ -24,11 +24,13 @@ Die Bezahlung erfolgt nach Tarif. Das Hauptaufgabengebiet wird die Anmeldung und
 Art der Stelle: Vollzeit, Festanstellung
 Arbeitszeiten: Montag bis Freitag
 
-
-
 Stellenbeschreibung Arzt: 
 
 Wir suchen zum nächstmöglichen Zeitpunkt eine/n
+
+**A﻿ssistenzarzt**
+
+I﻿m Rahmen der Weiterbildung zum Facharzt für Allgemeinmedizin kann der "chirurgische Teil" in unserer Praxis absolviert werden. Die erforderlichen Befugnisse liegen vor. 
 
 **Fachärztin / Facharzt für Orthopädie und Unfallchirurgie**\
 Art der Stelle: Teilzeit, Festanstellung
@@ -44,8 +46,6 @@ bei entsprechendem Interesse Unterstützung beim Auf- und Ausbau der operativen 
 finanzielle Unterstützung bei Fort- und Weiterbildung
 
 eine leistungsgerechte attraktive Vergütung
-
-
 
 Eine Weiterbildungsermächtigung Orthopädie und Unfallchirurgie für 12 Monate ist vorhanden. Des Weiteren bilden wir regelmäßig MFA aus. 
 

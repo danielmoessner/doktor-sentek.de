@@ -15,7 +15,7 @@ excerpt: |-
 ---
 ## Tennisellenbogen / Golferellenbogen 
 
-![alt](../media/boot.jpg "tit")
+![alt]( "tit")
 
 Beim Tennis- oder Golferellenbogen bereiten die Sehnenansätzen am Ellenbogen Schmerzen, entweder außen oder innen. Bei bestimmten Bewegungen der Hand schießt plötzlich ein Schmerz ein, der so heftig ist, dass einem Gegenstände aus der Hand fallen. 
 
@@ -36,6 +36,6 @@ Meistens ist eine Schleimbeutelentzündung vollkommen harmlos und bildet sich sp
 
 ## Nervenengpaßsyndrom (Sulcus ulnaris Syndrom) 
 
-![alt](../media/boot.jpg "tit")
+![alt]( "tit")
 
 Das Sulcus ulnaris Syndrom zählt wie das Karpaltunnelsyndrom zu den Nervenengpaßsyndromen. Hier wird der N. ulnaris am Ellenbogen eingeengt was zu teilweise unangenehmen Kribbeln oder Taubheitisgefühl im Bereich des Kleinfingers führen kann (Musikantenknochen).

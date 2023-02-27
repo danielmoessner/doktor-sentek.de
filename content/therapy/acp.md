@@ -7,7 +7,7 @@ meta:
     herkömmlichen Therapien. Mit Hilfe von körpereigenem, konditioniertem
     Blutplasma kann die Regeneration des Gewebes beschleunigt und dadurch eine
     Heilung unterstützt und Schmerzen gelindert werden.
-  image: ../media/fav Hand Krankheitsbild allg..jpg
+  image: ../media/hy-tissue-prp_immagine-01.jpg
 title: Eigenbluttherapie (Plättchenreiches Plasma)
 slug: PRP - Platelet Rich Plasma
 image: ../media/fav Hand Krankheitsbild allg..jpg

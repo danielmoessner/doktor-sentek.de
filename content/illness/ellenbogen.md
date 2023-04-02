@@ -2,7 +2,7 @@
 collection: illness
 meta:
   title: Krankheitsbild - Ellenbogen
-  description: Olecarnon
+  description: Olecranon
   image: ../media/fav Ellenbogen Krankheitsbild allg..jpg
 title: Ellenbogen.
 slug: ellenbogen

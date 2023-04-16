@@ -9,8 +9,8 @@ slug: ellenbogen
 image: ../media/fav Ellenbogen Krankheitsbild allg..jpg
 order: 3
 excerpt: |-
-  Tennisellenbogen / Golferellenbogen
-  Schleimbeutelentzündung
+  Tennisellenbogen / Golferellenbogen,
+  Schleimbeutelentzündung,
   Nervenengpasssyndrom
 ---
 ## Tennisellenbogen / Golferellenbogen 

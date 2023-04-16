@@ -3,11 +3,7 @@ collection: page
 slug: anti-aging
 meta:
   title: Anti-Aging Rostock
-  description: Falten bekommt jeder im Laufe seines Lebens. Doch oft lassen Falten
-    einen Menschen älter aussehen, als er sich eigentlich fühlt und es entsteht
-    ein falscher Eindruck, unter dem vor allem Frauen häufig leiden. Moderne
-    Behandlungsmethoden zur Reduzierung von Falten sind sanft und setzen auf
-    Wirkstoffe wie die Hyaluronsäure.
+  description: Botoxbehandlung, Botox, Hyaluronsäure, Hyalronspritze, Rostock
   image: ../media/r-d-smith-7ibuzq6cugs-unsplash.jpg
 header:
   pretitle: Anti Aging

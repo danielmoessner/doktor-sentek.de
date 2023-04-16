@@ -2,7 +2,8 @@
 collection: illness
 meta:
   title: Krankheitsbild - Ellenbogen
-  description: Olecranon
+  description: Tennisellenbogen, Golferellenbogen, Schleimbeutelentzündung,
+    Nervenengpasssyndrom
   image: ../media/fav Ellenbogen Krankheitsbild allg..jpg
 title: Ellenbogen
 slug: ellenbogen

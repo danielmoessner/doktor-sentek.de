@@ -9,10 +9,10 @@ slug: hand
 image: ../media/fav Hand Krankheitsbild allg..jpg
 order: 1
 excerpt: |-
-  Morbus Dupuytren
-  Schnellender Finger
-  Karpaltunnelsyndrom
-  Rhizarthrose
+  Morbus Dupuytren,
+  Schnellender Finger,
+  Karpaltunnelsyndrom,
+  Rhizarthrose,
   Frakturen der Hand- und Unterarmknochen
 ---
 ## Morbus Dupuytren

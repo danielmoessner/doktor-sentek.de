@@ -8,7 +8,7 @@ meta:
     zum Orthopäden und Unfallchirurgen sowie eine Auszubildende zur MFA.
   image: ../media/stellenangebote.jpg
 header:
-  pretitle: Stellenagebote
+  pretitle: Stellenangebote
   title: Aktuell haben wir 2 Positionen
   text: Suchen FA f. Orthopädie u. Unfallchirurgie oder Assistenzarzt in der
     Facharztausbildung zum Orthopäden und  Unfallchirurgen sowie eine
@@ -49,4 +49,4 @@ eine leistungsgerechte attraktive Vergütung
 
 Eine Weiterbildungsermächtigung Orthopädie und Unfallchirurgie für 12 Monate ist vorhanden. Des Weiteren bilden wir regelmäßig MFA aus. 
 
-Bei Interesse bitte email an **robert.sentek@gmx.net**
+Bei Interesse bitte email an **praxis@doktor-sentek.de**

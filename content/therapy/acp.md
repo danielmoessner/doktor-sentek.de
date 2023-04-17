@@ -10,7 +10,7 @@ meta:
   image: ../media/hy-tissue-prp_immagine-01.jpg
 title: Eigenbluttherapie (Plättchenreiches Plasma)
 slug: PRP - Platelet Rich Plasma
-image: ../media/fav Hand Krankheitsbild allg..jpg
+image: ../media/hy-tissue-prp_immagine-01.jpg
 order: 1
 excerpt: Für eine Vielzahl von Erkrankungen bzw. Verletzungen von Gelenken,
   Muskeln oder Sehnen gibt es seit kurzer Zeit eine Alternative zu den

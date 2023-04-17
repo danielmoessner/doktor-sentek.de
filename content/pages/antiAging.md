@@ -3,7 +3,7 @@ collection: page
 slug: anti-aging
 meta:
   title: Anti-Aging Rostock
-  description: Botoxbehandlung, Botox, Hyaluronsäure, Hyalronspritze, Rostock
+  description: Botoxbehandlung, Botox, Hyaluronsäure, Hyalronspritze, Rostock, Anti-Aging
   image: ../media/r-d-smith-7ibuzq6cugs-unsplash.jpg
 header:
   pretitle: Anti Aging

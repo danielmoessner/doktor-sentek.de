@@ -27,7 +27,7 @@ function Page({ data, location }) {
       />
       <Article html={operation.html} />
       <section
-        className="relative py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-24"
+        className="relative px-4 py-16 overflow-hidden sm:px-6 lg:px-8 lg:py-24"
         id="formular-danke"
       >
         <div className="max-w-xl mx-auto" id="formular">
@@ -88,7 +88,7 @@ function Page({ data, location }) {
                         name="first_name"
                         id="first_name"
                         autoComplete="given-name"
-                        className="py-3 px-4 block w-full shadow-sm focus:ring-teal-500 focus:border-teal-500 border-gray-300 rounded-md"
+                        className="block w-full px-4 py-3 border-gray-300 rounded-md shadow-sm focus:ring-teal-500 focus:border-teal-500"
                       />
                     </div>
                   </label>
@@ -103,7 +103,7 @@ function Page({ data, location }) {
                         name="last_name"
                         id="last_name"
                         autoComplete="family-name"
-                        className="py-3 px-4 block w-full shadow-sm focus:ring-teal-500 focus:border-teal-500 border-gray-300 rounded-md"
+                        className="block w-full px-4 py-3 border-gray-300 rounded-md shadow-sm focus:ring-teal-500 focus:border-teal-500"
                       />
                     </div>
                   </label>
@@ -118,7 +118,7 @@ function Page({ data, location }) {
                         required
                         id="tel"
                         autoComplete="tel"
-                        className="py-3 px-4 block w-full shadow-sm focus:ring-teal-500 focus:border-teal-500 border-gray-300 rounded-md"
+                        className="block w-full px-4 py-3 border-gray-300 rounded-md shadow-sm focus:ring-teal-500 focus:border-teal-500"
                       />
                     </div>
                   </label>
@@ -133,7 +133,7 @@ function Page({ data, location }) {
                         type="email"
                         required
                         autoComplete="email"
-                        className="py-3 px-4 block w-full shadow-sm focus:ring-teal-500 focus:border-teal-500 border-gray-300 rounded-md"
+                        className="block w-full px-4 py-3 border-gray-300 rounded-md shadow-sm focus:ring-teal-500 focus:border-teal-500"
                       />
                     </div>
                   </label>
@@ -148,7 +148,7 @@ function Page({ data, location }) {
                         name="operation"
                         required
                         type="text"
-                        className="py-3 px-4 block w-full shadow-sm focus:ring-teal-500 focus:border-teal-500 border-gray-300 rounded-md"
+                        className="block w-full px-4 py-3 border-gray-300 rounded-md shadow-sm focus:ring-teal-500 focus:border-teal-500"
                       />
                     </div>
                   </label>
@@ -161,7 +161,7 @@ function Page({ data, location }) {
                         id="message"
                         name="message"
                         rows="4"
-                        className="py-3 px-4 block w-full shadow-sm focus:ring-teal-500 focus:border-teal-500 border-gray-300 rounded-md"
+                        className="block w-full px-4 py-3 border-gray-300 rounded-md shadow-sm focus:ring-teal-500 focus:border-teal-500"
                       />
                     </div>
                   </label>
@@ -179,7 +179,7 @@ function Page({ data, location }) {
                         aria-checked="false"
                       >
                         <input
-                          className="transform sr-only translate-x-3 translate-y-2"
+                          className="transform translate-x-3 translate-y-2 sr-only"
                           type="checkbox"
                           checked={enabled}
                           onChange={() => {}}
@@ -201,7 +201,7 @@ function Page({ data, location }) {
                 <div className="sm:col-span-2">
                   <button
                     type="submit"
-                    className="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500"
+                    className="inline-flex items-center justify-center w-full px-6 py-3 text-base font-medium text-white bg-teal-600 border border-transparent rounded-md shadow-sm hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500"
                   >
                     {page.form.button}
                   </button>
@@ -225,7 +225,7 @@ Page.propTypes = {
 export default Page;
 
 export const query = graphql`
-  query($slug: String!) {
+  query ($slug: String!) {
     pagesYaml(slug: { eq: "operation" }) {
       content {
         pretitle

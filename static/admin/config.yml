@@ -68,7 +68,7 @@ collections:
             widget: object
             fields:
               - { label: Titel, name: title, widget: string }
-              - { label: Text, name: text, widget: text }
+              - { label: Text, name: text, widget: text, required: false }
               - { label: Button, name: button, widget: string }
           - label: Sprechstunden
             name: appointment
@@ -650,6 +650,7 @@ collections:
           - { label: Telefon, name: phone, widget: string }
           - { label: E-Mail, name: email, widget: string }
           - { label: Adresse, name: address, widget: text }
+          - { label: Fax, name: fax, widget: string }
       - file: content/settings/navigation.yml
         label: Navigation
         name: navigation

@@ -35,7 +35,7 @@ Page.propTypes = {
 export default Page;
 
 export const query = graphql`
-  query($slug: String!) {
+  query ($slug: String!) {
     pagesYaml(slug: { eq: "therapy" }) {
       pretitle
     }

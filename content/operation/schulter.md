@@ -12,11 +12,8 @@ title: Schulter
 slug: schulter
 image: ../media/bei  OP  Schulter.jpg
 order: 3
-excerpt: Eine subakromiale Dekompression verschafft der eingeklemmten
-  Rotatorenmanschette beim Impingementsydrom / Schulterengpass-Syndrom wieder
-  Platz. Dabei werden Weichteile (Teile des Schleimbeutels) und Teile der
-  Unterseite des Acromions (Schulterdach) mittels einer Fräse sparsam entfernt,
-  so dass wieder ein ungehinderter Gleitvorgang möglich ist.
+excerpt: Subakromiale Dekompression, Rotatorenmanschettenoperation,
+  Stabilisierende Operation, Bizepssehnenverpflanzung
 ---
 ## Subakromiale Dekompression 
 

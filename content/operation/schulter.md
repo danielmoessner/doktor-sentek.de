@@ -25,8 +25,6 @@ Eine subakromiale Dekompression verschafft der eingeklemmten Rotatorenmanschett
 
 Bei der Rotatorenmanschetten-Operation ist die Rotatorenmanschette meist gerissen und zieht sich ein Ende wie ein Gummiband zurück. Durch die Rotatorenmanschettenoperation / Rotatorenmanschettennaht werden die Rissenden wieder an die ursprüngliche Stelle zurückgezogen und dort mittels Schrauben fest verankert.  Die Operation wird entweder arthroskopisch oder arthroskopisch-assistiert durchgeführt. 
 
-
-
 ## Stabilisierende Operation bei Schulterluxation (Auskugeln) 
 
 Zunächst wird eine diagnostische Arthroskopie (Gelenkspiegelung) zur Beurteilung des Ausmaßes der Verletzung von Pfannenrand und Kapselbandstrukturen sowie zur Beurteilung zusätzlicher Schäden durchgeführt. 
@@ -38,3 +36,7 @@ Anschließend erfolgt die arthroskopische Stabilisierung der Schulter (Schlüsse
 ## Bizepssehnen-Verpflanzung / Tenodese 
 
 Ist die Bizepssehne nicht mehr funktionell oder führt die verletzte Bizepssehne immer wieder zu Schulterschmerzen, so kann die Bizepssehne durch eine wenig aufwändige Operation, rein arthroskopisch, an eine Stelle in der Schulter verpflanzt werden, an der sie keine Schulterschmerzen mehr verursacht und ihre volle Funktion behält.
+
+
+
+Bei weiteren Fragen sprechen sie uns gern an oder Vereinbaren sie einen Termin über unser Kontaktformular.

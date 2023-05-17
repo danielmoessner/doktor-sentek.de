@@ -3,7 +3,7 @@ collection: operation
 meta:
   title: "Operation: Schulter"
   description: Schulter, Arthroskopie, Rotatorenmanschettenruptur, Labrum,
-    Kalkschulter, Frozen shoulder, Schulterchirurgie
+    Kalkschulter, Frozen shoulder, Schulterchirurgie, Schulterspezialist
   image: ../media/bei  OP  Schulter.jpg
 title: Schulter
 slug: schulter

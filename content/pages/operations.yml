@@ -2,12 +2,14 @@ collection: page
 slug: operations
 meta:
   title: Operationen
-  description: "Operationen: Schulter, Ellenbogen, Knie, Hand, Hüfte, ambulantes
-    operieren, Ambulante Operation"
+  description: "Operationen: Schulterspezialist, Ellenbogenspezialist,
+    Kniespezialist, Handspezialist, Hüftespezialist, ambulantes operieren,
+    Ambulante Operation"
   image: ../media/Hintergrund bei konservative Therapie.jpg
 header:
   title: Operationen
-  text: Schulter, Hand, Hüfte, Knie
+  text: Schulter, Ellenbogen, Hand, Hüfte, Knie, Ambulantes Operieren, Stationäres
+    Operieren
   image: ../media/Hintergrund bei konservative Therapie.jpg
 content:
   button: weiter

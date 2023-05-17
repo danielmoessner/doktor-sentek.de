@@ -12,11 +12,8 @@ title: Hand
 slug: hand
 image: ../media/Touch 01 - bei OP Daumensattelgelenk.JPG
 order: 5
-excerpt: Als Handchirurg stellt für mich die operative Behandlung von Pat mit
-  Erkrankungen und Verletzungen der Hand eine zentrale Säule dar. Der Einsatz
-  von optischen Vergrößerungshilfen (Lupenbrille) sowie der Einsatz von
-  atraumatischen (gewebeschonenden) Operationstechniken kommen standardmäßig zum
-  Einsatz.
+excerpt: Morbus Dupuytren, Schnellender Finger, Karpaltunnelsyndrom,
+  Sattelgelenkarthrose, Rhizarthrose
 ---
 ## Morbus Dupuytren
 

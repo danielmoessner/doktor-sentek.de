@@ -2,11 +2,8 @@
 collection: operation
 meta:
   title: "Operation: Hand"
-  description: Als Handchirurg stellt für mich die operative Behandlung von Pat
-    mit Erkrankungen und Verletzungen der Hand eine zentrale Säule dar. Der
-    Einsatz von optischen Vergrößerungshilfen (Lupenbrille) sowie der Einsatz
-    von atraumatischen (gewebeschonenden) Operationstechniken kommen
-    standardmäßig zum Einsatz.
+  description: Handchirurg, Handchirurgie, Handspezialist, Radiusfraktur,
+    Karpaltunnelsyndrom, Dupuytren
   image: ../media/Wolf - bei OP Hand Hintergrund.jpg
 title: Hand
 slug: hand
@@ -15,6 +12,8 @@ order: 5
 excerpt: Morbus Dupuytren, Schnellender Finger, Karpaltunnelsyndrom,
   Sattelgelenkarthrose, Rhizarthrose
 ---
+Als Handchirurg stellt für mich die operative Behandlung von Pat mit Erkrankungen und Verletzungen der Hand eine zentrale Säule dar. Der Einsatz von optischen Vergrößerungshilfen (Lupenbrille) sowie der Einsatz von atraumatischen (gewebeschonenden) Operationstechniken kommen standardmäßig zum Einsatz.
+
 ## Morbus Dupuytren
 
 Durch die Operation werden die zu meist stranghaften Gewebsanteile entfernt. Hierbei ist darauf zu achten das Gefäß- und Nervenstrukturen nicht verletzt werden. Unter Umständen kann die Operation etwas länger dauern wenn die krankhaften Gewebestränge die Fingernerven regelrecht eingemauert haben. 

@@ -6,9 +6,9 @@ meta:
   image: ../media/stellenangebote.jpg
 header:
   title: Kontakt
-  text: Kontakt, Anfahrt, sprechstundenzeiten
+  text: Kontakt, Anfahrt, Praxisöffnungszeiten
 contact:
   title1: Kontakt
   text1: Wir freuen uns auf Sie
   title2: Anfahrt
-  title3: Sprechstundenzeit
+  title3: Praxisiöffnungszeiten

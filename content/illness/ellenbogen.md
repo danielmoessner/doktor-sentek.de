@@ -37,6 +37,6 @@ Meistens ist eine Schleimbeutelentzündung vollkommen harmlos und bildet sich sp
 
 ## Nervenengpaßsyndrom (Sulcus ulnaris Syndrom) 
 
-![alt]( "tit")
+![]( "tit")
 
 Das Sulcus ulnaris Syndrom zählt wie das Karpaltunnelsyndrom zu den Nervenengpaßsyndromen. Hier wird der N. ulnaris am Ellenbogen eingeengt was zu teilweise unangenehmen Kribbeln oder Taubheitisgefühl im Bereich des Kleinfingers führen kann (Musikantenknochen).

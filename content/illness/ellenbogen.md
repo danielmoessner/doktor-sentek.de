@@ -16,7 +16,7 @@ excerpt: |-
 ---
 ## Tennisellenbogen / Golferellenbogen 
 
-![alt]( "tit")
+![]( "tit")
 
 Beim Tennis- oder Golferellenbogen bereiten die Sehnenansätzen am Ellenbogen Schmerzen, entweder außen oder innen. Bei bestimmten Bewegungen der Hand schießt plötzlich ein Schmerz ein, der so heftig ist, dass einem Gegenstände aus der Hand fallen. 
 

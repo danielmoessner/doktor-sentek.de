@@ -1,7 +1,7 @@
 ---
 collection: illness
 meta:
-  title: Krankheitsbild - Ellenbogen
+  title: Krankheitsbild - Schulter
   description: Bei chronischer und langanhaltender Reizung (Entzündung) kann es zu
     einer sogenannten Kalkschulter kommen. In der Rotatorenmanschette entstehen
     Kalkdepots, die ein Impingement und den damit verbundenen Schulterschmerz

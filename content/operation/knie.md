@@ -2,11 +2,8 @@
 collection: operation
 meta:
   title: "Operation: Knie"
-  description: Viele Meniskusverletzungen lassen sich heute wieder nähen oder an
-    der ursprünglichen Position des Meniskus fixieren. Dies hängt von
-    der Lokalisation des Meniskusrisses und der dortigen Durchblutung des
-    Meniskus ab. Handelt es sich um einen direkt an der Kapsel befindlichen oder
-    nicht zu langen Meniskusriss, kann dieser genäht werden.
+  description: Meniskus, Kniespezialist, Arthroskopie, Rostock, Endoprothese,
+    Schlitten, ambulant
   image: ../media/fav Knie Krankheitsbild allg..jpg
 title: Knie
 slug: knie

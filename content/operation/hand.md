@@ -3,7 +3,7 @@ collection: operation
 meta:
   title: "Operation: Hand"
   description: Handchirurg, Handchirurgie, Handspezialist, Radiusfraktur,
-    Karpaltunnelsyndrom, Dupuytren
+    Karpaltunnelsyndrom, Dupuytren, Rostock, GDZ, ambulant
   image: ../media/Wolf - bei OP Hand Hintergrund.jpg
 title: Hand
 slug: hand

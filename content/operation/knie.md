@@ -3,7 +3,7 @@ collection: operation
 meta:
   title: "Operation: Knie"
   description: Meniskus, Kniespezialist, Arthroskopie, Rostock, Endoprothese,
-    Schlitten, ambulant
+    Schlitten, ambulant, o-Bein, Umstellungsosteotomie, Achskorrektur, Knie
   image: ../media/fav Knie Krankheitsbild allg..jpg
 title: Knie
 slug: knie
@@ -19,7 +19,7 @@ excerpt: Viele Meniskusverletzungen lassen sich heute wieder nähen oder an der
 
 Je nach Art und Größe des Risses wird der Meniskus genäht oder teilweise entfernt. Beide Eingriffe erfolgen ausschließlich arthroskopisch, d. h. durch eine Schlüsselloch-Operation 
 
-### Meniscusnaht oder Meniscusrefixation: 
+### Meniskusnaht oder Meniskusrefixation: 
 
 Viele Meniskusverletzungen lassen sich heute wieder nähen oder an der ursprünglichen Position des Meniskus fixieren. Dies hängt von der Lokalisation des Meniskusrisses und der dortigen Durchblutung des Meniskus ab. Handelt es sich um einen direkt an der Kapsel befindlichen oder nicht zu langen Meniskusriss, kann dieser genäht werden. 
 

@@ -4,7 +4,7 @@ meta:
   title: "Operation: Schulter"
   description: Schulter, Arthroskopie, Rotatorenmanschettenruptur, Labrum,
     Kalkschulter, frozen shoulder, Schulterchirurgie, Schulterspezialist,
-    ambulant, Rostock
+    ambulant, Rostock, Weber
   image: ../media/bei  OP  Schulter.jpg
 title: Schulter
 slug: schulter

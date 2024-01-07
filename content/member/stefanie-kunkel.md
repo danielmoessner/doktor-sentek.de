@@ -6,4 +6,4 @@ subtitle: Medizinische Fachangestellte
 image: ../media/favicon.png
 excerpt: stefanie kunkel
 ---
-P﻿raxisorganisation
+L﻿eitende MFA, Praxisorganisation, Hygienefachkraft

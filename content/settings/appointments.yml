@@ -2,12 +2,13 @@ collection: settings
 slug: appointments
 appointments:
   - day: Montag
-    openingHours: 08:00 bis 10:00 - 15:00 bis 17:00 (jeden zweiten Montag ambulante OP`s)
+    openingHours: 08:00 bis 10:00 - 15:00 bis 17:00 (jeden zweiten Montag ambulante
+      OP`s in den geraden KWen)
   - day: Dienstag
     openingHours:  08:00 bis 12:00 - 13:00 bis 17:00
   - day: Mittwoch
-    openingHours: 8:00 bis 10:00
+    openingHours: 08:00 bis 10:00
   - day: Donnerstag
-    openingHours: 08:00 bis 12:00 - 15:00 bis 17:00
+    openingHours: 08:00 bis 12:00 - 14:00 bis 16:00
   - day: Freitag
-    openingHours: 8:00 bis 13:00
+    openingHours: 08:00 bis 13:00

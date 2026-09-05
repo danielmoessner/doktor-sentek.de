@@ -3,10 +3,10 @@ collection: operation
 meta:
   title: "Operation: Hüfte"
   description: Endoprothese, TEP, Hüftspezialist, Rostock, Hüfte
-  image: ../media/fav Hüfte Krankheitsbild allg.jpg
+  image: ../media/fav-Hüfte-Krankheitsbild-allg.jpg
 title: Hüfte
 slug: huefte
-image: ../media/fav Hüfte Krankheitsbild allg.jpg
+image: ../media/fav-Hüfte-Krankheitsbild-allg.jpg
 order: 8
 excerpt: Hüftgelenkstotalendoprothese
 ---

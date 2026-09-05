@@ -4,10 +4,10 @@ meta:
   title: Krankheitsbild - Ellenbogen
   description: Tennisellenbogen, Golferellenbogen, Schleimbeutelentzündung,
     Nervenengpasssyndrom
-  image: ../media/fav Ellenbogen Krankheitsbild allg..jpg
+  image: ../media/fav-Ellenbogen-Krankheitsbild-allg..jpg
 title: Ellenbogen
 slug: ellenbogen
-image: ../media/fav Ellenbogen Krankheitsbild allg..jpg
+image: ../media/fav-Ellenbogen-Krankheitsbild-allg..jpg
 order: 3
 excerpt: |-
   Tennisellenbogen / Golferellenbogen,

@@ -3,10 +3,10 @@ collection: operation
 meta:
   title: "Operation: Ellenbogen"
   description: Ellenbogen, Tennisellenbogen, Golferellenbogen, Sulcus-ulnaris Syndrom
-  image: ../media/fav Ellenbogen Krankheitsbild allg..jpg
+  image: ../media/fav-Ellenbogen-Krankheitsbild-allg..jpg
 title: Ellenbogen
 slug: ellenbogen
-image: ../media/fav Ellenbogen Krankheitsbild allg..jpg
+image: ../media/fav-Ellenbogen-Krankheitsbild-allg..jpg
 order: 4
 excerpt: Denervation, Schleimbeutelentfernung, Sulcus-ulnaris Syndrom
 ---

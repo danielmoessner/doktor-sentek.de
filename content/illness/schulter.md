@@ -6,10 +6,10 @@ meta:
     einer sogenannten Kalkschulter kommen. In der Rotatorenmanschette entstehen
     Kalkdepots, die ein Impingement und den damit verbundenen Schulterschmerz
     weiter verstärken. Das Liegen auf der Schulter ist dann häufig unmöglich.
-  image: ../media/fav Schulter Krankheitsbild allg..jpg
+  image: ../media/fav-Schulter-Krankheitsbild-allg..jpg
 title: Schulter
 slug: schulter
-image: ../media/fav Schulter Krankheitsbild allg..jpg
+image: ../media/fav-Schulter-Krankheitsbild-allg..jpg
 order: 2
 excerpt: Bei chronischer und langanhaltender Reizung (Entzündung) kann es zu
   einer sogenannten Kalkschulter kommen. In der Rotatorenmanschette entstehen

@@ -5,10 +5,10 @@ meta:
   description: Schulter, Arthroskopie, Rotatorenmanschettenruptur, Labrum,
     Kalkschulter, frozen shoulder, Schulterchirurgie, Schulterspezialist,
     ambulant, Rostock, Weber
-  image: ../media/bei  OP  Schulter.jpg
+  image: ../media/bei-OP-Schulter.jpg
 title: Schulter
 slug: schulter
-image: ../media/bei  OP  Schulter.jpg
+image: ../media/bei-OP-Schulter.jpg
 order: 3
 excerpt: Subakromiale Dekompression, Rotatorenmanschettenoperation,
   Stabilisierende Operation, Bizepssehnenverpflanzung
@@ -19,7 +19,7 @@ Eine subakromiale Dekompression verschafft der eingeklemmten Rotatorenmanschett
 
 ## Rotatorenmanschetten-Operation / Rotatorenmanschetten-Naht 
 
-![Schulter](../media/fav Schulter Rotatorenmanschette OP.JPG "Schulter")
+![Schulter](../media/fav-Schulter-Rotatorenmanschette-OP.JPG "Schulter")
 
 Bei der Rotatorenmanschetten-Operation ist die Rotatorenmanschette meist gerissen und zieht sich ein Ende wie ein Gummiband zurück. Durch die Rotatorenmanschettenoperation / Rotatorenmanschettennaht werden die Rissenden wieder an die ursprüngliche Stelle zurückgezogen und dort mittels Schrauben fest verankert.  Die Operation wird entweder arthroskopisch oder arthroskopisch-assistiert durchgeführt. 
 

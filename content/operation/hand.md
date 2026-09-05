@@ -4,10 +4,10 @@ meta:
   title: "Operation: Hand"
   description: Handchirurg, Handchirurgie, Handspezialist, Radiusfraktur,
     Karpaltunnelsyndrom, Dupuytren, Rostock, GDZ, ambulant
-  image: ../media/Wolf - bei OP Hand Hintergrund.jpg
+  image: ../media/Wolf-bei-OP-Hand-Hintergrund.jpg
 title: Hand
 slug: hand
-image: ../media/Touch 01 - bei OP Daumensattelgelenk.JPG
+image: ../media/Touch-01-bei-OP-Daumensattelgelenk.JPG
 order: 5
 excerpt: Morbus Dupuytren, Schnellender Finger, Karpaltunnelsyndrom,
   Sattelgelenkarthrose, Rhizarthrose
@@ -40,4 +40,4 @@ Bei der fortgeschrittenen Daumensattelgelenksarthrose kommen zwei Operationsverf
 
 Die Versorgung erfolgt als stationäre Operation.
 
-![](../media/Touch 02 - bei OP Daumensattelgelenk.JPG)
+![](../media/Touch-02-bei-OP-Daumensattelgelenk.JPG)

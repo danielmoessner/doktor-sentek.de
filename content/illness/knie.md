@@ -6,10 +6,10 @@ meta:
     und Unterschenkelknochen ein innerer und ein äußerer Meniskus. Der Meniskus
     besteht aus Knorpelgewebe und unterliegt dem gleichen Verschleiß wie der
     Rest des Knorpels.
-  image: ../media/fav Knie Krankheitsbild allg..jpg
+  image: ../media/fav-Knie-Krankheitsbild-allg..jpg
 title: Knie
 slug: knie
-image: ../media/fav Knie Krankheitsbild allg..jpg
+image: ../media/fav-Knie-Krankheitsbild-allg..jpg
 order: 5
 excerpt: Im Kniegelenk befindet sich als Puffer zwischen Ober-
   und Unterschenkelknochen ein innerer und ein äußerer Meniskus. Der Meniskus

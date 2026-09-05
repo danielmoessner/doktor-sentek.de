@@ -4,10 +4,10 @@ meta:
   title: Krankheitsbild - Hand
   description: Morbus Dupuytren, Schnellender Finger, Karpaltunnelsyndrom,
     Rhizarthrose, Frakturen des Handgelenkes
-  image: ../media/fav Hand Krankheitsbild allg..jpg
+  image: ../media/fav-Hand-Krankheitsbild-allg..jpg
 title: Hand
 slug: hand
-image: ../media/fav Hand Krankheitsbild allg..jpg
+image: ../media/fav-Hand-Krankheitsbild-allg..jpg
 order: 1
 excerpt: |-
   Morbus Dupuytren,

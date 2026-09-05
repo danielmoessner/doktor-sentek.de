@@ -1,0 +1,226 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import sanitizeHtml from 'sanitize-html';
+import { getHomePage, getSettingContentBySlug } from '../lib/content';
+import { cmsAssetToPublicUrl } from '../lib/cms-paths';
+import { getIllnessEntries, getMemberEntries } from '../lib/collections';
+
+const [home, illnesses, members, contact, appointments, indication] = await Promise.all([
+  getHomePage(),
+  getIllnessEntries(),
+  getMemberEntries(),
+  getSettingContentBySlug('contact'),
+  getSettingContentBySlug('appointments'),
+  getSettingContentBySlug('indication'),
+]);
+
+const heroImage = cmsAssetToPublicUrl(home?.header?.image);
+const antiAgingImage = cmsAssetToPublicUrl(home?.antiAging?.image);
+
+const withBreaks = (value = '') => sanitizeHtml(String(value).replace(/\n/g, '<br />'));
+---
+
+<BaseLayout title={home?.meta?.title} description={home?.meta?.description}>
+  <aside>
+    <div class="fixed right-0 z-50 top-[25vh] lg:top-[15vh]">
+      <button
+        id="indication-toggle"
+        type="button"
+        class="w-12 p-3 bg-gray-900 rounded-l-full cursor-pointer text-gray-050 hover:bg-gray-800 focus:outline-none"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      </button>
+      <div id="indication-panel" class="absolute right-0 transition-transform duration-150 transform translate-x-full w-80">
+        <div class="text-gray-900 rounded-l-lg shadow-lg bg-gray-050">
+          <div class="p-4">
+            <h2 class="text-lg font-medium">{indication?.title}</h2>
+            <p class="mt-2" set:html={withBreaks(indication?.text || '')} />
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="bg-gray-50">
+    <section class="lg:relative">
+      <div class="w-full pt-16 pb-20 mx-auto text-center max-w-7xl lg:py-32 lg:text-left">
+        <div class="px-4 lg:w-1/2 sm:px-6 xl:pr-16">
+          <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl">
+            <span class="block xl:inline">{home?.header?.title}</span>
+            <span class="block ml-3 text-teal-600 xl:inline">{home?.header?.titleColor}</span>
+          </h1>
+          <p class="max-w-md mx-auto mt-3 text-lg text-gray-500 sm:text-xl md:mt-5 md:max-w-3xl">{home?.header?.text}</p>
+          <div class="mt-10 sm:flex sm:justify-center lg:justify-start">
+            <div class="rounded-md shadow">
+              <a href="#sprechstunden" class="flex items-center justify-center w-full px-8 py-3 text-base font-medium text-white bg-teal-600 border border-transparent rounded-md hover:bg-teal-700 md:py-4 md:text-lg md:px-10">{home?.header?.buttonLeft}</a>
+            </div>
+            <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
+              <a href="#krankheitsbilder" class="flex items-center justify-center w-full px-8 py-3 text-base font-medium text-teal-600 bg-white border border-transparent rounded-md hover:bg-gray-50 md:py-4 md:text-lg md:px-10">{home?.header?.buttonRight}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="relative w-full h-64 sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full">
+        {heroImage && <img alt="Header Bild" class="absolute inset-0 object-cover w-full h-full" src={heroImage} />}
+      </div>
+    </section>
+
+    <section id="krankheitsbilder">
+      <div class="bg-white">
+        <div class="px-4 py-16 mx-auto max-w-7xl sm:px-6 lg:py-24 lg:px-8">
+          <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-3xl font-extrabold text-gray-900">{home?.illness?.title}</h2>
+            <p class="mt-4 text-lg text-gray-500">{home?.illness?.text}</p>
+          </div>
+          <dl class="mt-12 space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 lg:grid-cols-4 lg:gap-x-8">
+            {illnesses.map((illness) => (
+              <div class="relative">
+                <dt>
+                  <svg class="absolute w-6 h-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <p class="text-lg font-medium leading-6 text-gray-900 ml-9">{illness.title}</p>
+                </dt>
+                <dd class="mt-2 text-base text-gray-500 ml-9">
+                  <p class="line-clamp-3" set:html={withBreaks(illness.excerpt)} />
+                  <a class="block mt-2 text-base font-semibold text-teal-600 hover:text-teal-500" href={`/krankheitsbilder/${illness.routeSlug}/`}>
+                    {home?.illness?.button}
+                  </a>
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="">
+        <div class="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-8 lg:py-24">
+          <div class="space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
+            <div class="space-y-5 sm:space-y-4">
+              <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">{home?.team?.title}</h2>
+              <p class="text-xl text-gray-500">{home?.team?.text}</p>
+            </div>
+            <div class="lg:col-span-2">
+              <ul class="space-y-12 sm:divide-y sm:divide-gray-200 sm:space-y-0 sm:-mt-8 lg:gap-x-8 lg:space-y-0">
+                {members.map((member) => (
+                  <li class="sm:py-8">
+                    <div class="space-y-4 sm:grid sm:grid-cols-3 sm:items-start sm:gap-6 sm:space-y-0">
+                      <div class="aspect-w-3 aspect-h-2 sm:aspect-w-3 sm:aspect-h-4">
+                        {member.image && <img class="absolute inset-0 object-cover w-full h-full rounded-lg shadow-lg" src={member.image} alt={member.title} />}
+                      </div>
+                      <div class="sm:col-span-2">
+                        <div class="space-y-4">
+                          <div class="space-y-1 text-lg font-medium leading-6">
+                            <h3>{member.title}</h3>
+                            <p class="text-teal-600">{member.subtitle}</p>
+                          </div>
+                          <div class="prose-lg">
+                            <p class="text-gray-500" set:html={withBreaks(member.excerpt)} />
+                          </div>
+                          <div class="pt-4">
+                            <a class="text-base font-semibold text-teal-600 hover:text-teal-500" href="/team/">{home?.team?.button}</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sprechstunden">
+      <div class="relative bg-white">
+        <div class="absolute inset-0">
+          <div class="absolute inset-y-0 left-0 w-1/2" />
+        </div>
+        <div class="relative max-w-4xl mx-auto lg:grid lg:grid-cols-6">
+          <div class="px-4 py-16 sm:px-6 lg:col-span-3 lg:px-8 lg:py-24 xl:pr-12">
+            <div class="max-w-lg mx-auto">
+              <h2 class="text-2xl font-extrabold tracking-tight text-gray-900 sm:text-3xl">{home?.appointment?.title}</h2>
+              <p class="mt-3 text-lg leading-6 text-gray-500">{home?.appointment?.text}</p>
+              <dl class="mt-8 text-base text-gray-500">
+                <div>
+                  <dt class="sr-only">Adresse</dt>
+                  <dd class="" set:html={withBreaks(contact?.address)} />
+                </div>
+                <div class="mt-6">
+                  <dt class="sr-only">Telefon</dt>
+                  <dd class="flex">
+                    <svg class="flex-shrink-0 w-6 h-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                    <a href={`tel:${contact?.phone}`} class="ml-3 text-base font-medium text-gray-600 hover:text-teal-800">{contact?.phone}</a>
+                  </dd>
+                </div>
+                <div class="mt-3">
+                  <dt class="sr-only">E-Mail</dt>
+                  <dd class="flex">
+                    <svg class="flex-shrink-0 w-6 h-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    <a href={`mailto:${contact?.email}`} class="ml-3 text-base font-medium text-gray-600 hover:text-teal-800">{contact?.email}</a>
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+          <div class="px-4 pb-16 sm:px-6 lg:col-span-3 lg:py-24 lg:px-8 xl:pl-12">
+            <div class="max-w-lg mx-auto lg:max-w-none">
+              <dl class="sm:divide-y sm:divide-gray-200">
+                {(appointments?.appointments || []).map((appointment: any) => (
+                  <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                    <dt class="font-medium text-gray-500 md:text-sm">{appointment.day}</dt>
+                    <dd class="mt-1 text-gray-900 md:text-sm sm:mt-0 sm:col-span-2 sm:text-right">{appointment.openingHours}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="relative bg-teal-900">
+        <div class="h-56 bg-teal-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
+          {antiAgingImage && <img class="object-cover w-full h-full" src={antiAgingImage} alt="" />}
+        </div>
+        <div class="relative px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-8 lg:py-16">
+          <div class="md:ml-auto md:w-1/2 md:pl-10">
+            <h2 class="text-base font-semibold tracking-wider uppercase text-teal-050 text-opacity-80">{home?.antiAging?.pretitle}</h2>
+            <p class="mt-2 text-3xl font-extrabold tracking-tight text-white sm:text-4xl">{home?.antiAging?.title}</p>
+            <p class="mt-3 text-lg text-teal-050 text-opacity-80">{home?.antiAging?.text}</p>
+            <div class="mt-8">
+              <div class="inline-flex space-x-3 rounded-md shadow">
+                <a href="/anti-aging/" class="items-center justify-center block px-5 py-3 text-base font-medium text-teal-800 bg-white border border-transparent rounded-md hover:bg-gray-50 focus:outline-none ring-gray-50 focus:ring-2 ring-offset-teal-900 focus:ring-offset-2">
+                  {home?.antiAging?.button}
+                </a>
+                <a href="/anti-aging/#formular" class="items-center justify-center block px-5 py-3 text-base font-medium text-teal-800 bg-white border border-transparent rounded-md hover:bg-gray-50 focus:outline-none ring-gray-50 focus:ring-2 ring-offset-teal-900 focus:ring-offset-2">
+                  {home?.antiAging?.button2}
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const toggle = document.getElementById('indication-toggle');
+    const panel = document.getElementById('indication-panel');
+    if (toggle && panel) {
+      toggle.addEventListener('click', () => {
+        panel.classList.toggle('translate-x-full');
+      });
+    }
+  </script>
+</BaseLayout>

@@ -1,0 +1,315 @@
+---
+import '../styles/global.css';
+import {
+  getGlobalSettings,
+  getNavigationSettings,
+  getSettingContentBySlug,
+} from '../lib/content';
+import { getIllnessEntries, getOperationEntries } from '../lib/collections';
+
+const { title, description } = Astro.props;
+
+const [globalSettings, navigation, contact, footer, illnessEntries, operationEntries] = await Promise.all([
+  getGlobalSettings(),
+  getNavigationSettings(),
+  getSettingContentBySlug('contact'),
+  getSettingContentBySlug('footer'),
+  getIllnessEntries(),
+  getOperationEntries(),
+]);
+
+const focusLinks = [
+  { href: '/operationen/', label: navigation?.focus?.operations || 'Operationen' },
+  { href: '/konservative-therapien/', label: navigation?.focus?.therapies || 'Konservative Therapien' },
+  { href: '/anti-aging/', label: navigation?.focus?.antiAging || 'Anti Aging' },
+];
+
+const contactLinks = [
+  { href: '/kontakt/', label: navigation?.contact?.link1 || 'Kontaktdaten' },
+  { href: '/kontakt/', label: navigation?.contact?.link2 || 'Sprechzeiten' },
+  { href: '/kontakt/', label: navigation?.contact?.link3 || 'Anfahrt' },
+  { href: '/stellenangebote/', label: navigation?.contact?.link4 || 'Stellenangebote' },
+];
+
+const currentPath = Astro.url.pathname;
+const isCurrent = (path: string) => {
+  if (path === '/') return currentPath === '/';
+  const normalizedPath = path.endsWith('/') ? path : `${path}/`;
+  return currentPath === normalizedPath;
+};
+
+const desktopLinkClass = (path: string) =>
+  `border-transparent px-4 text-gray-500 hover:border-teal-600 hover:bg-teal-700 hover:text-teal-050 inline-flex items-center pt-1 border-b-2 text-base font-medium ${
+    isCurrent(path) ? 'border-teal-700 text-gray-900' : ''
+  }`;
+
+const mobileLinkClass = (path: string) =>
+  `border-transparent text-gray-500 hover:bg-teal-050 hover:border-teal-500 hover:text-teal-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium ${
+    isCurrent(path) ? 'bg-teal-050 border-teal-500 text-teal-700' : ''
+  }`;
+---
+
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title || 'Dr. med. Robert Sentek'}</title>
+    {description && <meta name="description" content={description} />}
+    {globalSettings?.favicon && <link rel="icon" href={globalSettings.favicon} />}
+  </head>
+  <body class="">
+    <header>
+      <nav class="hidden lg:block">
+        <div class="mx-auto max-w-7xl lg:px-6">
+          <div class="border-b border-gray-100">
+            <div class="px-4 pt-3 pb-4 sm:px-6 lg:px-0">
+              <div class="flex flex-row">
+                <div class="flex flex-row space-x-7">
+                  <div class="flex flex-row items-center">
+                    <svg class="w-6 h-6 mr-2 text-teal-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                    <a class="text-base font-medium text-gray-600 hover:text-teal-800" href={`tel:${contact?.phone || ''}`}>{contact?.phone || ''}</a>
+                  </div>
+                  <div class="flex flex-row items-center">
+                    <svg class="w-6 h-6 mr-2 text-teal-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    <a class="text-base font-medium text-gray-600 hover:text-teal-800" href={`mailto:${contact?.email || ''}`}>{contact?.email || ''}</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <nav class="z-50 bg-white border-b border-gray-100 shadow-sm lg:sticky lg:top-0">
+        <div class="mx-auto max-w-7xl lg:px-6">
+          <div class="relative flex flex-row-reverse justify-between h-20 px-4 sm:px-6 lg:px-0">
+            <div class="relative flex items-center xl:hidden">
+              <button
+                id="mobile-menu-button"
+                type="button"
+                class="absolute right-0 inline-flex items-center justify-center p-2 text-gray-400 rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-teal-500"
+                aria-controls="mobile-menu"
+                aria-expanded="false"
+              >
+                <span class="sr-only">Menue oeffnen</span>
+                <svg id="menu-icon-open" class="block w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+                <svg id="menu-icon-close" class="hidden w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+
+            <div class="flex items-center flex-1 sm:items-stretch sm:justify-between">
+              <a href="/" class="flex items-center flex-shrink-0 w-2/3 text-teal-900 sm:px-4 md:px-0 md:w-80 lg:w-96">
+                {globalSettings?.logo ? (
+                  <div class="w-full" set:html={globalSettings.logo} />
+                ) : (
+                  <span class="text-lg font-semibold text-teal-800 hover:text-teal-700">Dr. med. Robert Sentek</span>
+                )}
+              </a>
+
+              <div class="hidden xl:ml-6 xl:flex">
+                <a class={desktopLinkClass('/')} href="/">{navigation?.link1 || 'Startseite'}</a>
+                <a class={desktopLinkClass('/team/')} href="/team/">{navigation?.link2 || 'Zur Person'}</a>
+
+                <div class="relative inline-flex items-center text-gray-500 group" data-dropdown="illness">
+                  <a class="inline-flex items-center h-full px-4 pt-1 text-base font-medium border-b-2 border-transparent hover:border-teal-700 hover:text-teal-050 focus:outline-none" href="/krankheitsbilder/" data-dropdown-trigger="illness">
+                    <span>{navigation?.link3 || 'Krankheitsbilder'}</span>
+                    <svg class="w-5 h-5 ml-2 text-gray-400 group-hover:text-teal-050" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                  </a>
+                  <div class="absolute bottom-0 z-10 hidden w-screen max-w-sm transform translate-y-full" data-dropdown-panel="illness">
+                    <div class="overflow-hidden rounded-b-lg shadow-lg ring-1 ring-black ring-opacity-5">
+                      <div class="relative grid gap-1 py-3 bg-teal-900 bg-opacity-80">
+                        {illnessEntries.map((item: any) => (
+                          <a class="block px-5 py-3 hover:bg-teal-800 text-teal-050" href={`/krankheitsbilder/${encodeURIComponent(item.routeSlug)}/`}>{item.title}</a>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="relative inline-flex items-center text-gray-500 group" data-dropdown="focus">
+                  <a class="inline-flex items-center h-full px-4 pt-1 text-base font-medium border-b-2 border-transparent hover:border-teal-700 hover:text-teal-050 focus:outline-none" href="/schwerpunkte/" data-dropdown-trigger="focus">
+                    <span>{navigation?.link4 || 'Schwerpunkte'}</span>
+                    <svg class="w-5 h-5 ml-2 text-gray-400 group-hover:text-teal-050" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                  </a>
+                  <div class="absolute bottom-0 z-10 hidden w-screen max-w-sm transform translate-y-full" data-dropdown-panel="focus">
+                    <div class="overflow-hidden rounded-b-lg shadow-lg ring-1 ring-black ring-opacity-5">
+                      <div class="relative grid gap-1 py-3 bg-teal-900 bg-opacity-80">
+                        {focusLinks.map((item) => (
+                          <a class="block px-5 py-3 hover:bg-teal-800 text-teal-050" href={item.href}>{item.label}</a>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="relative inline-flex items-center text-gray-500 group" data-dropdown="contact">
+                  <a class="inline-flex items-center h-full px-4 pt-1 text-base font-medium border-b-2 border-transparent hover:border-teal-700 hover:text-teal-050 focus:outline-none" href="/kontakt/" data-dropdown-trigger="contact">
+                    <span>{navigation?.link5 || 'Kontakt'}</span>
+                    <svg class="w-5 h-5 ml-2 text-gray-400 group-hover:text-teal-050" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                  </a>
+                  <div class="absolute bottom-0 z-10 hidden w-screen max-w-sm transform translate-y-full" data-dropdown-panel="contact">
+                    <div class="overflow-hidden rounded-b-lg shadow-lg ring-1 ring-black ring-opacity-5">
+                      <div class="relative grid gap-1 py-3 bg-teal-900 bg-opacity-80">
+                        {contactLinks.map((item) => (
+                          <a class="block px-5 py-3 hover:bg-teal-800 text-teal-050" href={item.href}>{item.label}</a>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="mobile-menu" class="hidden xl:hidden">
+            <div class="pt-2 pb-4 space-y-1">
+              <a class={mobileLinkClass('/')} href="/">{navigation?.link1 || 'Startseite'}</a>
+              <a class={mobileLinkClass('/team/')} href="/team/">{navigation?.link2 || 'Zur Person'}</a>
+              <a class={mobileLinkClass('/krankheitsbilder/')} href="/krankheitsbilder/">{navigation?.link3 || 'Krankheitsbilder'}</a>
+              <a class={mobileLinkClass('/operationen/')} href="/operationen/">{navigation?.focus?.operations || 'Operationen'}</a>
+              <a class={mobileLinkClass('/konservative-therapien/')} href="/konservative-therapien/">{navigation?.focus?.therapies || 'Konservative Therapien'}</a>
+              <a class={mobileLinkClass('/anti-aging/')} href="/anti-aging/">{navigation?.focus?.antiAging || 'Anti Aging'}</a>
+              <a class={mobileLinkClass('/kontakt/')} href="/kontakt/">{navigation?.link5 || 'Kontakt'}</a>
+              <a class={mobileLinkClass('/stellenangebote/')} href="/stellenangebote/">{navigation?.contact?.link4 || 'Stellenangebote'}</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="bg-gray-50">
+      <slot />
+    </main>
+
+    <footer class="shadow-inner bg-gray-50" aria-labelledby="footerHeading">
+      <h2 id="footerHeading" class="sr-only">Footer</h2>
+      <div class="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:pt-16 lg:pb-20 lg:px-6">
+        <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+          <div class="space-y-8 text-teal-900 xl:col-span-1">
+            <div class="max-w-lg">
+              {globalSettings?.logo && <div set:html={globalSettings.logo} />}
+            </div>
+            <p class="text-base text-gray-500">{footer?.text || 'so erreichen sie uns'}</p>
+            <div class="flex flex-col space-y-3">
+              <div class="flex flex-row items-center">
+                <svg class="w-6 h-6 mr-2 text-teal-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                <a class="text-base font-medium text-gray-600 hover:text-teal-800" href={`tel:${contact?.phone || ''}`}>{contact?.phone || ''}</a>
+              </div>
+              <div class="flex flex-row items-center">
+                <svg class="w-6 h-6 mr-2 text-teal-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                <a class="text-base font-medium text-gray-600 hover:text-teal-800" href={`mailto:${contact?.email || ''}`}>{contact?.email || ''}</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-8 mt-12 xl:mt-0 xl:col-span-2">
+            <div class="md:grid md:grid-cols-2 md:gap-8">
+              <div>
+                <h3 class="text-sm font-semibold tracking-wider text-gray-400 uppercase">{footer?.column1 || 'Navigation'}</h3>
+                <ul class="mt-4 space-y-4">
+                  <li><a href="/" class="text-base text-gray-500 hover:text-gray-900">{footer?.link11 || 'Startseite'}</a></li>
+                  <li><a href="/team/" class="text-base text-gray-500 hover:text-gray-900">{footer?.link12 || 'Zur Person'}</a></li>
+                  <li><a href="/krankheitsbilder/" class="text-base text-gray-500 hover:text-gray-900">{footer?.link13 || 'Krankheitsbilder'}</a></li>
+                  <li><a href="/operationen/" class="text-base text-gray-500 hover:text-gray-900">{footer?.link14 || 'Operationen'}</a></li>
+                  <li><a href="/konservative-therapien/" class="text-base text-gray-500 hover:text-gray-900">{footer?.link15 || 'Konservative Therapien'}</a></li>
+                  <li><a href="/kontakt/" class="text-base text-gray-500 hover:text-gray-900">{footer?.link16 || 'Kontakt'}</a></li>
+                </ul>
+              </div>
+              <div class="mt-12 md:mt-0">
+                <h3 class="text-sm font-semibold tracking-wider text-gray-400 uppercase">{footer?.column2 || 'Krankheitsbilder'}</h3>
+                <ul class="mt-4 space-y-4">
+                  {illnessEntries.map((item: any) => (
+                    <li><a class="text-base text-gray-500 hover:text-gray-900" href={`/krankheitsbilder/${encodeURIComponent(item.routeSlug)}/`}>{item.title}</a></li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <div class="md:grid md:grid-cols-2 md:gap-8">
+              <div>
+                <h3 class="text-sm font-semibold tracking-wider text-gray-400 uppercase">{footer?.column3 || 'Operationen'}</h3>
+                <ul class="mt-4 space-y-4">
+                  {operationEntries.map((item: any) => (
+                    <li><a class="text-base text-gray-500 hover:text-gray-900" href={`/operationen/${encodeURIComponent(item.routeSlug)}/`}>{item.title}</a></li>
+                  ))}
+                </ul>
+              </div>
+
+              <div class="mt-12 md:mt-0">
+                <h3 class="text-sm font-semibold tracking-wider text-gray-400 uppercase">{footer?.column4 || 'Rechtliches'}</h3>
+                <ul class="mt-4 space-y-4">
+                  <li><a href="/impressum/" class="text-base text-gray-500 hover:text-gray-900">{footer?.link41 || 'Impressum'}</a></li>
+                  <li><a href="/datenschutz/" class="text-base text-gray-500 hover:text-gray-900">{footer?.link42 || 'Datenschutz'}</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const button = document.getElementById('mobile-menu-button');
+      const menu = document.getElementById('mobile-menu');
+      const menuOpenIcon = document.getElementById('menu-icon-open');
+      const menuCloseIcon = document.getElementById('menu-icon-close');
+
+      if (button && menu) {
+        button.addEventListener('click', () => {
+          const isHidden = menu.classList.contains('hidden');
+          menu.classList.toggle('hidden');
+          button.setAttribute('aria-expanded', String(isHidden));
+          menuOpenIcon?.classList.toggle('hidden');
+          menuCloseIcon?.classList.toggle('hidden');
+        });
+      }
+
+      const dropdowns = document.querySelectorAll('[data-dropdown]');
+      dropdowns.forEach((dropdown) => {
+        const name = dropdown.getAttribute('data-dropdown');
+        const trigger = dropdown.querySelector(`[data-dropdown-trigger="${name}"]`);
+        const panel = dropdown.querySelector(`[data-dropdown-panel="${name}"]`);
+        if (!trigger || !panel) return;
+
+        let closeTimeout = 0;
+        const open = () => {
+          clearTimeout(closeTimeout);
+          dropdown.classList.add('bg-teal-700', 'text-teal-050');
+          panel.classList.remove('hidden');
+          trigger.classList.add('text-teal-050');
+        };
+        const close = () => {
+          closeTimeout = window.setTimeout(() => {
+            dropdown.classList.remove('bg-teal-700', 'text-teal-050');
+            panel.classList.add('hidden');
+            trigger.classList.remove('text-teal-050');
+          }, 200);
+        };
+
+        trigger.addEventListener('mouseenter', open);
+        trigger.addEventListener('focus', open);
+        panel.addEventListener('mouseenter', open);
+        dropdown.addEventListener('mouseleave', close);
+      });
+    </script>
+  </body>
+</html>

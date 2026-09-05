@@ -3,10 +3,10 @@ collection: illness
 meta:
   title: "Krankheitsbild: Fuß- und Sprunggelenk "
   description: Achillessehnenschmerz, Fersenschmerz, Senk- Spreizfüße
-  image: ../media/fav Fuß Krankheitsbild allg.jpg
+  image: ../media/fav-Fuß-Krankheitsbild-allg.jpg
 title: Fuß- und Sprunggelenk
 slug: fuss-und-sprunggelenk
-image: ../media/fav Fuß Krankheitsbild allg.jpg
+image: ../media/fav-Fuß-Krankheitsbild-allg.jpg
 order: 6
 excerpt: Achillessehnenschmerz, Fersenschmerz, Senk- Spreizfüße
 ---

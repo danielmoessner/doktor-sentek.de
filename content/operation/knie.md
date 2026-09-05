@@ -4,10 +4,10 @@ meta:
   title: "Operation: Knie"
   description: Meniskus, Kniespezialist, Arthroskopie, Rostock, Endoprothese,
     Schlitten, ambulant, o-Bein, Umstellungsosteotomie, Achskorrektur, Knie
-  image: ../media/fav Knie Krankheitsbild allg..jpg
+  image: ../media/fav-Knie-Krankheitsbild-allg..jpg
 title: Knie
 slug: knie
-image: ../media/fav Knie Krankheitsbild allg..jpg
+image: ../media/fav-Knie-Krankheitsbild-allg..jpg
 order: 4
 excerpt: Viele Meniskusverletzungen lassen sich heute wieder nähen oder an der
   ursprünglichen Position des Meniskus fixieren. Dies hängt von der Lokalisation

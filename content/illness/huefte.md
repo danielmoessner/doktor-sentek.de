@@ -7,10 +7,10 @@ meta:
     Verschleiß des Hüftgelenks in Frage. Wenn ein Patient wegen Hüftschmerzen
     den Arzt aufsucht, liegen häufig schon Bewegungseinschränkungen und damit
     eine deutliche Hüftarthrose vor.
-  image: ../media/fav Hüfte Krankheitsbild allg.jpg
+  image: ../media/fav-Hüfte-Krankheitsbild-allg.jpg
 title: Hüfte
 slug: huefte
-image: ../media/fav Hüfte Krankheitsbild allg.jpg
+image: ../media/fav-Hüfte-Krankheitsbild-allg.jpg
 order: 4
 excerpt: Hüftgelenksarthrose
 ---

@@ -4,7 +4,7 @@ const lineClamp = require('@tailwindcss/line-clamp');
 const forms = require('@tailwindcss/forms');
 
 module.exports = {
-  purge: ['./src/**/*.{js,jsx,ts,tsx}'],
+  purge: ['./src/**/*.{astro,html,js,jsx,ts,tsx,md,mdx}'],
   darkMode: false, // or 'media' or 'class'
   mode: 'jit',
   theme: {

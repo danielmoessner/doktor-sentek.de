@@ -26,25 +26,26 @@ E-Mail: praxis@doktor-sentek.de
 ### Berufsbezeichnung und berufsrechtliche Regelungen
 
 Berufsbezeichnung:\
-Facharzt für Orthopädie, Unfall- und Handchirurgie
+Facharzt für Orthopädie, Unfall- und Handchirurgie\
+Die Berufsbezeichnung wurde in der Bundesrepublik Deutschland verliehen.
 
-Zuständige Kammer:\
+**Zuständige Ärztekammer**\
 Ärztekammer Mecklenburg-Vorpommern\
-Körperschaft des öffentlichen Rechts\
 August-Bebel-Straße 9a\
-18055 Rostock
+18055 Rostock\
+www.aek-mv.de
 
-Verliehen in:\
-Deutschland
+**Zuständige Kassenärztliche Vereinigung**\
+Kassenärztliche Vereinigung Mecklenburg-Vorpommern\
+Neumühler Straße 22\
+19057 Schwerin\
+www.kvmv.de
 
-Es gelten folgende berufsrechtliche Regelungen:\
-Berufsordnung für die Ärzte Mecklenburg Vorpommerns\
-einsehbar unter:\
-https://www.aek-mv.de/aerztin-arzt/recht.html
+**Berufsrechtliche Regelungen**\
+Es gilt die Berufsordnung für die Ärztinnen und Ärzte in Mecklenburg-Vorpommern.\
+Einsehbar unter:\
+https://www.aek-mv.de/aerztin-arzt/recht/amtliche-bekanntmachungen-bekanntgaben.html
 
-### Verbraucherstreitbeilegung/Universalschlichtungsstelle
+### Verbraucherstreitbeilegung
 
 Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
-
-Quelle:\
-https://www.e-recht24.de

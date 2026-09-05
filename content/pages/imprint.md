@@ -10,33 +10,41 @@ header:
   title: Impressum
   text: Hier finden Sie uns und unsere rechtlichen Informationen.
 ---
+
 ## Impressum
 
-### Herausgeber
-
-Dr. med. Robert Sentek
-
-### Praxisanschrift
-
+Dr. med. Robert Sentek\
 Trelleborger Str. 10B\
-18107 Rostock\
-\
-Telefon: (0381) 724351 \
-Fax:        (0381) 724351 \
-\
+18107 Rostock
+
+### Kontakt
+
+Telefon: 0381 724351\
+Telefax: 0381 724351\
 E-Mail: praxis@doktor-sentek.de
 
-### Gesetzliche Berufsbezeichnung
+### Berufsbezeichnung und berufsrechtliche Regelungen
 
-Facharzt für Orthopädie, Unfall- und Handchirurgie, verliehen in der Bundesrepublik Deutschland
+Berufsbezeichnung:\
+Facharzt für Orthopädie, Unfall- und Handchirurgie
 
-### Ärztekammer
-
+Zuständige Kammer:\
 Ärztekammer Mecklenburg-Vorpommern\
 Körperschaft des öffentlichen Rechts\
 August-Bebel-Straße 9a\
 18055 Rostock
 
-### Berufsrechtliche Regelungen
+Verliehen in:\
+Deutschland
 
-Berufsordnung für die Ärzte Mecklenburg Vorpommerns[](http://www.blaek.de/hauptseite.cfm?id_seite=127)
+Es gelten folgende berufsrechtliche Regelungen:\
+Berufsordnung für die Ärzte Mecklenburg Vorpommerns\
+einsehbar unter:\
+https://www.aek-mv.de/aerztin-arzt/recht.html
+
+### Verbraucherstreitbeilegung/Universalschlichtungsstelle
+
+Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
+
+Quelle:\
+https://www.e-recht24.de

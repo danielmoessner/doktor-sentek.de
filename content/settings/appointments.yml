@@ -2,9 +2,7 @@ collection: settings
 slug: appointments
 appointments:
   - day: Montag
-    openingHours: "08:00 bis 12:00 und 13.00 bis
-      15:00                    Selbstzahler und Privatsprechstunde: 15:00 bis
-      16:00 (Termine nach Vereinbarung)"
+    openingHours: "08:00 bis 12:00 und 13.00 bis 15:00                   "
   - day: Dienstag
     openingHours:  08:00 bis 13:00 - 14:00 bis 17:00
   - day: Mittwoch
@@ -13,3 +11,6 @@ appointments:
     openingHours: 08:00 bis 13:00 - 14:00 bis 16:00
   - day: Freitag
     openingHours: 08:00 bis 10:00
+  - day: Montag
+    openingHours: " Selbstzahler und Privatsprechstunde: 15:00 bis 16:00 (Termine
+      nach Vereinbarung)"
